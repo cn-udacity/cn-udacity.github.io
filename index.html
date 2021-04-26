@@ -1,0 +1,527 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>H5,200行代码实现粒子漩涡特效</title>
+<style>
+script{
+	margin:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+  background:#000;
+}
+#canvas{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+function project3D(x,y,z,vars){
+	var p,d;
+	x-=vars.camX;
+	y-=vars.camY-8;
+	z-=vars.camZ;
+	p=Math.atan2(x,z);
+	d=Math.sqrt(x*x+z*z);
+	x=Math.sin(p-vars.yaw)*d;
+	z=Math.cos(p-vars.yaw)*d;
+	p=Math.atan2(y,z);
+	d=Math.sqrt(y*y+z*z);
+	y=Math.sin(p-vars.pitch)*d;
+	z=Math.cos(p-vars.pitch)*d;
+	var rx1=-1000;
+	var ry1=1;
+	var rx2=1000;
+	var ry2=1;
+	var rx3=0;
+	var ry3=0;
+	var rx4=x;
+	var ry4=z;
+	var uc=(ry4-ry3)*(rx2-rx1)-(rx4-rx3)*(ry2-ry1);
+	var ua=((rx4-rx3)*(ry1-ry3)-(ry4-ry3)*(rx1-rx3))/uc;
+	var ub=((rx2-rx1)*(ry1-ry3)-(ry2-ry1)*(rx1-rx3))/uc;
+	if(!z)z=0.000000001;
+	if(ua>0&&ua<1&&ub>0&&ub<1){
+		return {
+			x:vars.cx+(rx1+ua*(rx2-rx1))*vars.scale,
+			y:vars.cy+y/z*vars.scale,
+			d:(x*x+y*y+z*z)
+		};
+	}else{
+		return { d:-1 };
+	}
+}
+function elevation(x,y,z){
+	var dist = Math.sqrt(x*x+y*y+z*z);
+	if(dist && z/dist>=-1 && z/dist <=1) return Math.acos(z / dist);
+	return 0.00000001;
+}
+function rgb(col){
+	col += 0.000001;
+	var r = parseInt((0.5+Math.sin(col)*0.5)*16);
+	var g = parseInt((0.5+Math.cos(col)*0.5)*16);
+	var b = parseInt((0.5-Math.sin(col)*0.5)*16);
+	return "#"+r.toString(16)+g.toString(16)+b.toString(16);
+}
+function interpolateColors(RGB1,RGB2,degree){
+	var w2=degree;
+	var w1=1-w2;
+	return [w1*RGB1[0]+w2*RGB2[0],w1*RGB1[1]+w2*RGB2[1],w1*RGB1[2]+w2*RGB2[2]];
+}
+function rgbArray(col){
+	col += 0.000001;
+	var r = parseInt((0.5+Math.sin(col)*0.5)*256);
+	var g = parseInt((0.5+Math.cos(col)*0.5)*256);
+	var b = parseInt((0.5-Math.sin(col)*0.5)*256);
+	return [r, g, b];
+}
+function colorString(arr){
+	var r = parseInt(arr[0]);
+	var g = parseInt(arr[1]);
+	var b = parseInt(arr[2]);
+	return "#"+("0" + r.toString(16) ).slice (-2)+("0" + g.toString(16) ).slice (-2)+("0" + b.toString(16) ).slice (-2);
+}
+function process(vars){
+	if(vars.points.length<vars.initParticles) for(var i=0;i<5;++i) spawnParticle(vars);
+	var p,d,t;	
+	p = Math.atan2(vars.camX, vars.camZ);
+	d = Math.sqrt(vars.camX * vars.camX + vars.camZ * vars.camZ);
+	d -= Math.sin(vars.frameNo / 80) / 25;
+	t = Math.cos(vars.frameNo / 300) / 165;
+	vars.camX = Math.sin(p + t) * d;
+	vars.camZ = Math.cos(p + t) * d;
+	vars.camY = -Math.sin(vars.frameNo / 220) * 15;
+	vars.yaw = Math.PI + p + t;
+	vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2;	
+	var t;
+	for(var i=0;i<vars.points.length;++i){		
+		x=vars.points[i].x;
+		y=vars.points[i].y;
+		z=vars.points[i].z;
+		d=Math.sqrt(x*x+z*z)/1.0075;
+		t=.1/(1+d*d/5);
+		p=Math.atan2(x,z)+t;
+		vars.points[i].x=Math.sin(p)*d;
+		vars.points[i].z=Math.cos(p)*d;
+		vars.points[i].y+=vars.points[i].vy*t*((Math.sqrt(vars.distributionRadius)-d)*2);
+		if(vars.points[i].y>vars.vortexHeight/2 || d<.25){
+			vars.points.splice(i,1);
+			spawnParticle(vars);
+		}
+	}
+}
+function drawFloor(vars){	
+	var x,y,z,d,point,a;
+	for (var i = -25; i <= 25; i += 1) {
+		for (var j = -25; j <= 25; j += 1) {
+			x = i*2;
+			z = j*2;
+			y = vars.floor;
+			d = Math.sqrt(x * x + z * z);
+			point = project3D(x, y-d*d/85, z, vars);
+			if (point.d != -1) {
+				size = 1 + 15000 / (1 + point.d);
+				a = 0.15 - Math.pow(d / 50, 4) * 0.15;
+				if (a > 0) {
+					vars.ctx.fillStyle = colorString(interpolateColors(rgbArray(d/26-vars.frameNo/40),[0,128,32],.5+Math.sin(d/6-vars.frameNo/8)/2));
+					vars.ctx.globalAlpha = a;
+					vars.ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+				}
+			}
+		}
+	}		
+	vars.ctx.fillStyle = "#82f";
+	for (var i = -25; i <= 25; i += 1) {
+		for (var j = -25; j <= 25; j += 1) {
+			x = i*2;
+			z = j*2;
+			y = -vars.floor;
+			d = Math.sqrt(x * x + z * z);
+			point = project3D(x, y+d*d/85, z, vars);
+			if (point.d != -1) {
+				size = 1 + 15000 / (1 + point.d);
+				a = 0.15 - Math.pow(d / 50, 4) * 0.15;
+				if (a > 0) {
+					vars.ctx.fillStyle = colorString(interpolateColors(rgbArray(-d/26-vars.frameNo/40),[32,0,128],.5+Math.sin(-d/6-vars.frameNo/8)/2));
+					vars.ctx.globalAlpha = a;
+					vars.ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+				}
+			}
+		}
+	}		
+}
+function sortFunction(a,b){
+	return b.dist-a.dist;
+}
+function draw(vars){
+	vars.ctx.globalAlpha=.15;
+	vars.ctx.fillStyle="#000";
+	vars.ctx.fillRect(0, 0, canvas.width, canvas.height);
+	drawFloor(vars);	
+	var point,x,y,z,a;
+	for(var i=0;i<vars.points.length;++i){
+		x=vars.points[i].x;
+		y=vars.points[i].y;
+		z=vars.points[i].z;
+		point=project3D(x,y,z,vars);
+		if(point.d != -1){
+			vars.points[i].dist=point.d;
+			size=1+vars.points[i].radius/(1+point.d);
+			d=Math.abs(vars.points[i].y);
+			a = .8 - Math.pow(d / (vars.vortexHeight/2), 1000) * .8;
+			vars.ctx.globalAlpha=a>=0&&a<=1?a:0;
+			vars.ctx.fillStyle=rgb(vars.points[i].color);
+			if(point.x>-1&&point.x<vars.canvas.width&&point.y>-1&&point.y<vars.canvas.height)vars.ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+		}
+	}
+	vars.points.sort(sortFunction);
+}
+function spawnParticle(vars){
+ 
+	var p,ls;
+	pt={};
+	p=Math.PI*2*Math.random();
+	ls=Math.sqrt(Math.random()*vars.distributionRadius);
+	pt.x=Math.sin(p)*ls;
+	pt.y=-vars.vortexHeight/2;
+	pt.vy=vars.initV/20+Math.random()*vars.initV;
+	pt.z=Math.cos(p)*ls;
+	pt.radius=200+800*Math.random();
+	pt.color=pt.radius/1000+vars.frameNo/250;
+	vars.points.push(pt);	
+}
+function frame(vars) {
+	if(vars === undefined){
+		var vars={};
+		vars.canvas = document.querySelector("canvas");
+		vars.ctx = vars.canvas.getContext("2d");
+		vars.canvas.width = document.body.clientWidth;
+		vars.canvas.height = document.body.clientHeight;
+		window.addEventListener("resize", function(){
+			vars.canvas.width = document.body.clientWidth;
+			vars.canvas.height = document.body.clientHeight;
+			vars.cx=vars.canvas.width/2;
+			vars.cy=vars.canvas.height/2;
+		}, true);
+		vars.frameNo=0;
+ 
+		vars.camX = 0;
+		vars.camY = 0;
+		vars.camZ = -14;
+		vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2;
+		vars.yaw = 0;
+		vars.cx=vars.canvas.width/2;
+		vars.cy=vars.canvas.height/2;
+		vars.bounding=10;
+		vars.scale=500;
+		vars.floor=26.5;
+ 
+		vars.points=[];
+		vars.initParticles=700;
+		vars.initV=.01;
+		vars.distributionRadius=800;
+		vars.vortexHeight=25;
+	}
+	vars.frameNo++;
+	requestAnimationFrame(function() {
+		frame(vars);
+	});
+	process(vars);
+	draw(vars);
+}
+frame();
+</script>
+</body>
+
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="baidu-site-verification" content="code-fS4sie13WL" />
+  <meta name="keywords" content="优达学城, Udacity, 目录, 人工智能, 数据分析, 无人驾驶, 编程, 全栈">
+  <meta name="description" content="优达学城目录, 优达学城课程体验, Udacity catalog, Udacity table of contents">
+  <title>Udacity 👀 优达学城</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plyr.css">
+  <link rel="stylesheet" href="assets/css/katex.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="">
+
+    <div id="">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <h1 style="">Udacity 👀 优达学城</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+  
+  <p>欢迎来到<b>【Udacity 👀 优达学城】</b> ，这里可查看Udcity/优达学城课程目录。</p>
+
+</div>
+
+	<hr/>
+
+<div>
+	<h3> 代表性课程-体验 </h3>
+  <p><h2 data-spotlight="人工智能系列代表课程："> 人工智能系列代表课程：<a href="python人工智能试学/index.html" style="color:rgb(255, 196, 0);">Python人工智能入门-试学</a>（中英字幕）</h2></p>
+	<p><h2 data-spotlight="数据分析系列代表课程：">数据分析系列代表课程：<a href="数据分析入门试学/index.html" style="color:rgb(255, 196, 0);">数据分析入门-试学</a>（中英字幕）</h2></p>
+	<p><h2 data-spotlight="无人驾驶入门代表课程：">无人驾驶入门代表课程：<a href="无人驾驶入门试学/index.html" style="color:rgb(255, 196, 0);">无人驾驶工入门-试学</a>（中英字幕）</h2></p>
+	<p><h2 data-spotlight="编程系列代表课程">编程系列代表课程：<a href="c++试学/index.html" style="color:rgb(255, 196, 0);">C++程序开发-试学</a>（英文字幕）</h2></p>
+	<p><h2 data-spotlight="全栈系列代表课程：">全栈系列代表课程：<a href="前端入门试学/index.html" style="color:rgb(255, 196, 0);">前端开发入门-试学</a>（中英字幕）</h2></p>
+	<p>【字幕】：点击视频右下角的小齿轮⚙️可选择字幕，有些课程只有英文字幕。</p>
+  <video controls="">
+    <source src="01. Python：欢迎学习 Python 编程-_XOoHSQIkkw.mp4" type="video/mp4"/>
+    <track default="false" kind="subtitles" label="pt-BR" src="01. Python：欢迎学习 Python 编程-_XOoHSQIkkw.pt-BR.vtt" srclang="pt-BR"/>
+    <track default="false" kind="subtitles" label="ar" src="01. Python：欢迎学习 Python 编程-_XOoHSQIkkw.ar.vtt" srclang="ar"/>
+    <track default="false" kind="subtitles" label="zh-CN" src="01. Python：欢迎学习 Python 编程-_XOoHSQIkkw.zh-CN.vtt" srclang="zh-CN"/>
+    <track default="true" kind="subtitles" label="en" src="01. Python：欢迎学习 Python 编程-_XOoHSQIkkw.en.vtt" srclang="en"/>
+   </video>
+	<br/>
+	<p>购买课程后提供离线网页版的全套资料，网页效果同上，含视频、代码、项目及答案等，可永久使用。</p>
+</div>
+
+  <hr/>
+
+<div>
+	<h3>2021无人驾驶系列课程-目录【新版】</h3>
+  <p><a href="c++3.0.html" >C++程序开发 / C++ Developer 3.0版 </a>（英文字幕）</p>
+  <p><a href="传感器融合.html" >传感器融合 / Sensor Fusion Engineer 5.0版 </a>（英文字幕）</p>
+  <p><a href="数据结构.html" >数据结构与算法 / Data Structures and Algorithms </a>（英文字幕）</p>
+	<p><a href="无人驾驶入门.html" >无人驾驶入门 / Intro to Self-Driving Cars 3.0版</a>（中英字幕）</p>
+	<p><a href="Self-Driving Car Engineer2.0.html" >无人驾驶工程师 / Self-Driving Car Engineer 新版2.0 </a>（中英字幕）</p>
+  <p><a href="Self-Driving Car Engineer.html" >无人驾驶工程师 / Self-Driving Car Engineer 旧版1.0不再提供 </a>（中英字幕）</p>
+	<p><a href="Flying Car.html" >无人机开发工程师 / Flying Car and Autonomous Flight Engineer 5.0版 </a>（英文字幕）</p>
+  <p><a href="机器人开发工程师 .html" >机器人开发工程师 / Robotics Software Engineer 5.0 </a>（中英字幕）</p>
+</div>
+
+	<hr/>
+
+<div>
+	<h3>2021人工智能系列课程-目录【新版】</h3>
+  <p><a href="全面编程入门.html" >Intro to Programming 一站式入门学习Python，Java，前端 </a>（中英字幕）</p>
+  <p><a href="Python 编程入门 v1.0.0.html" >Python 编程入门 学习你的第一个爬虫程序 </a>（中英字幕）</p>
+	<p><a href="Python人工智能入门VIP版5.0.html" >Python人工智能入门VIP版 / AI Programming with Python 10.版 </a>（中英字幕）</p>
+  <p><a href="PyTorch机器学习入门2.0.html" >PyTorch机器学习入门 / Machine Learning - Introduction 新开课程 </a>（中英字幕）</p>
+  <p><a href="TensorFlow机器学习入门.html" >TensorFlow机器学习入门 / Introduction to Machine Learning with TensorFlow 新开课程</a>（中英字幕）</p>
+	<p><a href="机器学习4.0.html" >机器学习工程师 / Machine Learning Engineer 5.0版新增软件工程基础内容 </a>（中英字幕）</p>
+	<p><a href="Deep Learning .html" >深度学习 / Deep Learning 7.0版新增部署模型内容 </a>（中英字幕）</p>
+	<p><a href="深度强化学习2.0.html" >深度强化学习 / Deep Reinforcement Learning 5.0版 </a>（英文字幕）</p>
+	<p><a href="计算机视觉4.0.html" >计算机视觉 / Computer Vision 5.0版新增云计算内容 </a>（中英字幕）</p>
+	<p><a href="自然语言 3.0.html" >自然语言处理 / Natural Language Processing 5.0版新增PyTorch内容 </a>（中英字幕）</p>
+	<p><a href="AI量化投资 3.0.html" >AI量化投资 / AI for Trading 5.0版增加了中文字幕跟修改了部分内容 </a>（中英文字幕）</p>
+	<p><a href="AI for Healthcare.html" >AI智能医疗 / AI for Healthcare 新课 </a>（英文字幕）</p>
+	<p><a href="AI产品经理.html" >AI产品经理 / AI Product Manager</a>（英文字幕）</p>
+	<p><a href="AI专业加长版.html" >人工智能 / Artificial Intelligence 3.0版修改了不少内容 </a>（中英字幕）</p>
+  <p><a href="AI 求职直通班6.0 VIP.html" >AI 求职直通班 VIP版 一站式学习AI< /a>（英文字幕）</p>
+  <p><a href="Intel® Edge AI for IoT Developers.html" >物联网开发 / Intel® Edge AI for IoT Developers 新课 </a>（英文字幕）</p>
+  <p><a href="RPA Developer with UiPath.html" >UiPath 机器人开发 / RPA Developer with UiPath 新开课程 </a>（中英字幕）</p>
+</div>
+
+	<hr/>
+
+<div>
+	<h3>2021数据分析系列课程-目录【新版】</h3>
+	<p><a href="商业数据分析3.0.html" >商业数据分析 / Business Analytics 3.0版新增SQL内容 </a>（中英字幕）</p>
+  <p><a href="商业数据分析 v6.0.vip.html" >商业数据分析 VIP版 针对中国市场的的内部版本 </a>（中英字幕）</p>
+	<p><a href="商业预测分析.html" >商业预测分析 / Predictive Analytics for Business</a>（中英字幕）</p>
+	<p><a href="数据科学Python编程.html" >数据科学Python编程 / Programming for Data Science with Python 新课 </a>（中英字幕）</p>
+  <p><a href="数据科学R编程.html" >数据科学R编程 / Programming for Data Science with R 新课 </a>（中英字幕）</p>
+	<p><a href="数据分析师.html" >数据分析师 / Data Analyst</a>（中英字幕）</p>
+	<p><a href="数据分析（入门） VIP版本.html" >数据分析入门【vip】 / Data Analyst Basic 新增GitHub跟领英干货内容 </a>（中英字幕）</p>
+	<p><a href="数据分析（进阶） v6.0.0.html" >数据分析进阶 / Data Analyst Adavanced 6.0版 </a>（中英字幕）</p>
+	<p><a href="数据科学家.html" >数据科学家 / Data Scientist</a>（中英字幕）</p>
+	<p><a href="数据工程师.html" >数据工程师 / Data Engineer 2.0版 </a>（英文字幕）</p>
+	<p><a href="数据营销5.0.html"" >数字营销 / Digital Marketing 5.0版改版了不少内容 </a>（中英字幕）</p>
+  <p><a href="SQL.html" >SQL 新课 </a>（英文字幕）</p>
+  <p><a href="数据流.html" >数据流 / Data Streaming 新课 </a>（英文字幕）</p>
+  <p><a href="数据基础.html" >数据基础 / Data Foundations</a>（英文字幕）</p>
+  <p><a href="市场分析.html" >市场分析 / Marketing Analytics 新版增加了字幕跟不少内容 </a>（英文字幕）</p>
+  <p><a href="数据可视化.html" >数据可视化 / Data Visualization</a>（英文字幕）</p>
+  <p><a href="面向商业领袖的AI.html" >面向商业领袖的AI / AI For Business Leaders 新课 </a>（英文字幕）</p>
+  <p><a href="面向企业领导者的数据科学.html" >面向企业领导者的数据科学 / Data Science for Business Leaders 新课 </a>（英文字幕）</p>
+</div>
+
+	<hr/>
+
+<div>
+	<h3>2021新课云计算系列课程-目录【新版】</h3>
+	<p><a href="Cloud Developer 2.0.html" >云计算软件开发 / Cloud Developer☁️</a>（英文字幕）</p>
+	<p><a href="云计算DevOps.html" >云计算DevOps / Cloud DevOps Engineer</a>（英文字幕）</p>
+	<p><a href="AWS.html" >AWS云架构师 / AWS Cloud Architect</a>（英文字幕）</p>
+	<p><a href="Developer for Microsoft Azure.html" >Microsoft Azure 开发工程师 / Developer for Microsoft Azure</a>（英文字幕）</p>
+	<p><a href="DevOps Engineer for Microsoft Azure.html" >Microsoft Azure DevOps工程师 / DevOps Engineer for Microsoft Azure</a>（英文字幕）</p>
+</div>
+
+	<hr/>
+
+<div>
+	<h3>全栈系列课程-目录【新版】</h3>
+	<p></p>
+	<p><a href="微信小程序开发.html" >微信小程序开发</a>（中英字幕）</p>
+  <p><a href="前端开发（入门） v1.0.0.html" >前端开发（入门）</a>（中英字幕）</p>
+  <p><a href="前端开发（进阶） v4.0.0.html" >前端开发（进阶）</a>（中英字幕）</p>
+  <p><a href="前端开发.html" >前端开发工程师 / Front End Web Developer 新版内容全部修改</a>（英文字幕）</p>
+	<p><a href="全栈开发新版.html.html" >全栈开发 / Full Stack Web Developer【新版内容全部修改】</a>（英文字幕）</p>
+  <p><a href="全栈.html"" >全栈开发 / Full Stack Web Developer 旧版不再提供！！！</a>（英文字幕）</p>
+	<p><a href="Java开发工程师.html" >JAVA开发工程师/ Java Developer</a>（英文字幕）</p>
+  <p><a href="Java开发工程师.html" >JAVA开发工程师/ Java Developer</a>（英文字幕）</p>
+  <p><a href="React 5.0.html" >React 5.0版</a>（英文字幕）</p>
+	<p><a href="区块链 3.0.html"" >区块链开发 / Blockchain Developer 3.0版 </a>（英文字幕）</p>
+  <p><a href="Introduction to Cybersecurity.html" >网络安全 / Introduction to Cybersecurity 新课 </a>（英文字幕）</p>
+</div>
+
+<hr/>
+
+<div>
+	<h3>2021开发系列课程-目录【新版】</h3>
+	<p><a href="ios.html" >iOS开发工程师 / iOS Developer 旧版 </a>（中英字幕）</p>
+	<p><a href="iOS开发 4.0.html" >iOS开发工程师 / iOS Developer 新版 </a>（中英字幕）</p>
+	<p><a href="安卓开发基础.html" >安卓开发基础 / Android Basics 旧版 </a>（中英字幕）</p>
+	<p><a href="安卓开发基础 6.0.html" >安卓开发基础 / Android Basics 新版 </a>（中英字幕）</p>
+	<p><a href="安卓开发工程师.html" >安卓开发工程师 / Android Developer 旧版 </a>（中英字幕）</p>
+	<p><a href="安卓开发 10.0.html" >安卓开发工程师 / Android Developer 新版 </a>（中英字幕）</p>
+	<p><a href="VR开发.html" >Android开发入门 / Android Basics</a>（英文字幕）</p>
+</div>
+
+<hr/>
+
+<div>
+	<h3>2021市场商业系列课程-目录【新课】</h3>
+	<p><a href="交互设计.html" >交互设计 / User Experience</a>（英文字幕）</p>
+	<p><a href="产品经理.html" >产品经理 / Product Manager</a>（英文字幕）</p>
+  <p><a href="AI产品经理.html" >AI产品经理 / AI Product Manager</a>（英文字幕）</p>
+	<p><a href="营利策略.html" >营利策略 / Monetization Strategy</a>（英文字幕）</p>
+	<p><a href="数据经理.html" >数据产品经理 / Data Product Manager</a>（英文字幕）</p>
+</div>
+
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://shop455562174.taobao.com/?spm=2013.1.1000126.d21.48982ff0hE7XvF" target="_blank">点击进入Udacity优达学城店铺购买</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <section id="chip-section">
+    <video src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4" muted playsinline autoplay loop></video>
+    <h1>
+      来吧小伙伴<br>
+      开启你的学习之路
+    </h1>
+    <div id="the-chip">
+      <svg viewBox="0 0 1000 1000" id="A13">
+        <rect class="text-bg" x="78" y="307" width="843" height="387"></rect>
+        <path d="M893.839695,31 L895.066071,31.0099354 C935.054114,31.6582805 967.348376,63.956556 967.990262,103.946169 L968,105.160305 L968,894.839695 L967.990065,896.066071 C967.341719,936.054114 935.043444,968.348376 895.053831,968.990262 L893.839695,969 L104.160305,969 L102.933929,968.990065 C62.9458856,968.341719 30.6516243,936.043444 30.0097379,896.053831 L30,894.839695 L30,105.160305 L30.0099354,103.933929 C30.6582805,63.9458856 62.956556,31.6516243 102.946169,31.0097379 L104.160305,31 L893.839695,31 Z M746.261438,399 C720.891068,399 697.908497,406.178571 686.267974,413.65625 L695.520697,446.558036 C703.281046,441.772321 719.995643,434.892857 735.814815,434.892857 C755.215686,434.892857 764.46841,443.566964 764.46841,455.232143 C764.46841,471.683036 745.366013,477.665179 730.143791,477.665179 L712.235294,477.665179 L712.235294,510.267857 L730.740741,510.267857 C750.738562,510.267857 769.840959,518.941964 769.840959,538.383929 C769.840959,552.741071 757.901961,564.107143 734.32244,564.107143 C715.816993,564.107143 697.311547,556.629464 689.252723,552.142857 L680,586.540179 C691.342048,593.419643 712.533769,600 737.605664,600 C786.854031,600 817,574.875 817,540.776786 C817,515.053571 798.196078,497.40625 774.915033,493.21875 L774.915033,492.620536 C798.793028,484.544643 810.433551,468.09375 810.433551,447.455357 C810.433551,420.834821 787.45098,399 746.261438,399 Z M486.512195,395 L427,395 L366,596 L412.717073,596 L427,544.408012 L484.429268,544.408012 L499.902439,596 L549,596 L486.512195,395 Z M644,402 L606.667785,402 L555,425.876923 L562.466443,459.901538 L599.5,442.292308 L600.097315,442.292308 L600.097315,596 L644,596 L644,402 Z M240.531042,404.280688 L237.283702,405.468274 C227.238818,409.107297 221.243767,410.93207 219.349668,410.93207 C216.554106,410.93207 210.17784,409.031898 200.247412,405.284905 L198.837992,404.763898 C189.530001,401.373803 181.984244,399.650292 176.164334,399.650292 C164.996112,399.837018 154.625512,402.75553 145.027551,408.482713 C135.647735,414.079741 128.110486,421.657892 122.392498,431.23034 L121.99652,431.901421 C114.661865,444.214093 111,458.907077 111,475.942715 C111,490.81457 113.715961,506.175987 119.133835,522.039516 C124.192702,536.726222 130.650134,549.608473 138.504565,560.717633 L139.862999,562.632356 C146.584254,572.026688 152.241437,578.731806 156.82169,582.747709 C164.32913,589.765174 171.850072,593.175357 179.394841,592.993063 L179.838678,592.978196 C184.897548,592.805595 191.514187,591.063893 199.727635,587.721741 C207.928586,584.395242 215.595715,582.747709 222.744623,582.747709 C229.561062,582.747709 237.015908,584.395242 245.127887,587.721741 C253.213333,591.063893 260.159327,592.711447 265.919035,592.711447 C273.942048,592.523152 281.434355,589.212369 288.42717,582.747709 C292.938164,578.809281 298.791526,571.716976 305.940438,561.470815 C311.185053,553.954856 315.711655,545.779887 319.535849,536.898823 C321.11236,533.133 322.595212,529.210267 324,525.114938 C317.771435,522.489722 312.148969,518.834501 307.090999,514.135332 L306.486749,513.56642 C294.982938,502.849509 289.129576,489.352176 288.957877,473.132468 C288.770571,452.309041 298.182783,436.076779 317.210116,424.487459 C306.580405,409.298642 290.59682,400.867905 269.32179,399.141902 C261.470478,398.4719 251.886573,400.172802 240.531042,404.280688 Z M454.966443,430 L455.557047,430 L458.400752,441.493321 C460.667056,450.623403 463.132186,460.315337 465.597315,468.571429 L478,511 L434,511 L445.812081,468.571429 C449.060403,457 452.013423,441.868132 454.966443,430 Z M269.735915,340 C263.351502,340.327936 256.563201,342.242941 249.386557,345.705743 C242.194375,349.220995 236.263544,353.627625 231.600286,358.927326 C222.259769,369.394476 217,382.196201 217,394.158222 C217,395.811495 217.107185,397.384794 217.292036,398.879663 C231.799116,400.04695 245.176874,392.649512 256.236994,379.84778 C265.401969,369.079203 270,357.444914 270,344.984462 C270,343.33164 269.922334,341.665768 269.735915,340 Z" class="chip-mask"></path>
+        <path d="M894.279877,0 C952.083613,0 999.052244,46.3905942 999.985837,103.971847 L1000,105.720123 L1000,894.279877 C1000,952.083613 953.609406,999.052244 896.028153,999.985837 L894.279877,1000 L105.720123,1000 C47.9163872,1000 0.947755733,953.609406 0.0141634759,896.028153 L0,894.279877 L0,105.720123 C0,47.9163872 46.3905942,0.947755733 103.971847,0.0141634759 L105.720123,0 L894.279877,0 Z M892.997819,31 L105.002181,31 C64.5406078,31 31.6634119,63.4725801 31.0099142,103.77842 L31,105.002181 L31,892.997819 C31,933.459392 63.4725801,966.336588 103.77842,966.990086 L105.002181,967 L892.997819,967 C933.459392,967 966.336588,934.52742 966.990086,894.22158 L967,892.997819 L967,105.002181 C967,64.5406078 934.52742,31.6634119 894.22158,31.0099142 L892.997819,31 Z" class="chip"></path>
+      </svg>
+    </div>
+  </section>
+
+  <script  src="./script.js"></script>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/plyr.polyfilled.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('人工智能编程基础')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

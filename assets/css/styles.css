@@ -2,122 +2,7 @@ html {
   position: relative;
   min-height: 100%;
 }
-.tab{
-  width: 1110px;
-  height: 1000px;
-  color: #607291;
-  background-color: #fff;
-  overflow: hidden;
-}
-input{
-  display: none;
-}
-label{
-  float: left;
-  width: 158px;
-  height: 56px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 700;
-  background-color: #e5e9ea;
-  transition: all .3s;
-}
-label:hover{
-  background-color: #fff;
-}
-label img{
-  width: 20px;
-  height: 5px;
-  vertical-align: middle;
-  margin-top: 1px;
-  margin-right: 1000px;
-}
-ol{
-  /* 清除浮动 */
-  clear: both;
-  width: 8000px;
-  height: 294px;
-  transition: all .5s;
-}
-ol li{
-  float: left;
-  list-style: none;
-  width: 1000px;
-  height: 210px;
-  padding: 80px;
-}
-ol li img{
-  float: left;
-  width: 142px;
-  height: 142px;
-  margin-right: 20px;
-}
-ol li p{
-  /* 首行缩进两个字符 */
-  /* text-indent: 2em;*/
-  /* 伸缩盒子模型 */
-  display: -webkit-box;
-  /* 在伸缩盒子模型里让子元素垂直排列 */
-  -webkit-box-orient: vertical;
-  /* 这个不是css的标准语句，需要配合以上两种属性一起使用，意思是只显示三行 */
-  -webkit-line-clamp: 3;
-  /* 溢出隐藏 */
-  overflow: hidden;
-  /* 溢出隐藏的文字呈现省略号 */
-  text-overflow: ellipsis;
-  margin-top: 20px;
-}
-#tab1:checked~ol{
-  margin-left: 0;
-}
 
-#tab2:checked~ol {
-  margin-left: -1000px;
-}
-
-#tab3:checked~ol {
-  margin-left: -2000px;
-}
-
-#tab4:checked~ol {
-  margin-left: -3000px;
-}
-
-#tab5:checked~ol {
-  margin-left: -4000px;
-}
-#tab6:checked~ol {
-  margin-left: -5000px;
-}
-#tab7:checked~ol {
-  margin-left: -6000px;
-}
-#tab1:checked~label[for="tab1"]{
-  background-color: #fff;
-}
-
-#tab2:checked~label[for="tab2"] {
-  background-color: #fff;
-}
-
-#tab3:checked~label[for="tab3"] {
-  background-color: #fff;
-}
-
-#tab4:checked~label[for="tab4"] {
-  background-color: #fff;
-}
-
-#tab5:checked~label[for="tab5"] {
-  background-color: #fff;
-}
-#tab6:checked~label[for="tab6"] {
-  background-color: #fff;
-}
-#tab7:checked~label[for="tab7"] {
-  background-color: #fff;
-}
 .divider {
   height: 2px;
   border-top: 3px dashed #cecece;
@@ -455,19 +340,17 @@ h1 {
 }
 
 
-
-
-h2 {
+h4 {
   color: #333;
   font-family: Helvetica;
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 8rem;
   letter-spacing: -0.04rem;
   position: relative;
 }
 
-h2::after {
+h4::after {
   content: attr(data-spotlight);
   color: transparent;
   position: absolute;
@@ -477,7 +360,7 @@ h2::after {
   clip-path: ellipse(100px 100px at 0% 50%);
   animation: spotlight 5s infinite;
   background-image: url(https://images.unsplash.com/photo-1579547621869-0ddb5f237392?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
-  background-size: 150%;
+  background-size: 100%;
   -webkit-background-clip: text;
   background-clip: text;
 }

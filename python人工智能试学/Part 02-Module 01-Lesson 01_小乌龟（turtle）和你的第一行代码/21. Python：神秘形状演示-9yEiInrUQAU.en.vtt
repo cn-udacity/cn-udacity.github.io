@@ -4,136 +4,180 @@ Language: en
 
 00:00:00.000 --> 00:00:03.015
 So, the exercise asked us to put this
+所以这次演习让我们把这个
 
 00:00:03.015 --> 00:00:07.195
 angle's variable with a long list of numbers in it right here.
+角度的变量在这里有一个长的数字
 
 00:00:07.195 --> 00:00:12.060
 Then we needed to write a loop that would use the values from that list.
+然后 我们需要编写一个循环 该循环将使用该列表中的值 
 
 00:00:12.060 --> 00:00:15.669
 The loop started for angle in angles,
+这个线圈开始角度的角度
 
 00:00:15.669 --> 00:00:18.789
 and then we had to write the statements inside the loop.
+然后我们要在环线内写下这些语句
 
 00:00:18.789 --> 00:00:23.309
 Inside the loop, we wanted the turtle to turn right, but how far?
+在这个圈里 我们想让海龟右转 但是多远呢 ?
 
 00:00:23.309 --> 00:00:28.454
 On each step, we wanted to turn by an angle that's been taken from this list.
+在每一步上 我们都想用一个从这个列表中获取的角度来转变 
 
 00:00:28.454 --> 00:00:31.864
 There's a variable created by the loop that will do just that.
+由循环创建的变量将仅执行该变量 
 
 00:00:31.864 --> 00:00:34.030
 This is the angle variable.
+这是角度变量 
 
 00:00:34.030 --> 00:00:38.030
 So, to get the turtle named builder to turn right by that angle,
+所以要让乌龟叫建设者按那个角度右转
 
 00:00:38.030 --> 00:00:41.469
 we say builder.right (angle).
+我们说的是 builder.right (角度 )  
 
 00:00:41.469 --> 00:00:44.015
 Remember, each time the loop runs,
+记住每次循环运行
 
 00:00:44.015 --> 00:00:48.509
 this variable will get assigned an item from this list.
+此变量将从该列表中分配一个项 
 
 00:00:48.509 --> 00:00:53.119
 The first time through the loop the variable get assigned negative 90,
+第一次通过循环将变量分配为负 90 
 
 00:00:53.119 --> 00:00:56.149
 the second time through the loop it'll get zero.
+第二次它就会归零
 
 00:00:56.149 --> 00:00:57.850
 So, it won't turn at all,
+所以它根本不会转动
 
 00:00:57.850 --> 00:01:02.855
 then zero again, then negative 90 and so on.
+然后再零 再负 90 等 
 
 00:01:02.854 --> 00:01:06.969
 After it turns we want it to go forward 25.
+我们想让它前进 25
 
 00:01:06.969 --> 00:01:09.939
 We know how to do that builder.forward(25).
+我们知道如何执行 builder.forward (25) 
 
 00:01:09.939 --> 00:01:13.739
 Let's run this code and see what happens.
+让我们运行这个代码 看看发生了什么 
 
 00:01:14.299 --> 00:01:16.484
 Hey, look.
+嘿看啊
 
 00:01:16.484 --> 00:01:19.405
 It looks like a house, or maybe an arrow.
+它看起来像房子 或者可能是箭 
 
 00:01:19.405 --> 00:01:22.905
 So, this program shows us something interesting about numbers.
+所以 这个节目给我们展示了一些关于数字的有趣的东西 
 
 00:01:22.905 --> 00:01:26.290
 They can mean different things depending on how they're used.
+根据它们的使用方式 它们可以表示不同的东西 
 
 00:01:26.290 --> 00:01:28.390
 In the code that you've seen in this course,
+在你在这个过程中看到的代码中
 
 00:01:28.390 --> 00:01:32.625
 we've used a list of numbers to mean several different things.
+我们用了一串数字来表示几种不同的东西
 
 00:01:32.625 --> 00:01:35.859
 In the very first examples with George and Amy,
+在乔治和艾米的第一个例子中
 
 00:01:35.859 --> 00:01:38.659
 the actual numbers in the list weren't used at all.
+列表中的实际数字根本没有使用 
 
 00:01:38.659 --> 00:01:42.754
 We just use the list length to control how many sides the turtle drew;
+我们只是用列表长度来控制海龟画的多少边 ;
 
 00:01:42.754 --> 00:01:44.564
 four sides for a square,
+一个正方形的四边
 
 00:01:44.564 --> 00:01:46.405
 or five for a pentagon.
+五个五个五个
 
 00:01:46.405 --> 00:01:47.924
 On the page with Dizzy,
+在有 Dizzy的页面上
 
 00:01:47.924 --> 00:01:50.619
 the turtle who drew a blue square spiral,
+画出蓝色方形螺旋的乌龟
 
 00:01:50.620 --> 00:01:54.605
 we used the numbers in the list to control the lengths of the side.
+我们用了列表中的数字来控制边的长度
 
 00:01:54.605 --> 00:01:57.295
 Here, building this house,
+在这里建造这座房子
 
 00:01:57.295 --> 00:02:01.150
 we're using the numbers to control the angles of the turtle's turns.
+我们用数字来控制海龟的角度
 
 00:02:01.150 --> 00:02:05.745
 The number 90 could be used as a length or as an angle.
+编号 90 可用作长度或角度 
 
 00:02:05.745 --> 00:02:08.620
 If we pass 90 to the forward method,
+如果我们将 90 传递到正向方法
 
 00:02:08.620 --> 00:02:10.545
 then the turtle treats it as a length.
+那乌龟会把它当成一个长度
 
 00:02:10.544 --> 00:02:15.364
 But if we pass it to the right or left method the turtle treats it as an angle.
+但如果我们把它传给右边或左边的方法 乌龟会把它当作一个角度 
 
 00:02:15.365 --> 00:02:19.655
 This is something you will see over and over in your future as a programmer.
+这是你未来作为一个程序员会看到的东西 
 
 00:02:19.655 --> 00:02:24.004
 A values type doesn't tell you everything about the meaning of that value.
+值类型不告诉您该值的含义 
 
 00:02:24.004 --> 00:02:27.289
 It's up to you as the programmer to think through whether
+由你作为程序员来思考
 
 00:02:27.289 --> 00:02:31.125
 a particular numerical value is meant to be a distance,
+一个数值就是一个距离 
 
 00:02:31.125 --> 00:02:36.159
 an angle, account, an amount of money, or something else.
-
+一个角度 账户 一笔钱 或者别的什么 

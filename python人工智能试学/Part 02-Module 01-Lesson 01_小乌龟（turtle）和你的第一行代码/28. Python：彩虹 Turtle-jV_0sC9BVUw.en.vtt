@@ -4,34 +4,44 @@ Language: en
 
 00:00:00.000 --> 00:00:05.370
 In this exercise, we'd like you to take what you know about looping and turtles,
+在这次演习中我们想让你了解循环和海龟
 
 00:00:05.370 --> 00:00:07.155
 and draw something of your own.
+把你自己的东西画出来
 
 00:00:07.155 --> 00:00:10.919
 But specifically, we've given you a list of the colors
+但具体来说 我们给了你一份颜色列表
 
 00:00:10.919 --> 00:00:14.775
 of the rainbow and we'd like you to draw something rainbow colored.
+我们希望你能画出彩虹色的东西
 
 00:00:14.775 --> 00:00:19.685
 You can use a loop over this list to draw a shape with different colored sides.
+您可以在此列表上使用循环来绘制具有不同颜色边的形状 
 
 00:00:19.684 --> 00:00:24.009
 Here are just a couple of examples of shapes that you can create with a loop like that.
+这里有几个形状的例子 你可以用这样的循环创建 
 
 00:00:24.010 --> 00:00:26.070
 You could make a hexagon,
+你可以做个六角形
 
 00:00:26.070 --> 00:00:28.289
 whose sides are just different colors,
+他们的肤色不同
 
 00:00:28.289 --> 00:00:30.750
 or you could take some time and figure out how to
+或者你可以花点时间想出办法
 
 00:00:30.750 --> 00:00:34.335
 draw a rainbow or you could do something totally different.
+画出彩虹或者你可以做些完全不同的事
 
 00:00:34.335 --> 00:00:38.799
 After you try it, we'll show you the code for both of these.
-
+在你尝试之后 我们会向你们展示这两者的代码 

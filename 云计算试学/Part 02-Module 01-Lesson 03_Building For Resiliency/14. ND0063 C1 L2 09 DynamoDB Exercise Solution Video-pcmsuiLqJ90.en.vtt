@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.460
+In this exercise, you are asked to create
+
+00:00:02.460 --> 00:00:07.710
+a DynamoDB table and then transform that table into a global table.
+
+00:00:07.710 --> 00:00:14.040
+You can see here we've created a DynamoDB table with has some basic details, table name.
+
+00:00:14.040 --> 00:00:16.725
+Then we set up our primary partition key.
+
+00:00:16.725 --> 00:00:20.715
+Then we have also enabled streaming on the table,
+
+00:00:20.715 --> 00:00:23.655
+which is a requirement for global tables.
+
+00:00:23.655 --> 00:00:27.315
+We move down to our Global Table's tab.
+
+00:00:27.315 --> 00:00:32.360
+We can see that we now have the option to add a region to our table.
+
+00:00:32.360 --> 00:00:38.900
+We add the region by selecting whichever region where we'd like to replicate to.
+
+00:00:38.900 --> 00:00:42.905
+AWS tells us that that region is ready and available,
+
+00:00:42.905 --> 00:00:45.560
+and we create a replica.
+
+00:00:45.560 --> 00:00:49.100
+Once this finishes, we'll have a global table that is
+
+00:00:49.100 --> 00:00:53.880
+writable in multiple regions, and there we go.
+

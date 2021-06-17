@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.450
+Which are true about elastic load balancers?
+
+00:00:03.450 --> 00:00:07.900
+An elastic load balancer can span multiple availability zones.
+
+00:00:07.900 --> 00:00:12.660
+Also an elastic load balancers IP addresses will change over time.
+
+00:00:12.660 --> 00:00:17.470
+However, an elastic load balancer cannot span regions.
+

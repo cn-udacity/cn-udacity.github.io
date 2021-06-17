@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.640
+DynamoDB is a non-relational database created by AWS.
+
+00:00:05.640 --> 00:00:12.330
+For a database, DynamoDB has relatively few knobs and dials for configuration.
+
+00:00:12.330 --> 00:00:15.900
+In DynamoDB, you create one table.
+
+00:00:15.900 --> 00:00:21.320
+With relational databases, we typically think of a database as a collection of tables.
+
+00:00:21.320 --> 00:00:26.420
+But in DynamoDB, one database consists of just one table.
+
+00:00:26.420 --> 00:00:34.335
+The tables you create in DynamoDB have one primary key and an optional sort key.
+
+00:00:34.335 --> 00:00:38.450
+You can create additional indices on the table so that you
+
+00:00:38.450 --> 00:00:43.535
+can in effect have multiple primary or sort keys on the table.
+
+00:00:43.535 --> 00:00:48.095
+That's the entire data model for DynamoDB.
+
+00:00:48.095 --> 00:00:50.405
+It is simple and straightforward,
+
+00:00:50.405 --> 00:00:52.925
+but yet still quite powerful.
+
+00:00:52.925 --> 00:00:56.795
+The read and write throughput of DynamoDB is measured
+
+00:00:56.795 --> 00:01:00.535
+and charged by the number of operations per second.
+
+00:01:00.535 --> 00:01:04.990
+You decide how much reading and writing you'll be doing per second,
+
+00:01:04.990 --> 00:01:08.605
+and simply set those values on the table or index.
+
+00:01:08.605 --> 00:01:13.150
+You also have options to pay on demand for this usage,
+
+00:01:13.150 --> 00:01:19.605
+so that you don't have to pick a number or you can let the capacity auto scale over time.
+
+00:01:19.605 --> 00:01:23.185
+Again, compared to a traditional relational database,
+
+00:01:23.185 --> 00:01:25.660
+this is drastically simpler.
+
+00:01:25.660 --> 00:01:28.195
+Don't let the simplicity fool you though.
+
+00:01:28.195 --> 00:01:33.025
+DynamoDB is quite powerful and suitable for many workloads.
+
+00:01:33.025 --> 00:01:38.020
+DynamoDB can scale to handle tens of millions of requests a
+
+00:01:38.020 --> 00:01:43.360
+second while automatically scaling up and down as required.
+
+00:01:43.360 --> 00:01:46.805
+DynamoDB is resilient by default.
+
+00:01:46.805 --> 00:01:49.270
+AWS runs the service across
+
+00:01:49.270 --> 00:01:53.800
+multiple availability zones and takes care of replicating your data,
+
+00:01:53.800 --> 00:01:59.465
+so that any single availability zone failure would not impact your DynamoDB tables.
+
+00:01:59.465 --> 00:02:01.495
+This is a big deal.
+
+00:02:01.495 --> 00:02:07.635
+You don't have to think or worry about configuring DynamoDB to be Multi-AZ.
+
+00:02:07.635 --> 00:02:10.945
+You also don't have to decide on the cost trade-offs,
+
+00:02:10.945 --> 00:02:12.580
+since the cost of running in
+
+00:02:12.580 --> 00:02:17.490
+multiple availability zones is baked into the base price of the service.
+
+00:02:17.490 --> 00:02:22.240
+Speaking of cost, while some of this functionality may sound expensive,
+
+00:02:22.240 --> 00:02:25.480
+it is often the case that DynamoDB is actually
+
+00:02:25.480 --> 00:02:29.735
+cheaper than a server-based database such as RDS.
+
+00:02:29.735 --> 00:02:34.280
+This is because DynamoDB lets you pay only for what you use,
+
+00:02:34.280 --> 00:02:40.400
+whereas a dedicated server or servers cost you money 24 hours a day,
+
+00:02:40.400 --> 00:02:43.010
+365 days a year,
+
+00:02:43.010 --> 00:02:46.510
+366 days in a leap year.
+

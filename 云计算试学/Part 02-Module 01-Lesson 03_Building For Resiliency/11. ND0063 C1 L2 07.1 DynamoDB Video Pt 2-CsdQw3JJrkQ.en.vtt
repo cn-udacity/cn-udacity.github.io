@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.780
+A DynamoDB Stream is an ongoing flow of events,
+
+00:00:03.780 --> 00:00:07.410
+which includes all changes made to a Dynamo table.
+
+00:00:07.410 --> 00:00:12.060
+This event stream will be empty if there are no changes being made to a table.
+
+00:00:12.060 --> 00:00:15.210
+But when table changes are made,
+
+00:00:15.210 --> 00:00:19.770
+an event will be placed into the DynamoDB Stream for each change.
+
+00:00:19.770 --> 00:00:22.919
+This includes all change events: creating,
+
+00:00:22.919 --> 00:00:26.635
+updating, deleting any item in the table.
+
+00:00:26.635 --> 00:00:31.580
+Operations that only read items from table will not be included in the stream.
+
+00:00:31.580 --> 00:00:33.860
+So why do we want this?
+
+00:00:33.860 --> 00:00:38.255
+Streams allow you to take an action on a change to the database.
+
+00:00:38.255 --> 00:00:43.550
+For example, if you wanted to track how many new accounts were created over time,
+
+00:00:43.550 --> 00:00:48.050
+you could have an application process your stream and take an action on
+
+00:00:48.050 --> 00:00:51.710
+each create event or if you wanted to send
+
+00:00:51.710 --> 00:00:56.465
+an INET message to a user for setting a high score in an online game,
+
+00:00:56.465 --> 00:00:58.970
+you could use a lambda function to compare
+
+00:00:58.970 --> 00:01:02.090
+any score increases to the current leader board.
+
+00:01:02.090 --> 00:01:06.065
+There are many potential uses for DynamoDB Streams,
+
+00:01:06.065 --> 00:01:10.925
+including DynamoDB global tables,
+
+00:01:10.925 --> 00:01:15.635
+otherwise known as multi-region redundancy.
+
+00:01:15.635 --> 00:01:20.150
+DynamoDB Streams are used to create global tables.
+
+00:01:20.150 --> 00:01:26.095
+A global table is a DynamoDB table replicated across regions.
+
+00:01:26.095 --> 00:01:32.015
+As you've seen, creating multi-region services is usually not trivial.
+
+00:01:32.015 --> 00:01:36.640
+However, this is one case where it's actually quite simple.
+
+00:01:36.640 --> 00:01:40.010
+You enable DynamoDB Streams and then
+
+00:01:40.010 --> 00:01:43.505
+select the region to which you would like to replicate your table.
+
+00:01:43.505 --> 00:01:45.955
+AWS takes care of the rest.
+
+00:01:45.955 --> 00:01:48.720
+Global tables are active, active.
+
+00:01:48.720 --> 00:01:51.635
+This means that you can write to the table in
+
+00:01:51.635 --> 00:01:56.125
+any region and the changes propagate to all of the other regions.
+
+00:01:56.125 --> 00:02:01.190
+This is different from the read replica model that many RDS services follow,
+
+00:02:01.190 --> 00:02:04.525
+where the replicated data can only be read.
+
+00:02:04.525 --> 00:02:10.460
+Being active, active allows you to run services in multiple region and
+
+00:02:10.460 --> 00:02:16.385
+have those applications access the data locally and operate with some autonomy,
+
+00:02:16.385 --> 00:02:19.670
+which creates even more redundancy in your environment.
+
+00:02:19.670 --> 00:02:21.980
+DynamoDB takes advantage of
+
+00:02:21.980 --> 00:02:28.760
+the AWS network backbone to provide low latency data replication across regions.
+
+00:02:28.760 --> 00:02:34.175
+Multi-region active, active datastores are a big deal.
+
+00:02:34.175 --> 00:02:38.150
+Many databases and services are unable to accomplish this,
+
+00:02:38.150 --> 00:02:42.700
+or they require a large amount of effort to set up and maintain.
+
+00:02:42.700 --> 00:02:44.985
+For use cases that require it,
+
+00:02:44.985 --> 00:02:49.140
+DynamoDB offers tremendous resiliency.
+

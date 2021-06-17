@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.395
+In this exercise, you are asked to setup a Multi-AZ ElastiCache cluster.
+
+00:00:07.395 --> 00:00:12.735
+We can see that the first thing we should do is set up our Subnet Group.
+
+00:00:12.735 --> 00:00:15.615
+When we look at our subnet group,
+
+00:00:15.615 --> 00:00:20.744
+we can see that we have set up the group with multiple subnets,
+
+00:00:20.744 --> 00:00:24.015
+which lead us to multiple availability zones.
+
+00:00:24.015 --> 00:00:27.119
+Once we have our subnet group created,
+
+00:00:27.119 --> 00:00:30.160
+then we can create our cluster.
+
+00:00:31.160 --> 00:00:34.725
+We can see that once our cluster is created,
+
+00:00:34.725 --> 00:00:38.025
+we have multiple nodes within the cluster.
+
+00:00:38.025 --> 00:00:42.130
+We can see their current role as either a primary or replica,
+
+00:00:42.130 --> 00:00:47.400
+and we can also see that they are spread across multiple availability zones.
+

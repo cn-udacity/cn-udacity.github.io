@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.375
+What can you do with an S3 lifecycle policy?
+
+00:00:03.375 --> 00:00:05.220
+With a lifecycle policy,
+
+00:00:05.220 --> 00:00:08.790
+you can move objects between storage tiers in S3.
+
+00:00:08.790 --> 00:00:12.915
+You can also use the lifecycle policy to delete objects.
+
+00:00:12.915 --> 00:00:19.785
+However, you cannot use an S3 lifecycle policy to move objects between AWS services,
+
+00:00:19.785 --> 00:00:23.380
+nor can you use it to compress those objects.
+

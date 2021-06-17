@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.610
+We've covered a lot of ground in this lesson.
+
+00:00:02.610 --> 00:00:05.355
+You've looked at a number of AWS services,
+
+00:00:05.355 --> 00:00:08.520
+a few of their abilities and importantly how
+
+00:00:08.520 --> 00:00:12.715
+these services can be made multi AZ or multi-region.
+
+00:00:12.715 --> 00:00:17.599
+You've seen how server-based services and compute services
+
+00:00:17.599 --> 00:00:23.200
+get spread out into multiple subnets which lead to multiple availability zones.
+
+00:00:23.200 --> 00:00:28.250
+You've set up DynamoDB to work in a multi-region mode by working with
+
+00:00:28.250 --> 00:00:35.330
+global tables and you've used advanced features to manage your data in the multi AZ,
+
+00:00:35.330 --> 00:00:38.100
+by default S3 service.
+
+00:00:38.100 --> 00:00:43.010
+Finally, you worked with AWS compute services to understand how
+
+00:00:43.010 --> 00:00:48.125
+to take generic custom servers and run them redundantly as well.
+
+00:00:48.125 --> 00:00:50.810
+You should now have a good handle on which
+
+00:00:50.810 --> 00:00:54.485
+services are suitable for which type of redundancy needs.
+
+00:00:54.485 --> 00:01:00.580
+You've also seen some of the built-in redundancy in AWS native services.
+
+00:01:00.580 --> 00:01:05.360
+Using this knowledge to select the appropriate services for your use case,
+
+00:01:05.360 --> 00:01:07.535
+will save you a lot of time and effort
+
+00:01:07.535 --> 00:01:10.480
+instead of trying to use the wrong tool for the job.
+
+00:01:10.480 --> 00:01:14.270
+We've seen the basics of high availability in AWS and
+
+00:01:14.270 --> 00:01:18.245
+now how to build a resilient application services.
+
+00:01:18.245 --> 00:01:20.420
+Soon, we'll get to considering
+
+00:01:20.420 --> 00:01:25.880
+our business goals and then observability and recoverability.
+

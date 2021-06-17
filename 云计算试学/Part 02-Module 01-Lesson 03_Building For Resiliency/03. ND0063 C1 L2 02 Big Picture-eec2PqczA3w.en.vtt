@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.095
+Resiliency doesn't stop with a region or VPC.
+
+00:00:04.095 --> 00:00:07.530
+Creating a platform that is holistically available
+
+00:00:07.530 --> 00:00:11.265
+requires resiliency throughout each part of your service.
+
+00:00:11.265 --> 00:00:13.380
+To have a resilient platform,
+
+00:00:13.380 --> 00:00:15.810
+all parts of it need to be fault tolerant.
+
+00:00:15.810 --> 00:00:19.995
+As you decide if a service needs to tolerate failures,
+
+00:00:19.995 --> 00:00:23.610
+you can let that decision drive choices about whether to
+
+00:00:23.610 --> 00:00:28.350
+spend the time and dollars to make your applications resilient.
+
+00:00:28.350 --> 00:00:30.300
+Should you desire to,
+
+00:00:30.300 --> 00:00:35.645
+AWS provides you the tools you need to make all components resilient.
+
+00:00:35.645 --> 00:00:39.650
+In this lesson, you'll practice driving redundancy
+
+00:00:39.650 --> 00:00:44.135
+throughout your system by ensuring that not only the underlying network,
+
+00:00:44.135 --> 00:00:49.680
+but also the individual services on top of it are highly available.
+

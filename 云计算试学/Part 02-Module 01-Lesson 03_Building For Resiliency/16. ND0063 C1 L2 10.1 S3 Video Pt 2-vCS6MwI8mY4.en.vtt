@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.195
+Standard storage is standard.
+
+00:00:03.195 --> 00:00:07.695
+If you have objects that you will access regularly, keep them here.
+
+00:00:07.695 --> 00:00:11.785
+Infrequently accessed or IA is a great option
+
+00:00:11.785 --> 00:00:16.445
+for important data that you will use occasionally, but not frequently.
+
+00:00:16.445 --> 00:00:19.750
+You access the data in the exact same way,
+
+00:00:19.750 --> 00:00:24.820
+but you are charged less for storage and more for accessing the objects.
+
+00:00:24.820 --> 00:00:29.855
+Thus, if you don't access these objects often you will save money.
+
+00:00:29.855 --> 00:00:34.120
+If you don't know what your access patterns will be for your data,
+
+00:00:34.120 --> 00:00:36.910
+you can use intelligent tiering.
+
+00:00:36.910 --> 00:00:40.300
+This automatically moves objects between
+
+00:00:40.300 --> 00:00:44.675
+standard and infrequently accessed to help you optimize costs.
+
+00:00:44.675 --> 00:00:48.275
+Glacier is called glacier to imply
+
+00:00:48.275 --> 00:00:53.720
+colder storage or storage that is not as immediately accessible.
+
+00:00:53.720 --> 00:00:58.720
+This is a good choice for backups or data that you're unlikely to need often.
+
+00:00:58.720 --> 00:01:03.845
+This option is less expensive than standard warmer storage classes.
+
+00:01:03.845 --> 00:01:08.375
+Glacier deep archive is even colder storage.
+
+00:01:08.375 --> 00:01:15.440
+Again, best for items that you need to keep but may never or very rarely access.
+
+00:01:15.440 --> 00:01:21.035
+This storage tier can take up to 12 hours to give you access to your data,
+
+00:01:21.035 --> 00:01:24.810
+but again, this tier cost even less.
+

@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.015
+But you never thought of the a redundant umbrella.
+
+00:00:03.015 --> 00:00:09.025
+Most AWS services are either inherently redundant or can be configured to be redundant.
+
+00:00:09.025 --> 00:00:11.670
+It will be important that you learn to recognize which
+
+00:00:11.670 --> 00:00:15.405
+services come redundant by default and which do not.
+
+00:00:15.405 --> 00:00:19.635
+Most services have a varying degree of redundancy.
+
+00:00:19.635 --> 00:00:24.270
+You can make cost versus benefit decisions for your use case.
+
+00:00:24.270 --> 00:00:27.870
+Sometimes, high availability is absolutely critical.
+
+00:00:27.870 --> 00:00:30.585
+Sometimes, it's just nice to have,
+
+00:00:30.585 --> 00:00:32.830
+and sometimes it's unnecessary.
+
+00:00:32.830 --> 00:00:35.985
+Costs often plays a factor in these decisions.
+
+00:00:35.985 --> 00:00:40.100
+To have a service run in a ultra redundant, active,
+
+00:00:40.100 --> 00:00:44.165
+active multi-region configuration always cost more
+
+00:00:44.165 --> 00:00:48.965
+than running it on a single application server in one availability zone.
+
+00:00:48.965 --> 00:00:51.140
+There are circumstances for both.
+
+00:00:51.140 --> 00:00:55.025
+You must decide and be able to justify that decision.
+
+00:00:55.025 --> 00:00:59.580
+Also, consider what is required for a given use case.
+

@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+Usage patterns for data tends to change over time.
+
+00:00:03.615 --> 00:00:05.624
+For data created today,
+
+00:00:05.624 --> 00:00:08.340
+it is most likely accessed today.
+
+00:00:08.340 --> 00:00:12.075
+It is less likely it'll be accessed next week.
+
+00:00:12.075 --> 00:00:15.720
+Even less likely that is will be accessed next month,
+
+00:00:15.720 --> 00:00:17.130
+and a year from now,
+
+00:00:17.130 --> 00:00:22.080
+it's unlikely it'll be accessed with any frequency, generally speaking.
+
+00:00:22.080 --> 00:00:26.160
+In many cases, we could save lots of money by having
+
+00:00:26.160 --> 00:00:30.420
+S3 objects change their storage tiers over time.
+
+00:00:30.420 --> 00:00:34.425
+This is what S3 lifecycle policies allow us to do.
+
+00:00:34.425 --> 00:00:37.605
+You define a lifecycle policy on a bucket
+
+00:00:37.605 --> 00:00:41.040
+and what action should happen over what period of time.
+
+00:00:41.040 --> 00:00:44.990
+You could have an object stay in standard storage for
+
+00:00:44.990 --> 00:00:47.840
+three months and then moved to infrequently
+
+00:00:47.840 --> 00:00:52.120
+access storage for a year and then to glacier.
+
+00:00:52.120 --> 00:00:56.210
+You can also do this for only certain types of objects in
+
+00:00:56.210 --> 00:01:00.410
+a bucket or for certain subsections within a bucket.
+
+00:01:00.410 --> 00:01:05.515
+Another option you have is to just delete an object after certain amount of time.
+
+00:01:05.515 --> 00:01:09.210
+There is no cheaper storage than not storing at all.
+
+00:01:09.210 --> 00:01:12.889
+As we store more and more data from more and more sources,
+
+00:01:12.889 --> 00:01:18.080
+it's important to consider how your data storage cost will grow over time and when
+
+00:01:18.080 --> 00:01:20.390
+the cost of storing data exceeds
+
+00:01:20.390 --> 00:01:24.385
+the value of being able to access it if you would ever need it.
+
+00:01:24.385 --> 00:01:30.290
+S3 events allow you to take action when things happen in your S3 buckets.
+
+00:01:30.290 --> 00:01:34.130
+For example, S3 events allow you to run
+
+00:01:34.130 --> 00:01:38.870
+a Lambda function on the activity of objects in your S3 bucket.
+
+00:01:38.870 --> 00:01:42.710
+You could run a Lambda on the creation of any object.
+
+00:01:42.710 --> 00:01:45.700
+If you had a bucket that stored photos.
+
+00:01:45.700 --> 00:01:50.520
+When a photo were uploaded to that bucket and S3 event could trigger
+
+00:01:50.520 --> 00:01:55.745
+a Lambda function to go and create multiple resolutions of that photo.
+
+00:01:55.745 --> 00:01:59.220
+S3 events have many potential uses.
+
+00:01:59.220 --> 00:02:03.525
+That photo scenario is a example of a common use case,
+
+00:02:03.525 --> 00:02:08.205
+decoupling file uploading from power processing.
+
+00:02:08.205 --> 00:02:12.395
+You can turn on versioning for an S3 bucket.
+
+00:02:12.395 --> 00:02:16.010
+This thing keeps every version of an object.
+
+00:02:16.010 --> 00:02:19.625
+So if you upload a document to S3,
+
+00:02:19.625 --> 00:02:23.510
+then modify it and then modify it again,
+
+00:02:23.510 --> 00:02:27.110
+S3 keeps three copies of that object.
+
+00:02:27.110 --> 00:02:30.575
+To your application, it will look like there is
+
+00:02:30.575 --> 00:02:33.965
+just one object that has your most recent changes.
+
+00:02:33.965 --> 00:02:37.520
+But if you dig into the details of the object,
+
+00:02:37.520 --> 00:02:42.190
+you will see that S3 is holding on to all copies of that object.
+
+00:02:42.190 --> 00:02:44.045
+With versioning turned on,
+
+00:02:44.045 --> 00:02:47.480
+you can delete an object and it will disappear from your bucket,
+
+00:02:47.480 --> 00:02:49.490
+but it will not be gone.
+
+00:02:49.490 --> 00:02:56.470
+S3 uses what it calls delete markers to allow you to even recover deleted objects.
+
+00:02:56.470 --> 00:03:01.580
+This functionality allows you to have a safety net under your S3 buckets.
+
+00:03:01.580 --> 00:03:04.460
+Accidental changes can be undone.
+
+00:03:04.460 --> 00:03:09.550
+You can go back at any time and see what the original version of an object look like.
+
+00:03:09.550 --> 00:03:13.490
+If a system became compromised by attackers and they try to run
+
+00:03:13.490 --> 00:03:16.670
+a ransomware attack where they encrypted all of
+
+00:03:16.670 --> 00:03:20.360
+your files and wanted you to pay for the encryption key,
+
+00:03:20.360 --> 00:03:23.120
+you could calmly revert all of the objects
+
+00:03:23.120 --> 00:03:27.000
+back to the last version and go on with your day.
+

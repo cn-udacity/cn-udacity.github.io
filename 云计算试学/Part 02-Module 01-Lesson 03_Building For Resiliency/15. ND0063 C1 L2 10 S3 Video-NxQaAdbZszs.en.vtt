@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.995
+What is S3?
+
+00:00:01.995 --> 00:00:05.385
+S3 stands for simple storage service.
+
+00:00:05.385 --> 00:00:08.910
+It's one of the first services AWS created.
+
+00:00:08.910 --> 00:00:11.490
+In S3, you create buckets,
+
+00:00:11.490 --> 00:00:13.080
+and in those buckets,
+
+00:00:13.080 --> 00:00:14.550
+you can store objects.
+
+00:00:14.550 --> 00:00:18.345
+An object is for most practical purposes, a file.
+
+00:00:18.345 --> 00:00:20.085
+How much data can you store?
+
+00:00:20.085 --> 00:00:24.690
+There is no limit to the number of objects you can store in a bucket.
+
+00:00:24.690 --> 00:00:28.440
+People store exabytes of data in S3.
+
+00:00:28.440 --> 00:00:32.095
+S3 is designed to store any amount of data,
+
+00:00:32.095 --> 00:00:34.535
+which is a pretty bold statement.
+
+00:00:34.535 --> 00:00:37.384
+S3 like most AWS services,
+
+00:00:37.384 --> 00:00:42.680
+is pay-as-you-go, which means they only pay for what you store in S3.
+
+00:00:42.680 --> 00:00:46.900
+Cost vary on the exact type of S3 storage you use,
+
+00:00:46.900 --> 00:00:48.615
+we'll dig in more shortly,
+
+00:00:48.615 --> 00:00:57.545
+but overall, the most you pay for S3 is under three cents per gigabyte per month.
+
+00:00:57.545 --> 00:01:01.450
+As you'll see, you can spend even less than that.
+
+00:01:01.450 --> 00:01:04.160
+S3 is highly durable.
+
+00:01:04.160 --> 00:01:07.865
+Durability is different than availability.
+
+00:01:07.865 --> 00:01:14.290
+Durability refers to the likelihood that you will lose something stored in S3.
+
+00:01:14.290 --> 00:01:17.715
+The answer is not very likely.
+
+00:01:17.715 --> 00:01:27.815
+Per AWS, S3 is designed to provide 11 nines of durability of objects over a given year.
+
+00:01:27.815 --> 00:01:33.740
+This durability level corresponds to an average expected loss of
+
+00:01:33.740 --> 00:01:41.035
+0.000000001 percent of objects.
+
+00:01:41.035 --> 00:01:47.315
+For example, if you store 10 million objects in Amazon S3,
+
+00:01:47.315 --> 00:01:56.295
+you can on average expect to incur a loss of a single object once every 10,000 years.
+
+00:01:56.295 --> 00:02:02.645
+Not too bad. S3 allows you to replicate your buckets or just part of the bucket.
+
+00:02:02.645 --> 00:02:04.955
+This is useful for redundancy,
+
+00:02:04.955 --> 00:02:08.705
+but also for applications that have use cases where
+
+00:02:08.705 --> 00:02:13.340
+some parts of your application would like to modify objects in different ways.
+
+00:02:13.340 --> 00:02:17.885
+You can replicate a bucket within the same region in cases where you want to keep
+
+00:02:17.885 --> 00:02:23.665
+a clean copy of your uploaded files yet still have a workspace for making changes,
+
+00:02:23.665 --> 00:02:27.710
+or you can create a cross-region bucket replica.
+
+00:02:27.710 --> 00:02:33.600
+A cross-region replica is perfect for multi-region recovery of data.
+

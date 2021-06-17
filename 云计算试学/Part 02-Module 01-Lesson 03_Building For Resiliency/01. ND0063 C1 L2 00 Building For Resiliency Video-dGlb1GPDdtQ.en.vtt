@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.730
+In this lesson, we'll look at redundancy and
+
+00:00:02.730 --> 00:00:06.855
+resiliency within individual AWS application services.
+
+00:00:06.855 --> 00:00:09.780
+We've already looked at some foundational pieces within
+
+00:00:09.780 --> 00:00:13.410
+AWS of creating high availability infrastructure.
+
+00:00:13.410 --> 00:00:14.805
+Now we'll learn more about
+
+00:00:14.805 --> 00:00:19.450
+the individual AWS services and how to make those highly available.
+

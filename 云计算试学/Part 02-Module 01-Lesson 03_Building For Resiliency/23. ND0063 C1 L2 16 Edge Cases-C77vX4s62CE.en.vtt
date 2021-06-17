@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.330
+Using the right services involves considering their cost and level of redundancy.
+
+00:00:05.330 --> 00:00:08.475
+This combination can make for odd trade-offs.
+
+00:00:08.475 --> 00:00:11.445
+For example, you might be better off running
+
+00:00:11.445 --> 00:00:17.189
+the same lambda function in two different regions than have the same work done twice.
+
+00:00:17.189 --> 00:00:19.995
+This could be far cheaper than trying to run
+
+00:00:19.995 --> 00:00:23.490
+another service in a multi-region configuration.
+
+00:00:23.490 --> 00:00:27.744
+Once you are familiar with a wide array of AWS services,
+
+00:00:27.744 --> 00:00:31.280
+you can use your knowledge of their multi-AZ or
+
+00:00:31.280 --> 00:00:38.110
+multi-region abilities to select services to achieve your platform's availability needs.
+
+00:00:38.110 --> 00:00:40.065
+As Dr. Sue says,
+
+00:00:40.065 --> 00:00:41.660
+"Think left and think right,
+
+00:00:41.660 --> 00:00:43.160
+and think low and think high.
+
+00:00:43.160 --> 00:00:47.340
+Oh, the things you can think up if only you try."
+

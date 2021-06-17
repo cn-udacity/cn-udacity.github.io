@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.700
+Now, let's look at how we will instill redundancy in server-based services.
+
+00:00:05.700 --> 00:00:08.760
+For multi availability zone redundancy,
+
+00:00:08.760 --> 00:00:11.340
+you will need to configure a subnet group.
+
+00:00:11.340 --> 00:00:13.140
+A subnet group consists of
+
+00:00:13.140 --> 00:00:17.245
+more than one subnet in which the server is comprised of instances.
+
+00:00:17.245 --> 00:00:21.705
+A subnet is associated with only one availability zone.
+
+00:00:21.705 --> 00:00:27.635
+So to create a subnet group to support a multi availability zone configuration,
+
+00:00:27.635 --> 00:00:32.350
+your subnet group should include subnets from multiple availability zones.
+
+00:00:32.350 --> 00:00:35.900
+If you run one instance of an application and
+
+00:00:35.900 --> 00:00:40.130
+the underlying hardware fails or the availability zone fails,
+
+00:00:40.130 --> 00:00:42.485
+your service will become unavailable until
+
+00:00:42.485 --> 00:00:46.310
+a new server can be created in a different availability zone.
+
+00:00:46.310 --> 00:00:51.275
+The time this will take depends on the service and the amount of data that you have.
+
+00:00:51.275 --> 00:00:53.495
+Also, depending on the service,
+
+00:00:53.495 --> 00:00:55.250
+you may lose some data.
+
+00:00:55.250 --> 00:01:00.680
+To reduce downtime to seconds you need to create multiple instances.
+
+00:01:00.680 --> 00:01:03.785
+This takes different forms in different services.
+
+00:01:03.785 --> 00:01:06.770
+In ElastiCache, you configure a cluster.
+
+00:01:06.770 --> 00:01:11.710
+In RDS, you choose a multi-AZ configuration.
+
+00:01:11.710 --> 00:01:16.040
+The goal in all cases is to create a hot standby that
+
+00:01:16.040 --> 00:01:20.545
+has a current copy of your data ready to take over at a moment's notice.
+
+00:01:20.545 --> 00:01:25.205
+Yes, sometimes this is all as simple as a checkbox.
+
+00:01:25.205 --> 00:01:29.450
+RDS has a create multi-AZ checkbox that will
+
+00:01:29.450 --> 00:01:33.920
+create a secondary instance for you with no other effort on your part.
+
+00:01:33.920 --> 00:01:39.530
+Multi-region redundancy for server-based services is not always easy.
+
+00:01:39.530 --> 00:01:46.145
+Some services such as RDS allow you to create a read replica in another region,
+
+00:01:46.145 --> 00:01:52.105
+but you'll have to intervene to switch your platform to use it as a primary database.
+
+00:01:52.105 --> 00:01:56.570
+Other services don't actually have any multi-region support.
+
+00:01:56.570 --> 00:01:59.630
+Elasticsearch, for example, does not have
+
+00:01:59.630 --> 00:02:03.430
+provisions for running in a multi-region configuration.
+
+00:02:03.430 --> 00:02:09.050
+In these cases a common approach is to move backups of the data from
+
+00:02:09.050 --> 00:02:11.630
+these services into other regions so
+
+00:02:11.630 --> 00:02:15.005
+that the service could be recovered there if necessary.
+
+00:02:15.005 --> 00:02:18.545
+Redundancy for these services is not cheap.
+
+00:02:18.545 --> 00:02:20.450
+To have redundant server,
+
+00:02:20.450 --> 00:02:22.970
+you basically pay double the cost.
+
+00:02:22.970 --> 00:02:24.755
+Depending on the service,
+
+00:02:24.755 --> 00:02:28.235
+you may not even be able to use that secondary instance.
+
+00:02:28.235 --> 00:02:32.450
+It will just sit there waiting just in case you ever need it.
+
+00:02:32.450 --> 00:02:35.780
+This may not sound like a great value proposition,
+
+00:02:35.780 --> 00:02:40.495
+but it is the same situation you'd be in if you're running in a data center.
+
+00:02:40.495 --> 00:02:46.955
+The only way you have highly available mySQL is if you have two servers.
+
+00:02:46.955 --> 00:02:53.590
+Often the technologies we run at AWS are dictated by the needs of our applications.
+
+00:02:53.590 --> 00:02:55.295
+When this is the case,
+
+00:02:55.295 --> 00:03:01.225
+services like RDS make a lot of sense and still provide substantial value.
+
+00:03:01.225 --> 00:03:05.990
+Later, we will study other AWS native services that offer
+
+00:03:05.990 --> 00:03:11.670
+a better pricing model for multi availability zone and multi-region redundancy.
+

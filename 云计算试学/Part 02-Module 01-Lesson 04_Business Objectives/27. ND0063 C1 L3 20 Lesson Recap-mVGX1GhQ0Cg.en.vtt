@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.380
+In this lesson, you've worked on and created a variety of ways to meet
+
+00:00:04.380 --> 00:00:06.810
+business objectives and have seen how they
+
+00:00:06.810 --> 00:00:09.585
+relate to the work you do in creating available,
+
+00:00:09.585 --> 00:00:11.805
+reliable and resilient systems.
+
+00:00:11.805 --> 00:00:14.550
+You've measured uptime and downtime and
+
+00:00:14.550 --> 00:00:17.730
+seen the intricacies of measuring and reporting on them.
+
+00:00:17.730 --> 00:00:21.300
+These concepts are not quite simple opposites but need to be
+
+00:00:21.300 --> 00:00:25.125
+considered with scheduled maintenance integrated service as well.
+
+00:00:25.125 --> 00:00:29.414
+We've also calculated RTO and RPO matrix
+
+00:00:29.414 --> 00:00:34.185
+to gain an understanding of what they are and how they apply to your business.
+
+00:00:34.185 --> 00:00:37.920
+Disaster recovery is the last line of defense when
+
+00:00:37.920 --> 00:00:41.755
+a major disruption takes place in your main datacenter or region.
+
+00:00:41.755 --> 00:00:46.640
+You've practiced several options for disaster recovery configurations and
+
+00:00:46.640 --> 00:00:51.820
+also identified which AWS services are best suited for your DR needs.
+
+00:00:51.820 --> 00:00:53.945
+So far we've looked at
+
+00:00:53.945 --> 00:00:59.440
+the foundational pieces that AWS has in regions and availability zones.
+
+00:00:59.440 --> 00:01:04.565
+The resilience options within applications services and now
+
+00:01:04.565 --> 00:01:11.075
+business objectives and how they tie into availability, reliability, and resiliency.
+
+00:01:11.075 --> 00:01:18.360
+Coming up, we'll discuss monitoring for and reacting to failures within our systems.
+

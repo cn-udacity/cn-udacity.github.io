@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.050
+Now that we've learned more about what disaster recovery is overall,
+
+00:00:04.050 --> 00:00:06.285
+how do we do it in AWS?
+
+00:00:06.285 --> 00:00:10.415
+What tools and services are at our disposal that will help us?
+
+00:00:10.415 --> 00:00:12.565
+Geographic recovery.
+
+00:00:12.565 --> 00:00:17.445
+Disaster recovery plans are intended to cover major service disruptions.
+
+00:00:17.445 --> 00:00:22.950
+As such, a typical DR plan calls for re-establishing your platform a
+
+00:00:22.950 --> 00:00:29.565
+minimum of hundreds of miles away into multi-region services.
+
+00:00:29.565 --> 00:00:34.800
+If you need to prepare to be able to move hundreds of miles in AWS,
+
+00:00:34.800 --> 00:00:38.260
+this means you need to be able to move regions.
+
+00:00:38.260 --> 00:00:40.160
+If you are running active,
+
+00:00:40.160 --> 00:00:43.850
+active in multiple regions, excellent, you're done.
+
+00:00:43.850 --> 00:00:46.175
+However, as we've discussed,
+
+00:00:46.175 --> 00:00:47.855
+the ease of running active,
+
+00:00:47.855 --> 00:00:53.150
+active in multiple regions depends a lot on the services that you utilize.
+
+00:00:53.150 --> 00:01:00.920
+We've already seen how DynamoDB and S3 can be made multi-region with relative ease.
+
+00:01:00.920 --> 00:01:04.540
+Some global services such as IAM,
+
+00:01:04.540 --> 00:01:06.545
+a multi-region by default,
+
+00:01:06.545 --> 00:01:10.120
+while others like CloudFront can be made multi-region.
+
+00:01:10.120 --> 00:01:13.250
+CloudFront takes your content from your source
+
+00:01:13.250 --> 00:01:16.580
+and distributes it from multiple regions around the world.
+
+00:01:16.580 --> 00:01:20.135
+In this sense, it is always multi-region.
+
+00:01:20.135 --> 00:01:24.320
+However, by default, the source of your content,
+
+00:01:24.320 --> 00:01:27.290
+your origin Cloudfront terms,
+
+00:01:27.290 --> 00:01:30.650
+is only in one region and if that region fails,
+
+00:01:30.650 --> 00:01:32.800
+your application is down.
+
+00:01:32.800 --> 00:01:35.655
+With CloudFront origin groups,
+
+00:01:35.655 --> 00:01:42.085
+you can define multiple S3 buckets in multiple regions as failover buckets.
+
+00:01:42.085 --> 00:01:47.165
+If CloudFront is no longer able to get your content from the primary bucket,
+
+00:01:47.165 --> 00:01:49.795
+it will then try a backup bucket.
+
+00:01:49.795 --> 00:01:55.745
+Using this option, your CloudFront distribution can now survive a region failure.
+
+00:01:55.745 --> 00:01:58.490
+DynamoDB can run in an active,
+
+00:01:58.490 --> 00:02:02.725
+active scenario with fairly low cost and effort.
+
+00:02:02.725 --> 00:02:07.200
+RDS can create cross-region read replicas.
+
+00:02:07.200 --> 00:02:10.475
+These keep current data in another region,
+
+00:02:10.475 --> 00:02:15.740
+but there will still be work to do to make that data usable as an active database.
+
+00:02:15.740 --> 00:02:18.590
+You'll need to promote the read replica and then
+
+00:02:18.590 --> 00:02:21.940
+point your application at this new database instance.
+
+00:02:21.940 --> 00:02:25.430
+CloudFront can use multiple S3 buckets as
+
+00:02:25.430 --> 00:02:30.125
+the origin for the same assets and automatically failover between them.
+
+00:02:30.125 --> 00:02:33.585
+Origin groups within CloudFront can use S3 buckets in
+
+00:02:33.585 --> 00:02:38.615
+different regions and failover when necessary without manual intervention.
+
+00:02:38.615 --> 00:02:43.070
+S3 buckets can be automatically replicated across regions.
+
+00:02:43.070 --> 00:02:47.635
+This provides a mechanism to keep current copies of S3 objects.
+
+00:02:47.635 --> 00:02:50.955
+You do then pay double for storing these objects,
+
+00:02:50.955 --> 00:02:55.320
+but that is the cost of being prepared for DR incident
+

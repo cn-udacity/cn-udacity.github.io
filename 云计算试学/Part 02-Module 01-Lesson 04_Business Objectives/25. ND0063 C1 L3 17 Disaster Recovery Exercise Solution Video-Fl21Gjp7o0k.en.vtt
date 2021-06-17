@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.400
+In this exercise, you are asked to create
+
+00:00:02.400 --> 00:00:09.195
+a CloudFront distribution with a origin group as the source of your data.
+
+00:00:09.195 --> 00:00:11.745
+We've selected our CloudFront distribution,
+
+00:00:11.745 --> 00:00:13.260
+but this has already been set up.
+
+00:00:13.260 --> 00:00:17.235
+We navigate to the Origins and Origin Group tab.
+
+00:00:17.235 --> 00:00:20.880
+We can see that we have two origins setup;
+
+00:00:20.880 --> 00:00:23.955
+one representing each of our S3 buckets.
+
+00:00:23.955 --> 00:00:27.555
+Scrolling down, we can see that we have one origin group.
+
+00:00:27.555 --> 00:00:33.995
+This origin group is made up of both of these S3 origins that we've seen above,
+
+00:00:33.995 --> 00:00:38.125
+and that we have a primary and a DR-S3 bucket.
+
+00:00:38.125 --> 00:00:40.910
+We look at the Behaviors tab,
+
+00:00:40.910 --> 00:00:43.340
+we can see that the only behavior we
+
+00:00:43.340 --> 00:00:47.680
+have as a source of the origin group that we just looked at.
+
+00:00:47.680 --> 00:00:52.340
+This will then allow CloudFront to serve data from
+
+00:00:52.340 --> 00:00:57.415
+our primary S3 bucket in our primary region as long as it's available.
+
+00:00:57.415 --> 00:00:59.810
+Should that region become unavailable,
+
+00:00:59.810 --> 00:01:06.450
+S3 will automatically pull our data from the S3 bucket in our disaster recovery region.
+

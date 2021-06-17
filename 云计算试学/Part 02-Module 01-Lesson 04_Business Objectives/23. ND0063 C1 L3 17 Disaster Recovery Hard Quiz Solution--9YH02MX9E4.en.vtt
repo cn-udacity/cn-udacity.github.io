@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.305
+How can we have CloudFront fail over to a different AWS region?
+
+00:00:04.305 --> 00:00:08.115
+In order to automatically failover to a different AWS region,
+
+00:00:08.115 --> 00:00:10.830
+we should use CloudFront's origin groups.
+
+00:00:10.830 --> 00:00:14.520
+This will allow CloudFront to decide if it should follow
+
+00:00:14.520 --> 00:00:20.160
+a primary S3 bucket or failover to a secondary S3 bucket based on the availability.
+
+00:00:20.160 --> 00:00:23.040
+We could use multiple distributions or
+
+00:00:23.040 --> 00:00:26.175
+multiple origins within our CloudFront distribution,
+
+00:00:26.175 --> 00:00:27.705
+but this would still require
+
+00:00:27.705 --> 00:00:32.170
+manual intervention to actually cut these over in a DR event.
+

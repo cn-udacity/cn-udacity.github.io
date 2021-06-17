@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.950
+All right. Let's take a look at a sample solution for this exercise.
+
+00:00:04.950 --> 00:00:08.910
+ABC company hosted applications.
+
+00:00:08.910 --> 00:00:14.655
+ABC company shall provide general platform uptime of 99.9 percent.
+
+00:00:14.655 --> 00:00:19.410
+This will exclude regular maintenance window from 01:00 AM-05:00 AM,
+
+00:00:19.410 --> 00:00:22.125
+Central Standard Time every Sunday,
+
+00:00:22.125 --> 00:00:25.995
+as well as windows from 01:00 AM-05:00 AM on
+
+00:00:25.995 --> 00:00:31.155
+other days provided that ABC provides 24 hours of notice.
+
+00:00:31.155 --> 00:00:39.375
+Our second component to our SLA is that it's covering a third-party components.
+
+00:00:39.375 --> 00:00:42.915
+Some components of our system are beyond our control,
+
+00:00:42.915 --> 00:00:47.525
+and thus we can only pass through the provided SLA of these vendors.
+
+00:00:47.525 --> 00:00:50.750
+We only work with vendors and provide an SLA of
+
+00:00:50.750 --> 00:00:55.355
+99.9 percent or better for all critical services.
+
+00:00:55.355 --> 00:00:59.885
+The final component of our SLA covers non-critical components.
+
+00:00:59.885 --> 00:01:03.080
+Those components deemed non-critical,
+
+00:01:03.080 --> 00:01:09.045
+listed below are subject to a 95 percent uptime SLA.
+
+00:01:09.045 --> 00:01:11.825
+These components are not core to our offering
+
+00:01:11.825 --> 00:01:14.915
+but provides certain "nice to have" functionality.
+
+00:01:14.915 --> 00:01:17.675
+In cases where these services are not available,
+
+00:01:17.675 --> 00:01:22.980
+our platform shall continue to operate and provide core functionality as normal.
+

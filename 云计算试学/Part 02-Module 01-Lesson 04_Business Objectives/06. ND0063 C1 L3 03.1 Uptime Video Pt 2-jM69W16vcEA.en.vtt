@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.990
+Be very cautious when it comes to committing to uptime numbers.
+
+00:00:03.990 --> 00:00:09.330
+Do the math and make sure that you can reasonably achieve the numbers being asked for.
+
+00:00:09.330 --> 00:00:12.810
+Allow downtime will be the number of minutes that
+
+00:00:12.810 --> 00:00:16.410
+you are allowed to be down without violating your SLA.
+
+00:00:16.410 --> 00:00:20.570
+Allow downtime is typically measured on a monthly basis.
+
+00:00:20.570 --> 00:00:23.355
+Since different months have different lengths,
+
+00:00:23.355 --> 00:00:28.005
+SLAs often use a 30-day measurement to calculate downtime,
+
+00:00:28.005 --> 00:00:30.660
+even for months that have a different number of days.
+
+00:00:30.660 --> 00:00:33.435
+Let's get out the calculator and do some math.
+
+00:00:33.435 --> 00:00:39.430
+How much downtime would a 99 percent SLA allow for?
+

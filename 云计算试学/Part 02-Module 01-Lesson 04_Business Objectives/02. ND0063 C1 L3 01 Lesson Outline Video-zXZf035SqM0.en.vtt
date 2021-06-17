@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.325
+So far, we've looked at both the foundational redundancy pieces that AWS
+
+00:00:05.325 --> 00:00:11.170
+has and regions and Availability Zones as well as resilience within application services.
+
+00:00:11.170 --> 00:00:13.470
+Now we'll take a look at
+
+00:00:13.470 --> 00:00:18.150
+understanding business objectives and how this relates to our work here.
+
+00:00:18.150 --> 00:00:21.705
+Later, we'll discuss reacting to failure.
+
+00:00:21.705 --> 00:00:25.320
+In this lesson, we'll start by discussing uptime.
+
+00:00:25.320 --> 00:00:27.570
+What it is and how to measure it.
+
+00:00:27.570 --> 00:00:30.375
+The opposite of uptime is downtime.
+
+00:00:30.375 --> 00:00:34.035
+Downtime isn't quite as straightforward as it appears.
+
+00:00:34.035 --> 00:00:37.555
+We'll learn different types of downtime and how to account for them.
+
+00:00:37.555 --> 00:00:41.610
+RTO is the Recovery Time Objective.
+
+00:00:41.610 --> 00:00:43.205
+This is your commitment,
+
+00:00:43.205 --> 00:00:47.140
+the maximum amount of time that your service would be down.
+
+00:00:47.140 --> 00:00:49.455
+Recovery Point Objective or
+
+00:00:49.455 --> 00:00:54.485
+RP0 is the maximum amount of time over which you would lose data.
+
+00:00:54.485 --> 00:00:57.080
+These are commitments that you would make
+
+00:00:57.080 --> 00:01:01.044
+internally but also contractually to your customers.
+
+00:01:01.044 --> 00:01:06.500
+Disaster recovery is the extreme of availability and resiliency.
+
+00:01:06.500 --> 00:01:10.414
+It refers to bringing up your systems in another place,
+
+00:01:10.414 --> 00:01:13.365
+typically another AWS region.
+
+00:01:13.365 --> 00:01:19.590
+This would only be done in the case of a complete region outage or other disaster.
+

@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.699
+Disaster recovery, or DR,
+
+00:00:02.699 --> 00:00:05.025
+refers to worst-case scenarios.
+
+00:00:05.025 --> 00:00:10.285
+What do you do and how fast can you restore service after a major failure?
+
+00:00:10.285 --> 00:00:15.520
+Well, RTO and RPO apply to any failure incident.
+
+00:00:15.520 --> 00:00:19.620
+What values you can commit to for your RTO and RPO?
+
+00:00:19.620 --> 00:00:22.800
+You need to consider these worst-case scenarios.
+
+00:00:22.800 --> 00:00:24.915
+In a traditional data center,
+
+00:00:24.915 --> 00:00:28.065
+this would be a complete failure of that data center.
+
+00:00:28.065 --> 00:00:31.620
+Another example would be a major Internet outage.
+
+00:00:31.620 --> 00:00:35.730
+How do you get your platform back online when the normal home
+
+00:00:35.730 --> 00:00:40.030
+for your platform looks like it'll be down for some significant period?
+
+00:00:40.030 --> 00:00:43.715
+First of all, make sure you have everything that you need.
+
+00:00:43.715 --> 00:00:45.725
+What are those things?
+
+00:00:45.725 --> 00:00:50.165
+Database backups, server images, your application code,
+
+00:00:50.165 --> 00:00:53.810
+server configurations, other data repositories,
+
+00:00:53.810 --> 00:00:58.495
+network configuration, documentation, IP whitelist.
+
+00:00:58.495 --> 00:01:03.500
+Moving takes a lot of work and a lot of things and you can't forget anything.
+
+00:01:03.500 --> 00:01:06.890
+If you forget something or have an old version of something,
+
+00:01:06.890 --> 00:01:11.360
+your DR cut over may take much longer or fail completely.
+
+00:01:11.360 --> 00:01:16.475
+Remember, not only must all of your applications and data be available to move,
+
+00:01:16.475 --> 00:01:18.650
+but also your documentation.
+
+00:01:18.650 --> 00:01:20.945
+There are many things that can go wrong.
+
+00:01:20.945 --> 00:01:27.154
+Documentation is a must and will be invaluable when you are performing a DR failover.
+
+00:01:27.154 --> 00:01:30.380
+Keep in mind, this failover may have to be run by
+
+00:01:30.380 --> 00:01:35.465
+less experienced staff in the middle of the night under very stressful conditions.
+
+00:01:35.465 --> 00:01:37.835
+What can you do to make it success,
+
+00:01:37.835 --> 00:01:40.255
+not only possible but likely?
+
+00:01:40.255 --> 00:01:44.510
+Practice. Run through every step if possible and make
+
+00:01:44.510 --> 00:01:48.935
+sure that the documentation is actually reflective of your platform.
+
+00:01:48.935 --> 00:01:50.975
+Practice until you get it right,
+
+00:01:50.975 --> 00:01:53.630
+practice until you no longer have to cheat,
+
+00:01:53.630 --> 00:01:56.240
+and go look at your current infrastructure
+
+00:01:56.240 --> 00:01:59.315
+to make sure you've got all the pieces assembled correctly.
+
+00:01:59.315 --> 00:02:02.510
+Practice often. Things change over time,
+
+00:02:02.510 --> 00:02:04.235
+new features are released,
+
+00:02:04.235 --> 00:02:06.200
+new services are utilized.
+
+00:02:06.200 --> 00:02:08.194
+If you don't practice frequently,
+
+00:02:08.194 --> 00:02:13.190
+then you run the risk of realizing that you're DR documentation is out of date,
+
+00:02:13.190 --> 00:02:17.080
+only when you're in the midst of a real DR event.
+
+00:02:17.080 --> 00:02:21.680
+An important aspect of a DR failover that often goes overlooked is
+
+00:02:21.680 --> 00:02:27.485
+deciding when an ongoing incident is actually bad enough to start a DR failover.
+
+00:02:27.485 --> 00:02:29.375
+When an incident starts,
+
+00:02:29.375 --> 00:02:31.615
+you expect that it will resolve shortly.
+
+00:02:31.615 --> 00:02:36.730
+When it doesn't, at what point do you implement your disaster recovery plan?
+
+00:02:36.730 --> 00:02:42.679
+The consideration is how long does it take to recover in your DR location,
+
+00:02:42.679 --> 00:02:47.370
+and how long is your RTO? Who decides?
+
+00:02:47.370 --> 00:02:52.790
+This is a pretty major decision that will likely have repercussions. Who makes the call?
+
+00:02:52.790 --> 00:02:54.275
+The engineer on call,
+
+00:02:54.275 --> 00:02:58.720
+the engineering manager, the VP, CTO, CEO?
+
+00:02:58.720 --> 00:03:02.705
+You should establish the preferred order of decision-makers.
+
+00:03:02.705 --> 00:03:05.390
+Make sure that it's documented and that anyone who
+
+00:03:05.390 --> 00:03:08.260
+is on the list knows that they are on the list.
+
+00:03:08.260 --> 00:03:12.170
+You don't want to surprise the CEO in the middle of the night and ask if you should
+
+00:03:12.170 --> 00:03:16.345
+institute a DR failover if they don't know what that means.
+
+00:03:16.345 --> 00:03:19.410
+There are several types of DR planning.
+
+00:03:19.410 --> 00:03:24.670
+Cold standby means that you have all the data you need in your DR location,
+
+00:03:24.670 --> 00:03:30.385
+but every server and database will need to be spun up in order to perform a DR recovery.
+
+00:03:30.385 --> 00:03:33.580
+A pilot light plan would always have
+
+00:03:33.580 --> 00:03:37.930
+a bare minimum of some of the things always in your DR environment.
+
+00:03:37.930 --> 00:03:43.555
+This can be things like an active read replica of a database in your DR environment.
+
+00:03:43.555 --> 00:03:47.110
+A warm standby scenario would have
+
+00:03:47.110 --> 00:03:50.815
+the minimum amount of everything running in your DR region.
+
+00:03:50.815 --> 00:03:54.175
+So you would have databases and perhaps
+
+00:03:54.175 --> 00:03:58.205
+one of each server type always running in your DR region.
+
+00:03:58.205 --> 00:04:03.665
+A hot standby would be a complete second environment running at all times,
+
+00:04:03.665 --> 00:04:05.725
+ready to be cut over too.
+
+00:04:05.725 --> 00:04:07.280
+Of these different types,
+
+00:04:07.280 --> 00:04:09.830
+you must decide on the appropriate trade-off
+
+00:04:09.830 --> 00:04:12.935
+between cost of running things in your DR region
+
+00:04:12.935 --> 00:04:15.230
+and the cost of time spent getting
+
+00:04:15.230 --> 00:04:20.190
+your DR region capable of handling all of your production traffic.
+

@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.949
+The Recovery Time Objective,
+
+00:00:01.949 --> 00:00:06.900
+or RTO, is the maximum duration of a service interruption.
+
+00:00:06.900 --> 00:00:10.545
+This is the time that you agree to in your SLA.
+
+00:00:10.545 --> 00:00:14.910
+Of course, it is possible that you will fail to meet your RTO.
+
+00:00:14.910 --> 00:00:19.305
+In this case, any penalties in your contracts will come into play.
+
+00:00:19.305 --> 00:00:22.260
+RTO is similar to uptime,
+
+00:00:22.260 --> 00:00:24.330
+but it is measured per incident,
+
+00:00:24.330 --> 00:00:26.730
+rather than on a monthly basis.
+
+00:00:26.730 --> 00:00:30.330
+Really, your RTO should be small enough so that
+
+00:00:30.330 --> 00:00:34.539
+at least one outage would still fit within your uptime SLA.
+
+00:00:34.539 --> 00:00:37.320
+Otherwise, you can meet your RTO,
+
+00:00:37.320 --> 00:00:41.320
+SLA, but still miss your overall uptime SLA.
+
+00:00:41.320 --> 00:00:46.325
+As with uptime, you need to carefully consider what RTO you can support.
+
+00:00:46.325 --> 00:00:49.190
+All of the critical parts of your platform must be
+
+00:00:49.190 --> 00:00:52.945
+designed for recovery within your RTO timeframe.
+
+00:00:52.945 --> 00:00:56.645
+Lots of things must happen to restore service to your platform.
+
+00:00:56.645 --> 00:00:58.565
+When thinking about RTO,
+
+00:00:58.565 --> 00:01:03.830
+don't forget about the human factor type of things such as getting people out of bed,
+
+00:01:03.830 --> 00:01:06.230
+or searching for the right documentation.
+
+00:01:06.230 --> 00:01:09.500
+Your RTO should be the sum of the time it takes to
+
+00:01:09.500 --> 00:01:13.000
+complete all of the components of a recovery from failure.
+
+00:01:13.000 --> 00:01:16.535
+If it takes two hours to restore a database from a backup,
+
+00:01:16.535 --> 00:01:19.145
+you cannot have a one hour RTO.
+
+00:01:19.145 --> 00:01:22.850
+Be sure you have plans for staff to be on-call,
+
+00:01:22.850 --> 00:01:26.090
+and that those staff know how to recover your systems,
+
+00:01:26.090 --> 00:01:31.500
+or at least get in touch with other subject matter experts as needed.
+

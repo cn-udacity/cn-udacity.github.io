@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.420
+In this exercise, you'll be asked to create an RDS database with backups enabled and then
+
+00:00:06.420 --> 00:00:12.660
+restore that database to a point in time to demonstrate a point in time recovery.
+
+00:00:12.660 --> 00:00:16.110
+Let's take a quick look at how to create this database.
+
+00:00:16.110 --> 00:00:22.140
+Within AWS, we go into RDS and we create a database.
+
+00:00:22.140 --> 00:00:24.360
+RDS will ask us,
+
+00:00:24.360 --> 00:00:27.150
+we want a standard or easy create.
+
+00:00:27.150 --> 00:00:30.160
+Doesn't make a whole lot difference, we'll say standard.
+
+00:00:30.160 --> 00:00:33.214
+We are going to create a MySQL database,
+
+00:00:33.214 --> 00:00:37.385
+scroll through a fair number of options.
+
+00:00:37.385 --> 00:00:39.785
+You can say dev test,
+
+00:00:39.785 --> 00:00:43.310
+just so that we have a simpler database.
+
+00:00:43.310 --> 00:00:49.210
+We can leave most of these settings as they are for this exercise.
+
+00:00:49.210 --> 00:00:52.620
+We'll choose a burstable class just to
+
+00:00:52.620 --> 00:00:57.275
+save some money because the larger classes will cost more money.
+
+00:00:57.275 --> 00:01:00.560
+Then as we scroll all the way down,
+
+00:01:00.560 --> 00:01:05.685
+we'll see that there is some additional configuration.
+
+00:01:05.685 --> 00:01:07.800
+In the additional configuration,
+
+00:01:07.800 --> 00:01:12.655
+I just want to make sure that backups are in fact enabled, which is the default.
+
+00:01:12.655 --> 00:01:15.425
+Now with the automatic backups enabled,
+
+00:01:15.425 --> 00:01:19.030
+this is what enables us to actually do the point in time recovery.
+
+00:01:19.030 --> 00:01:21.650
+Which is why this is very important for this exercise,
+
+00:01:21.650 --> 00:01:25.105
+to make sure that this checkbox is in fact checked.
+
+00:01:25.105 --> 00:01:28.800
+From there, we'll create our database.
+

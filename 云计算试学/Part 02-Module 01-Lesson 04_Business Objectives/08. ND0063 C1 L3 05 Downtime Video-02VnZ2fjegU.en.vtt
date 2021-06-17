@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.550
+Isn't downtime just the opposite of uptime?
+
+00:00:02.550 --> 00:00:05.445
+Why should we talk about it as a separate topic?
+
+00:00:05.445 --> 00:00:08.340
+Downtime has some important caveats.
+
+00:00:08.340 --> 00:00:12.180
+Most platforms are not entirely within your control.
+
+00:00:12.180 --> 00:00:15.515
+You might use third-parties for aspects of your platform,
+
+00:00:15.515 --> 00:00:17.195
+such as email delivery,
+
+00:00:17.195 --> 00:00:20.345
+video streaming, data collection, and hosting.
+
+00:00:20.345 --> 00:00:22.805
+Do any of these sound familiar?
+
+00:00:22.805 --> 00:00:24.725
+Certainly at a minimum,
+
+00:00:24.725 --> 00:00:26.605
+you know about AWS.
+
+00:00:26.605 --> 00:00:28.740
+What if AWS goes down?
+
+00:00:28.740 --> 00:00:32.854
+How can it be expected to account for all of these services?
+
+00:00:32.854 --> 00:00:34.955
+You don't run them all yourself,
+
+00:00:34.955 --> 00:00:37.685
+so you can't personally keep them up and running.
+
+00:00:37.685 --> 00:00:43.780
+What do you do? You can choose third parties who themselves provide SLAs.
+
+00:00:43.780 --> 00:00:46.310
+Then in your own contracts,
+
+00:00:46.310 --> 00:00:52.040
+you can specify that you only use third parties with a minimum SLA threshold,
+
+00:00:52.040 --> 00:00:56.555
+but that you are not responsible for the third party downtime.
+
+00:00:56.555 --> 00:00:58.790
+Well, at least you can try.
+
+00:00:58.790 --> 00:01:01.215
+Your customers may not accept that.
+
+00:01:01.215 --> 00:01:04.160
+This is where you turn the negotiators within
+
+00:01:04.160 --> 00:01:07.520
+your organization to work out all of the details so that
+
+00:01:07.520 --> 00:01:14.945
+both parties and yourself understand what will and will not be your responsibilities.
+
+00:01:14.945 --> 00:01:17.480
+Let's talk about some math.
+
+00:01:17.480 --> 00:01:22.790
+If you provide a 99.9 percent SLAs to your customers and
+
+00:01:22.790 --> 00:01:28.345
+your third parties all provide 99.9 percent SLAs to you,
+
+00:01:28.345 --> 00:01:30.795
+you should be covered, right?
+
+00:01:30.795 --> 00:01:36.470
+Only if all of that downtime completely overlaps.
+
+00:01:36.470 --> 00:01:43.040
+If you happen to use all of your allotment of downtime in a month and even one of
+
+00:01:43.040 --> 00:01:45.860
+your third parties uses any of
+
+00:01:45.860 --> 00:01:51.505
+their allotment and their downtime doesn't fall within your downtime,
+
+00:01:51.505 --> 00:01:55.505
+you just missed being up for 99.9 percent of the month.
+
+00:01:55.505 --> 00:02:00.740
+Obviously, this problem just gets bigger as more third-parties that you use.
+
+00:02:00.740 --> 00:02:05.120
+But doing away with third parties is likely not practical either.
+
+00:02:05.120 --> 00:02:10.290
+So make sure you covered this case in writing in your agreements.
+

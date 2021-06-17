@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.385
+Recovery point objective or
+
+00:00:02.385 --> 00:00:07.845
+RPO is the maximum amount of time over which you can lose data.
+
+00:00:07.845 --> 00:00:11.310
+Customers are generating data within your platform,
+
+00:00:11.310 --> 00:00:14.880
+and losing that data after it has been generated is
+
+00:00:14.880 --> 00:00:18.555
+even worse than not being able to ingest it in the first place,
+
+00:00:18.555 --> 00:00:20.580
+which is what downtime would be.
+
+00:00:20.580 --> 00:00:23.760
+Thus, we separately track the duration of
+
+00:00:23.760 --> 00:00:27.720
+time over which we are allowed to lose customer data.
+
+00:00:27.720 --> 00:00:32.250
+It may sound odd but it's almost always true that losing
+
+00:00:32.250 --> 00:00:36.780
+customer data is worse than not being able to take it in in the first place.
+
+00:00:36.780 --> 00:00:39.050
+As a customer, would you rather
+
+00:00:39.050 --> 00:00:43.630
+an online shopping platform not be available for you to place an order,
+
+00:00:43.630 --> 00:00:47.100
+or that they take your order but then lose it.
+
+00:00:47.100 --> 00:00:50.510
+Don't forget to consider that losing it also
+
+00:00:50.510 --> 00:00:54.260
+likely means that they don't know that you ever submitted the order,
+
+00:00:54.260 --> 00:00:58.505
+and thus, they can't come back to you and ask you for your order again,
+
+00:00:58.505 --> 00:01:01.355
+your order will simply never show up.
+
+00:01:01.355 --> 00:01:04.520
+Most data is lost in one of two ways.
+
+00:01:04.520 --> 00:01:08.475
+If your system is up and available to your users but
+
+00:01:08.475 --> 00:01:13.580
+some failure is preventing it from durably storing the information sent to it,
+
+00:01:13.580 --> 00:01:16.400
+perhaps your database is a 100 percent full,
+
+00:01:16.400 --> 00:01:18.545
+then you are losing data.
+
+00:01:18.545 --> 00:01:22.535
+Systems tend to only have one shot at capturing data,
+
+00:01:22.535 --> 00:01:25.260
+and if they miss it, the data is gone.
+
+00:01:25.260 --> 00:01:28.805
+It may be possible to determine what data is missed
+
+00:01:28.805 --> 00:01:32.425
+by examining logs or other ancillary data sources,
+
+00:01:32.425 --> 00:01:34.280
+but this can be tricky,
+
+00:01:34.280 --> 00:01:38.090
+time-consuming, and possibly not 100 percent accurate.
+
+00:01:38.090 --> 00:01:41.360
+The second way is if you find yourself needing to restore from
+
+00:01:41.360 --> 00:01:47.280
+backup data and your backup is some amount of time old, you will lose data.
+
+00:01:47.280 --> 00:01:50.570
+If you back up your database once an hour,
+
+00:01:50.570 --> 00:01:54.065
+then your RPO must be at least one hour.
+
+00:01:54.065 --> 00:01:57.770
+If your backup completes at one o'clock and you
+
+00:01:57.770 --> 00:02:01.685
+have massive data corruption occur at 1:45,
+
+00:02:01.685 --> 00:02:08.325
+then to use the one o'clock data means that you will lose 45 minutes worth of data,
+
+00:02:08.325 --> 00:02:13.070
+and the RPO for that incident would be 45 minutes.
+
+00:02:13.070 --> 00:02:18.060
+Having redundant systems is the key to avoiding recovery in the first place.
+
+00:02:18.060 --> 00:02:23.380
+Highly available services keep things running and reduce service disruptions.
+
+00:02:23.380 --> 00:02:25.090
+You can use features like
+
+00:02:25.090 --> 00:02:29.530
+S3's version buckets in order to keep older versions of objects.
+
+00:02:29.530 --> 00:02:31.525
+In the case of data corruption,
+
+00:02:31.525 --> 00:02:36.145
+you can simply undo it and revert to a previous iteration of your data.
+
+00:02:36.145 --> 00:02:42.440
+Services like RDS and DynamoDB offer point-in-time data recovery.
+
+00:02:42.440 --> 00:02:46.705
+This means that they essentially have a continual backup.
+
+00:02:46.705 --> 00:02:51.410
+If you were to experience massive data corruption at 1:45,
+
+00:02:51.410 --> 00:02:58.745
+you can restore your data to 1:44 and have very little data loss and a very small RPO.
+
+00:02:58.745 --> 00:03:02.375
+Do not overlook the fact that if data corruption occurs
+
+00:03:02.375 --> 00:03:06.575
+at 1:45 and you don't realize it until 2:15,
+
+00:03:06.575 --> 00:03:10.010
+you will still suffer 30 minutes of data loss.
+
+00:03:10.010 --> 00:03:15.180
+This is why it is imperative to have strong monitoring and alerting.
+

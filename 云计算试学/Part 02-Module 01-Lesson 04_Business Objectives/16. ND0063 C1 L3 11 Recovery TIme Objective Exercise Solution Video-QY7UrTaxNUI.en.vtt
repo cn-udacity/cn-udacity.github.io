@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.850
+In this exercise, you're asked to compute what an RTO might be for a given situation.
+
+00:00:05.850 --> 00:00:10.725
+Let's take a look. At time zero, the problem occurs.
+
+00:00:10.725 --> 00:00:16.665
+If it takes five minutes for an amount of time to pass before an alert is triggered,
+
+00:00:16.665 --> 00:00:20.415
+another minute to actually trigger on call staff,
+
+00:00:20.415 --> 00:00:25.300
+10 minutes to get staff out of bed to get their computers to log on.
+
+00:00:25.300 --> 00:00:29.810
+Another 10 minutes before they can really start diagnosing the issue,
+
+00:00:29.810 --> 00:00:32.825
+15 minutes to discover the root cause,
+
+00:00:32.825 --> 00:00:36.095
+five more minutes to begin remediation,
+
+00:00:36.095 --> 00:00:40.040
+and another 10 minutes to actually have that remediation completed,
+
+00:00:40.040 --> 00:00:43.420
+looking at a total time of 56 minutes.
+
+00:00:43.420 --> 00:00:49.409
+In this case, an RTO of one hour for this incident would be reasonable.
+

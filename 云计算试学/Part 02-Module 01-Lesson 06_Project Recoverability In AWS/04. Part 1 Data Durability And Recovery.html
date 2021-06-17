@@ -1,0 +1,432 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Part 1: Data Durability And Recovery</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Recoverability In AWS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Overview.html">01. Overview</a>
+    </li>
+    <li class="">
+      <a href="02. GitHub Repository.html">02. GitHub Repository</a>
+    </li>
+    <li class="">
+      <a href="03. CloudFormation.html">03. CloudFormation</a>
+    </li>
+    <li class="">
+      <a href="04. Part 1 Data Durability And Recovery.html">04. Part 1: Data Durability And Recovery</a>
+    </li>
+    <li class="">
+      <a href="05. Part 2 Failover And Recovery.html">05. Part 2: Failover And Recovery</a>
+    </li>
+    <li class="">
+      <a href="06. Part 3 Web Resiliency.html">06. Part 3: Web Resiliency</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Recoverability In AWS.html">Project Description - Recoverability In AWS</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Recoverability In AWS.html">Project Rubric - Recoverability In AWS</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Part 1: Data Durability And Recovery</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="data-durability-and-recovery">Data Durability And Recovery</h1>
+<ol>
+<li>Pick two AWS regions. An active region and a standby region.</li>
+<li>Use CloudFormation to create one VPC in each region. Name the VPC in the active region "Primary" and name the VPC in the standby region "Secondary".</li>
+</ol>
+<p><strong>NOTE</strong>: Be sure to use different CIDR address ranges for the VPCs.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p><strong>SAVE</strong> screenshots of both VPCs after they are created. Name your screenshots:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="a86d6191-2322-4d5f-9098-56304f5e25f0--0">
+        <label for="a86d6191-2322-4d5f-9098-56304f5e25f0--0"><p>primary_Vpc.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a86d6191-2322-4d5f-9098-56304f5e25f0--1">
+        <label for="a86d6191-2322-4d5f-9098-56304f5e25f0--1"><p>secondary_Vpc.png</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>You got it.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="highly-durable-rds-database">Highly durable RDS Database</h3>
+<ol>
+<li>Create a new RDS Subnet group in the active and standby region using private subnets.</li>
+<li>Create a new MySQL, multi-AZ database in the active region. The database must:<ul>
+<li>Be a “burstable” instance class.</li>
+<li>Have only the “UDARR-Database” security group.</li>
+<li>Have an initial database called “udacity.”</li></ul></li>
+<li>Create a read replica database in the standby region. This database has the same requirements as the database in the active region. </li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p><strong>SAVE</strong> screenshots of the configuration of the databases in the active and secondary region after they are created. Also, save screenshots of the configuration of the database subnet groups as well as route tables associated with those subnets. Name the screenshots:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--0">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--0"><p>primaryDB_config.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--1">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--1"><p>secondaryDB_config.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--2">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--2"><p>primaryDB_subnetgroup.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--3">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--3"><p>secondaryDB_subnetgroup.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--4">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--4"><p>primaryVPC_subnets.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--5">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--5"><p>secondaryVPC_subnets.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--6">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--6"><p>primary_subnet_routing.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="42232113-7daa-47f1-928a-09f9e0694c1f--7">
+        <label for="42232113-7daa-47f1-928a-09f9e0694c1f--7"><p>secondary_subnet_routing.png</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>You got it.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="availability-estimate">Availability Estimate</h3>
+<p>Write a paragraph or two describing the achievable Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for this Multi-AZ, multi-region database in terms of:</p>
+<ol>
+<li>Minimum RTO for a single AZ outage</li>
+<li>Minimum RTO for a single region outage</li>
+<li>Minimum RPO for a single AZ outage</li>
+<li>Minimum RPO for a single region outage</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="3cd67340-12a0-4dee-9743-7e5752f0f2b5--0">
+        <label for="3cd67340-12a0-4dee-9743-7e5752f0f2b5--0"><p><strong>SAVE</strong> your answers in a text file named "estimates.txt"</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nice work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="demonstrate-normal-usage">Demonstrate normal usage</h3>
+<p>In the active region:</p>
+<ol>
+<li>Create an EC2 keypair in the region</li>
+<li>Launch an Amazon Linux EC2 instance in the active region. Configure the instance to use the VPC's public subnet and security group ("UDARR-Application"). </li>
+<li>SSH to the instance and connect to the "udacity" database in the RDS instance. </li>
+<li>Verify that you can create a table, insert data, and read data from the database. </li>
+<li>You have now demonstrated that you can read and write to the primary database</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="8ec98143-cc35-49a2-b450-199a5030fa37--0">
+        <label for="8ec98143-cc35-49a2-b450-199a5030fa37--0"><p><strong>SAVE</strong> the log of connecting to the database, creating the table, writing to and reading from the table in a text file called "log_primary.txt"</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nice work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="monitor-database">Monitor database</h3>
+<ol>
+<li>Observe the “DB Connections” to the database and how this metric changes as you connect to the database</li>
+<li>Observe the “Replication” configuration with your multi-region read replica. </li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p><strong>SAVE</strong> screenshots of the DB Connections and the database replication configuration. Name your screenshots:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="99b43d50-1510-468e-ac8b-447e092ed1e9--0">
+        <label for="99b43d50-1510-468e-ac8b-447e092ed1e9--0"><p>monitoring_connections.png</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="99b43d50-1510-468e-ac8b-447e092ed1e9--1">
+        <label for="99b43d50-1510-468e-ac8b-447e092ed1e9--1"><p>monitoring_replication.png</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Well done!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND0063 C1 Project Part 1</p></h3>
+  <video controls>
+  <source src="04. ND0063 C1 Project Part 1-1_VFDekXpRQ.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Part 2 Failover And Recovery.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Part 1: Data Durability And Recovery')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.290 --> 00:00:03.045
+It's time for the course project.
+
+00:00:03.045 --> 00:00:06.135
+In this project, you'll practice setting up
+
+00:00:06.135 --> 00:00:11.460
+an RDS database in a multi-availability zone, multi-region configuration.
+
+00:00:11.460 --> 00:00:16.380
+You'll connect to the database in each region and make sure that you're able to use it.
+
+00:00:16.380 --> 00:00:19.020
+Then we'll practice a failover,
+
+00:00:19.020 --> 00:00:22.890
+and failover that database from one region to the other,
+
+00:00:22.890 --> 00:00:24.720
+and then see how it reconnect
+
+00:00:24.720 --> 00:00:29.190
+our application to the newly created database in the separate region.
+
+00:00:29.190 --> 00:00:31.345
+In the second part of the project,
+
+00:00:31.345 --> 00:00:35.615
+you'll set up a website based on an versioned S3 bucket.
+
+00:00:35.615 --> 00:00:38.390
+Then we'll see how versioning works and how it can
+
+00:00:38.390 --> 00:00:41.645
+help you restore prior versions of your website.
+
+00:00:41.645 --> 00:00:45.755
+You'll see how any accidental changes can be automatically
+
+00:00:45.755 --> 00:00:50.860
+undone by rolling back to previous version of objects in your S3 bucket.
+
+00:00:50.860 --> 00:00:54.080
+This project will be a great way for you to demonstrate
+
+00:00:54.080 --> 00:00:57.319
+your newly understood knowledge of building highly available,
+
+00:00:57.319 --> 00:01:02.460
+redundant, and resilient systems on AWS. Good luck.
+

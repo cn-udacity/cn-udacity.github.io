@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+The second section of the project,
+
+00:00:02.160 --> 00:00:05.445
+we'll look at actually connecting to our read replica,
+
+00:00:05.445 --> 00:00:09.000
+demonstrating that it is read only,
+
+00:00:09.000 --> 00:00:12.000
+and then look at actually how to promote
+
+00:00:12.000 --> 00:00:16.605
+that database to actually be usable for read and write from your applications.
+
+00:00:16.605 --> 00:00:21.105
+So in order to do this, you want to make sure that you're going to your secondary region.
+
+00:00:21.105 --> 00:00:25.815
+In this case, this would be my North California region.
+
+00:00:25.815 --> 00:00:28.500
+You select your database.
+
+00:00:28.500 --> 00:00:31.560
+So you're going to want to launch an EC2 instance,
+
+00:00:31.560 --> 00:00:33.815
+and that EC2 instance,
+
+00:00:33.815 --> 00:00:36.380
+you're going to launch it,
+
+00:00:36.380 --> 00:00:39.050
+install the MySQL client,
+
+00:00:39.050 --> 00:00:40.850
+connect to your database,
+
+00:00:40.850 --> 00:00:44.210
+and then you'll go and try to run some commands.
+
+00:00:44.210 --> 00:00:46.220
+So if you try to insert data,
+
+00:00:46.220 --> 00:00:49.370
+you should get a message from the database saying that you're
+
+00:00:49.370 --> 00:00:52.885
+not allowed to do that because it is a read-only database.
+
+00:00:52.885 --> 00:00:56.090
+Then what we're going to do is go through the exercise of actually
+
+00:00:56.090 --> 00:00:59.945
+promoting that database to be a full-fledged database,
+
+00:00:59.945 --> 00:01:01.705
+not just a replica.
+
+00:01:01.705 --> 00:01:03.380
+So when you want to do that,
+
+00:01:03.380 --> 00:01:08.065
+you'll go and you'll find your read replica as you can see that we have here.
+
+00:01:08.065 --> 00:01:10.305
+You'll select that read replica,
+
+00:01:10.305 --> 00:01:12.290
+and then simply under actions,
+
+00:01:12.290 --> 00:01:14.990
+you'll see one of your options is to promote.
+
+00:01:14.990 --> 00:01:18.290
+So you go through this promote process which breaks
+
+00:01:18.290 --> 00:01:21.805
+the replication and creates your standalone database.
+
+00:01:21.805 --> 00:01:25.640
+So after you do that, after that process kicks off and completes,
+
+00:01:25.640 --> 00:01:29.780
+then you'll again connect to the database and then demonstrate that you can read
+
+00:01:29.780 --> 00:01:35.040
+and write to that new database that is promoted from being a read replica.
+

@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.820
+Regions and availability zones allow anyone to create worldwide infrastructure with ease.
+
+00:00:05.820 --> 00:00:09.615
+They also allow for redundancy within your platform.
+
+00:00:09.615 --> 00:00:11.835
+By properly using these components,
+
+00:00:11.835 --> 00:00:16.410
+you can create world-class systems in terms of both scale and reach.
+
+00:00:16.410 --> 00:00:19.530
+Many organizations build an AWS without
+
+00:00:19.530 --> 00:00:23.115
+a firm understanding of region's and availability zones.
+
+00:00:23.115 --> 00:00:27.165
+More proficient companies may use availability zones correctly,
+
+00:00:27.165 --> 00:00:28.995
+but run only in one region.
+
+00:00:28.995 --> 00:00:32.625
+By understanding and considering multi-region failover,
+
+00:00:32.625 --> 00:00:35.405
+or running actively in multiple regions,
+
+00:00:35.405 --> 00:00:39.590
+it'll be well on your way to creating an advanced platform on AWS.
+
+00:00:39.590 --> 00:00:43.625
+[inaudible] AWS region's and availability zones,
+
+00:00:43.625 --> 00:00:46.370
+you can create a truly global platform.
+
+00:00:46.370 --> 00:00:49.490
+You can compete with any other company or service
+
+00:00:49.490 --> 00:00:52.855
+in terms of scale, distribution, and performance.
+
+00:00:52.855 --> 00:00:57.010
+Many big-name companies are built on AWS.
+

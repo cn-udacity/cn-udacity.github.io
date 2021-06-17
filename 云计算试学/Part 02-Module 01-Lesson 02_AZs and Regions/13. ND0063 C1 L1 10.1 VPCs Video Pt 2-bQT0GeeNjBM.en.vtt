@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.390
+VPCs are closely related to IP networks.
+
+00:00:03.390 --> 00:00:05.655
+In order to set up a VPC,
+
+00:00:05.655 --> 00:00:08.605
+we need to provide it a network range.
+
+00:00:08.605 --> 00:00:11.790
+Let's look briefly at what a network range is.
+
+00:00:11.790 --> 00:00:16.830
+A network range is a consecutive set of IP addresses.
+
+00:00:16.830 --> 00:00:20.295
+In order to more concisely describe a network range,
+
+00:00:20.295 --> 00:00:23.370
+AWS uses CIDR notation.
+
+00:00:23.370 --> 00:00:29.325
+CIDR is an acronym for Classless Inter-Domain Routing,
+
+00:00:29.325 --> 00:00:32.370
+but we don't really need to worry about what all that means.
+
+00:00:32.370 --> 00:00:36.415
+CIDR notation is comprised of an IP address,
+
+00:00:36.415 --> 00:00:40.470
+followed by a slash, followed by a number.
+
+00:00:40.470 --> 00:00:45.030
+The IP address is the first address in the network range.
+
+00:00:45.030 --> 00:00:49.610
+The number after the slash tells us how big the range is.
+
+00:00:49.610 --> 00:00:51.605
+The smaller the number,
+
+00:00:51.605 --> 00:00:54.640
+the more addresses in the network range.
+
+00:00:54.640 --> 00:00:59.780
+Well, technically we can use any number between zero and 32.
+
+00:00:59.780 --> 00:01:02.780
+If we stick to 16 or 24,
+
+00:01:02.780 --> 00:01:04.385
+things stay a lot simpler.
+
+00:01:04.385 --> 00:01:07.055
+If we use /16,
+
+00:01:07.055 --> 00:01:14.495
+we use the maximum of the second half of the IP address as the end of the network range.
+
+00:01:14.495 --> 00:01:21.620
+So 10.2.0.0/16 goes from
+
+00:01:21.620 --> 00:01:28.875
+10.2.0.0 to 10.2.245.255.
+
+00:01:28.875 --> 00:01:31.480
+If we use a slash 24,
+
+00:01:31.480 --> 00:01:37.100
+we use the maximum of the last quarter of the IP or
+
+00:01:37.100 --> 00:01:42.450
+10.2.0.0/24 would go
+
+00:01:42.450 --> 00:01:51.120
+from 10.2.0.0 to 10.2.0.255.
+
+00:01:51.120 --> 00:01:55.210
+The detailed mechanics of using CIDR notation to determine
+
+00:01:55.210 --> 00:01:59.200
+a network range involve a topic called bit masking.
+
+00:01:59.200 --> 00:02:01.225
+That goes beyond the scope of this course.
+
+00:02:01.225 --> 00:02:05.080
+For now, you can just remember that /24 means
+
+00:02:05.080 --> 00:02:11.820
+255 addresses and /16 means 65,000 addresses.
+
+00:02:11.820 --> 00:02:15.770
+You may have run into situations where two computers on a network
+
+00:02:15.770 --> 00:02:19.620
+try to use the same IP address, things don't go well.
+
+00:02:19.620 --> 00:02:22.515
+They fight and complain, and no one is happy.
+
+00:02:22.515 --> 00:02:26.530
+When two VPCs have overlapping network ranges,
+
+00:02:26.530 --> 00:02:28.835
+the concept is basically the same.
+
+00:02:28.835 --> 00:02:35.190
+You cannot connect two VPCs that have the same or overlapping network ranges.
+

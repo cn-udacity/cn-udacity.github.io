@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.595
+Which are true about a VPC?
+
+00:00:02.595 --> 00:00:07.965
+AWS creates a default VPC for you in each region.
+
+00:00:07.965 --> 00:00:10.440
+The other answers are not correct.
+
+00:00:10.440 --> 00:00:13.185
+A VPC can have multiple subnets.
+
+00:00:13.185 --> 00:00:16.275
+Two VPCs can't overlap network ranges.
+
+00:00:16.275 --> 00:00:17.910
+But if they do overlap,
+
+00:00:17.910 --> 00:00:21.480
+you won't be able to pair or connect them to each other.
+
+00:00:21.480 --> 00:00:25.965
+VPCs aren't directly related to availability zones.
+
+00:00:25.965 --> 00:00:28.450
+They are region dependent.
+

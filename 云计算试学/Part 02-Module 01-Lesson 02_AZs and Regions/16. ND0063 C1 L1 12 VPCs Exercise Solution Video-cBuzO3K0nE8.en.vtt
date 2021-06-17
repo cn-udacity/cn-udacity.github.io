@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.310
+When looking at your new VPC,
+
+00:00:02.310 --> 00:00:07.470
+take note of all the things that are required to create a useful VPC.
+
+00:00:07.470 --> 00:00:10.995
+You need the VPC itself, a routing table,
+
+00:00:10.995 --> 00:00:16.350
+a subnet, and if you want to connect externally, an Internet gateway.
+
+00:00:16.350 --> 00:00:20.895
+You also need all of these things connected together in the correct way.
+
+00:00:20.895 --> 00:00:23.950
+Let's look through the things that have been created,
+
+00:00:23.950 --> 00:00:26.410
+and how they relate to each other.
+
+00:00:27.620 --> 00:00:31.785
+Looking at the newly created VPC,
+
+00:00:31.785 --> 00:00:33.990
+we can see a few things about it.
+
+00:00:33.990 --> 00:00:41.480
+In particular, make note of the CIDR address that was picked while we created the VPC,
+
+00:00:41.480 --> 00:00:46.615
+in this case, 10.0.0.0/16.
+
+00:00:46.615 --> 00:00:49.005
+Next, we'll take a look at the subnet.
+
+00:00:49.005 --> 00:00:52.195
+When we look at our subnet list,
+
+00:00:52.195 --> 00:00:57.185
+we see all the subnets for all of the VPCs that we have.
+
+00:00:57.185 --> 00:01:01.770
+We want to filter this by our newly created VPC.
+
+00:01:02.600 --> 00:01:09.080
+As we can see, we have one subnet created as part of this VPC.
+
+00:01:09.080 --> 00:01:11.015
+Now that we're looking at the subnet,
+
+00:01:11.015 --> 00:01:13.590
+we can also look at the route table.
+
+00:01:13.790 --> 00:01:19.400
+Here we can see that both the VPC network address,
+
+00:01:19.400 --> 00:01:24.650
+10.0.0/16 is in the route table,
+
+00:01:24.650 --> 00:01:26.510
+as well as another entry,
+
+00:01:26.510 --> 00:01:34.625
+the 0.0.0.0/0 entry is really what's called a default route.
+
+00:01:34.625 --> 00:01:37.705
+So anything that doesn't match the first role,
+
+00:01:37.705 --> 00:01:40.950
+goes to this route entry and
+
+00:01:40.950 --> 00:01:44.475
+the target for that is the Internet gateway that was created.
+
+00:01:44.475 --> 00:01:47.880
+From here, we can go and look at our Internet gateway.
+
+00:01:47.880 --> 00:01:53.350
+As we can see, the Internet gateway is attached to our newly created VPC.
+
+00:01:53.350 --> 00:01:56.780
+All of these elements connected together,
+
+00:01:56.780 --> 00:02:02.560
+form a VPC that is actually useful to us where we can put instances in this subnet.
+
+00:02:02.560 --> 00:02:05.715
+They will then use the associated route table,
+
+00:02:05.715 --> 00:02:08.350
+which routes traffic through the Internet gateway,
+
+00:02:08.350 --> 00:02:14.340
+and thus makes us a publicly accessible subnet within our new VPC.
+

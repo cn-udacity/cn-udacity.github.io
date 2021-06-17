@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.620
+In this exercise, we're setting up a NAT gateway and private subnet.
+
+00:00:06.230 --> 00:00:10.995
+We can find our NAT gateways in VPC.
+
+00:00:10.995 --> 00:00:16.380
+We look at our NAT gateway that is built.
+
+00:00:16.380 --> 00:00:20.970
+The routing table should have the NAT gateway as the target.
+
+00:00:20.970 --> 00:00:23.445
+So once we create a NAT gateway,
+
+00:00:23.445 --> 00:00:28.110
+we will then want to use and include that NAT gateway within a routing table.
+
+00:00:28.110 --> 00:00:34.485
+So we can see we have a NAT gateway here in our new VPC.
+
+00:00:34.485 --> 00:00:37.990
+What we'll want to do is look at our routing tables.
+
+00:00:40.340 --> 00:00:50.295
+We can see that in our routing table that we set up, we have,
+
+00:00:50.295 --> 00:00:53.240
+again as we saw in other exercises,
+
+00:00:53.240 --> 00:00:56.660
+that we've got a local route,
+
+00:00:56.660 --> 00:01:03.915
+and then we've got the default or the 0.0.0/0 route within our route table,
+
+00:01:03.915 --> 00:01:08.450
+this time we're pointing at the NAT gateway that we just took a look at.
+
+00:01:08.660 --> 00:01:11.455
+Once you've got the route table set up,
+
+00:01:11.455 --> 00:01:15.110
+then it's a matter of looking at our subnets and
+
+00:01:15.110 --> 00:01:19.640
+having the subnets also set up to use this route table.
+
+00:01:19.640 --> 00:01:23.350
+So we have a subnet here for this exercise.
+
+00:01:23.350 --> 00:01:24.920
+Within the subnet view,
+
+00:01:24.920 --> 00:01:26.900
+we can look at the route table again to see that
+
+00:01:26.900 --> 00:01:29.285
+we're pointing at the route table we just looked at,
+
+00:01:29.285 --> 00:01:34.980
+and now anything within this subnet we'll use obviously this route table.
+
+00:01:34.980 --> 00:01:40.050
+This route table has a default route going through our NAT gateway
+

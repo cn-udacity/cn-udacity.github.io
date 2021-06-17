@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.690
+It is important to think about needs versus wants.
+
+00:00:03.690 --> 00:00:08.340
+As you learn about the capabilities of AWS for reliability and redundancy,
+
+00:00:08.340 --> 00:00:10.410
+it is important to consider what level of
+
+00:00:10.410 --> 00:00:13.965
+availability is required for a use case or environment.
+
+00:00:13.965 --> 00:00:17.250
+Some non-critical cases require no redundancy,
+
+00:00:17.250 --> 00:00:22.080
+while production environments typically require significant levels of redundancy.
+
+00:00:22.080 --> 00:00:25.470
+In most cases, redundancy has cost.
+
+00:00:25.470 --> 00:00:27.660
+Depending on the services you use,
+
+00:00:27.660 --> 00:00:29.460
+redundancy can cost a lot.
+
+00:00:29.460 --> 00:00:32.130
+Typically, redundancy costs at least double.
+
+00:00:32.130 --> 00:00:34.449
+For example, in RDS,
+
+00:00:34.449 --> 00:00:38.125
+take the instance cost and double it to have a hot standby,
+
+00:00:38.125 --> 00:00:41.380
+triple it to have a read replica in another region.
+
+00:00:41.380 --> 00:00:43.220
+Review the cost structure for what you're
+
+00:00:43.220 --> 00:00:46.040
+building and weigh the costs against the benefits.
+
+00:00:46.040 --> 00:00:50.515
+Keep in mind that cost comes in multiple forms: there is direct monetary expense,
+
+00:00:50.515 --> 00:00:52.415
+as well as the cost of complexity,
+
+00:00:52.415 --> 00:00:55.010
+which can take the form of higher learning curves or
+
+00:00:55.010 --> 00:00:58.655
+difficulty in monitoring a system or diagnosing a problem.
+
+00:00:58.655 --> 00:01:01.145
+When considering how to architect a service,
+
+00:01:01.145 --> 00:01:03.470
+you should think about how a disruption
+
+00:01:03.470 --> 00:01:06.410
+or data loss in that service would impact your business.
+
+00:01:06.410 --> 00:01:09.950
+You'll need to think about what it will take to restore service,
+
+00:01:09.950 --> 00:01:14.580
+as well as the contractual obligations to which your business has committed.
+

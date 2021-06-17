@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.520
+Which are true about availability zones.
+
+00:00:02.520 --> 00:00:07.710
+The correct answer is the number of availability zones does vary per region.
+
+00:00:07.710 --> 00:00:10.665
+You really don't need to be concerned about the latency
+
+00:00:10.665 --> 00:00:13.725
+between availability zones as it's very low.
+
+00:00:13.725 --> 00:00:18.915
+AZs are in physical separate locations separated by miles.
+
+00:00:18.915 --> 00:00:21.959
+Unfortunately, not all [inaudible] services
+
+00:00:21.959 --> 00:00:26.130
+automatically use all or even multiple availability zones.
+
+00:00:26.130 --> 00:00:29.260
+You'll learn more about setting this up later.
+

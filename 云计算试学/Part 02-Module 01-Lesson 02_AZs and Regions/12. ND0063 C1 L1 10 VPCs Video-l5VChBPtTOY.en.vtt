@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.710
+The term Virtual Private Cloud,
+
+00:00:01.710 --> 00:00:04.680
+or VPC for short, sounds pretty intimidating.
+
+00:00:04.680 --> 00:00:08.730
+Really, every part of the acronym is a little intense.
+
+00:00:08.730 --> 00:00:13.800
+Virtual, private, and cloud all have a lot of connotations.
+
+00:00:13.800 --> 00:00:16.065
+So what is a VPC?
+
+00:00:16.065 --> 00:00:19.410
+If you've configured a traditional network infrastructure,
+
+00:00:19.410 --> 00:00:22.060
+you'll find VPCs fairly familiar.
+
+00:00:22.060 --> 00:00:24.880
+A VPC is primarily a network.
+
+00:00:24.880 --> 00:00:30.160
+It's virtual because any resource you create in AWS is virtual.
+
+00:00:30.160 --> 00:00:32.685
+It's private because it's yours.
+
+00:00:32.685 --> 00:00:34.840
+Just like a physical network that you own,
+
+00:00:34.840 --> 00:00:37.910
+you control what goes in and out of the network,
+
+00:00:37.910 --> 00:00:41.555
+and you decide where to put your service within the network.
+
+00:00:41.555 --> 00:00:44.255
+The cloud part is really redundant to virtual,
+
+00:00:44.255 --> 00:00:46.565
+and it just makes it sound extra special.
+
+00:00:46.565 --> 00:00:51.410
+VPCs are isolated private networks that are
+
+00:00:51.410 --> 00:00:56.860
+customizable to your needs and are region-specific.
+
+00:00:56.860 --> 00:00:59.690
+There are some aspects of VPCs that are
+
+00:00:59.690 --> 00:01:03.655
+more AWS constructs than they are strictly networking.
+
+00:01:03.655 --> 00:01:05.615
+Security groups, for example,
+
+00:01:05.615 --> 00:01:09.190
+are similar to firewalls but not exactly the same.
+
+00:01:09.190 --> 00:01:12.470
+The way that traffic gets into and out of
+
+00:01:12.470 --> 00:01:16.795
+a VPC is a little different, similar but different.
+
+00:01:16.795 --> 00:01:22.485
+AWS provides constructs to allow traffic from the Internet directly to your service,
+
+00:01:22.485 --> 00:01:28.570
+or you can have traffic flow outbound through network address translation devices.
+
+00:01:28.570 --> 00:01:30.345
+We'll look more at this later.
+
+00:01:30.345 --> 00:01:32.820
+You can connect VPCs together.
+
+00:01:32.820 --> 00:01:38.840
+You can peer two VPCs in your account even if they're in different regions.
+
+00:01:38.840 --> 00:01:42.935
+You can connect two VPCs from different AWS accounts,
+
+00:01:42.935 --> 00:01:46.300
+although, obviously, you should be cautious about doing this.
+
+00:01:46.300 --> 00:01:50.020
+How many VPCs you use is up to you.
+
+00:01:50.020 --> 00:01:53.575
+Depending on what network components you use,
+
+00:01:53.575 --> 00:01:56.665
+a VPC can have almost no cost.
+
+00:01:56.665 --> 00:02:01.255
+Given this, you have a lot of freedom to decide what makes sense for you.
+
+00:02:01.255 --> 00:02:04.960
+If you're running your application in one region,
+
+00:02:04.960 --> 00:02:09.714
+you can run a fully multi AZ mode with just one VPC.
+
+00:02:09.714 --> 00:02:16.389
+Having one VPC per region is actually the default setup within AWS.
+
+00:02:16.389 --> 00:02:21.220
+AWS now creates a default VPC for you in every region.
+
+00:02:21.220 --> 00:02:23.795
+However, you can delete this if you desire.
+
+00:02:23.795 --> 00:02:26.925
+You can have multiple VPCs per region.
+
+00:02:26.925 --> 00:02:31.260
+You can treat multiple VPCs as entirely standalone networks,
+
+00:02:31.260 --> 00:02:35.740
+or you can connect them together to form a larger network hierarchy.
+
+00:02:35.740 --> 00:02:40.760
+Really, you can combine VPCs in just about any way that you would like.
+
+00:02:40.760 --> 00:02:45.170
+You can also connect your office or data center directly to
+
+00:02:45.170 --> 00:02:50.185
+your VPC and thus extend your office network into AWS.
+
+00:02:50.185 --> 00:02:53.630
+So what things are in a VPC?
+
+00:02:53.630 --> 00:02:59.005
+Anything that is instance-based will run inside of VPC.
+
+00:02:59.005 --> 00:03:04.530
+For example, RDS, ElastiCache, DocumentDB,
+
+00:03:04.530 --> 00:03:08.690
+Elasticsearch, EMR, EC2, Load Balancers,
+
+00:03:08.690 --> 00:03:12.745
+Neptune, Redshift, lots of things.
+
+00:03:12.745 --> 00:03:16.010
+What are the things that do not run inside of a VPC?
+
+00:03:16.010 --> 00:03:22.025
+The more service-oriented AWS services tend to not run in a VPC.
+
+00:03:22.025 --> 00:03:26.895
+Any of the global services as well as several core services,
+
+00:03:26.895 --> 00:03:34.045
+such as SNS or SQS are actually services that are accessed directly over the Internet.
+
+00:03:34.045 --> 00:03:40.130
+Some of these include S3, DynamoDB, CloudFront, SNS,
+
+00:03:40.130 --> 00:03:43.625
+SQS, SES, Route 53,
+
+00:03:43.625 --> 00:03:47.880
+API Gateway, IAM, and Cloud Trail.
+

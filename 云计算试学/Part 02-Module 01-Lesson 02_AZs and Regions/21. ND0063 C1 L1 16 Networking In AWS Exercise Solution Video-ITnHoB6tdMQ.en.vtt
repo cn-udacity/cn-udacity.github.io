@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.175
+In this exercise, you'll be creating a NAT gateway and associating it with a subnet.
+
+00:00:05.175 --> 00:00:06.795
+In order to do that,
+
+00:00:06.795 --> 00:00:09.600
+let's take a look at how you would create a NAT gateway.
+
+00:00:09.600 --> 00:00:13.260
+NAT gateways ask you for a couple of options,.
+
+00:00:13.260 --> 00:00:15.030
+The first is the subnet.
+
+00:00:15.030 --> 00:00:18.330
+So you'll want to pick the subnet within
+
+00:00:18.330 --> 00:00:21.900
+the new VPC that you just created, your public subnet.
+
+00:00:21.900 --> 00:00:25.485
+The NAT gateway itself sits in a public subnet,
+
+00:00:25.485 --> 00:00:29.280
+and then it has access to the Internet from there.
+
+00:00:29.280 --> 00:00:32.235
+To pick your Elastic IP address,
+
+00:00:32.235 --> 00:00:34.665
+you can allocate a new IP address,
+
+00:00:34.665 --> 00:00:37.665
+or if you already have one in your account you can use that,
+
+00:00:37.665 --> 00:00:42.300
+but this is the public address that the NAT gateway itself will use.
+
+00:00:42.300 --> 00:00:44.705
+Once you have your NAT gateway,
+
+00:00:44.705 --> 00:00:47.165
+you'll look at your routing tables,
+
+00:00:47.165 --> 00:00:50.015
+and you'll look for the routing table that does not have
+
+00:00:50.015 --> 00:00:52.900
+an explicit subnet association already.
+
+00:00:52.900 --> 00:00:57.665
+The one that does have the subnet association is the one that's already in use.
+
+00:00:57.665 --> 00:01:02.040
+We take a look at this routing table and then the routes within it.
+
+00:01:02.040 --> 00:01:10.650
+We'll see that the only route is local route to the CDIR range of the VPC.
+
+00:01:10.650 --> 00:01:13.035
+From here, we'll add another route,
+
+00:01:13.035 --> 00:01:15.635
+and this second route will be your default route,
+
+00:01:15.635 --> 00:01:19.680
+and it will point at the newly created NAT gateway
+

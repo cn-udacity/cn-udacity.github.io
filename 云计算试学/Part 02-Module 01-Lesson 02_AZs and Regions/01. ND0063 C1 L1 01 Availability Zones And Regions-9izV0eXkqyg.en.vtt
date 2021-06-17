@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.120
+Availability Zones or AZs and Regions are
+
+00:00:03.120 --> 00:00:07.635
+the core components within AWS that allow local and global redundancy.
+
+00:00:07.635 --> 00:00:10.770
+Proper usage of these key resources is crucial for
+
+00:00:10.770 --> 00:00:14.220
+anyone building high availability systems on AWS.
+
+00:00:14.220 --> 00:00:18.120
+An AWS region contains multiple availability zones.
+
+00:00:18.120 --> 00:00:21.600
+These availability zones allow for fault isolation within
+
+00:00:21.600 --> 00:00:26.820
+a region and provide the simplest way to achieve a significant level of redundancy.
+
+00:00:26.820 --> 00:00:29.730
+The AWS global infrastructure is made up of
+
+00:00:29.730 --> 00:00:33.120
+multiple geographic regions spread around the world.
+
+00:00:33.120 --> 00:00:37.410
+These regions are connected via high speed private network,
+
+00:00:37.410 --> 00:00:39.690
+but the regions themselves are independent.
+
+00:00:39.690 --> 00:00:44.430
+Availability Zones and regions our containers for AWS networking.
+
+00:00:44.430 --> 00:00:46.985
+Networking in AWS is setup via
+
+00:00:46.985 --> 00:00:52.990
+isolated Virtual Private Clouds or VPCs that exist in one AWS region.
+
+00:00:52.990 --> 00:00:56.405
+You will get to see how you can have multiple of
+
+00:00:56.405 --> 00:01:02.065
+your own custom networks within AWS allowing you complete control and security.
+
+00:01:02.065 --> 00:01:04.600
+In this lesson, we will explore VPCs
+
+00:01:04.600 --> 00:01:08.940
+themselves and also the networking that is configured within them.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.805
+In this lesson, you've covered a lot of material.
+
+00:00:02.805 --> 00:00:05.370
+You've learned about the similarities and
+
+00:00:05.370 --> 00:00:08.760
+differences between regions and availability zones.
+
+00:00:08.760 --> 00:00:14.325
+You've also seen how they form the underpinning of fault tolerance in AWS.
+
+00:00:14.325 --> 00:00:17.760
+Making proper use of these physical assets
+
+00:00:17.760 --> 00:00:22.110
+allows you to create world-class worldwide platforms.
+
+00:00:22.110 --> 00:00:27.555
+VPCs and the networking you can create in AWS are closely related.
+
+00:00:27.555 --> 00:00:34.875
+You've looked at many common aspects of creating independent network segments within AWS,
+
+00:00:34.875 --> 00:00:37.650
+and how you can connect these segments together.
+
+00:00:37.650 --> 00:00:41.700
+Now that we've seen the base of high availability in AWS,
+
+00:00:41.700 --> 00:00:43.310
+we move on to building with
+
+00:00:43.310 --> 00:00:47.675
+resilience services before we get to considering our business goals.
+
+00:00:47.675 --> 00:00:51.570
+Then, observability and recoverability
+

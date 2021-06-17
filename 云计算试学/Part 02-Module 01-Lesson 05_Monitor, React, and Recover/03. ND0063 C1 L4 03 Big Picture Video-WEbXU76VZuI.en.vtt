@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.315
+Things break, you should expect things to break.
+
+00:00:03.315 --> 00:00:06.780
+Ask yourself, what will you do when things break?
+
+00:00:06.780 --> 00:00:08.745
+The more successful you are,
+
+00:00:08.745 --> 00:00:10.450
+the larger your platform will grow.
+
+00:00:10.450 --> 00:00:11.970
+The larger it grows,
+
+00:00:11.970 --> 00:00:13.950
+the more components it will have,
+
+00:00:13.950 --> 00:00:16.620
+and the higher the likelihood that something will fail,
+
+00:00:16.620 --> 00:00:19.500
+and the more important the system is,
+
+00:00:19.500 --> 00:00:21.090
+the bigger the problem that is,
+
+00:00:21.090 --> 00:00:24.780
+when it does fail, don't be surprised when things break.
+
+00:00:24.780 --> 00:00:27.050
+Expect it and prepare for it,
+
+00:00:27.050 --> 00:00:32.280
+make sure that you create systems that are observable and that you then observe them.
+
+00:00:32.280 --> 00:00:36.445
+But you can't just have a system that you actively watch.
+
+00:00:36.445 --> 00:00:39.330
+You need to create active monitoring that will
+
+00:00:39.330 --> 00:00:42.385
+alert you in the middle of the night when things go wrong.
+
+00:00:42.385 --> 00:00:45.745
+Monitoring and alerting are your eyes and ears.
+
+00:00:45.745 --> 00:00:50.435
+Monitoring is your ability to see what's going on within your systems,
+
+00:00:50.435 --> 00:00:55.105
+and alerting is your ears allowing you to hear about serious issues.
+
+00:00:55.105 --> 00:00:59.585
+Reacting to failure means taking the steps necessary to recover,
+
+00:00:59.585 --> 00:01:01.055
+get the lights back on,
+
+00:01:01.055 --> 00:01:02.630
+and return things to normal.
+
+00:01:02.630 --> 00:01:08.310
+Doing so quickly and efficiently is the key to meeting your business objectives.
+

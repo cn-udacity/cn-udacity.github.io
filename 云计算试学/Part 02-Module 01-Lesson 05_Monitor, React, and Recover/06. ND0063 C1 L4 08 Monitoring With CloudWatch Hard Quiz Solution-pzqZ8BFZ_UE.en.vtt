@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.985
+Which SQS metric tells you how many messages are waiting in an SQS queue?
+
+00:00:05.985 --> 00:00:10.650
+The answer is, approximate number of messages visible.
+
+00:00:10.650 --> 00:00:17.145
+Approximate age of oldest message tells you how old the oldest message in the queue is.
+
+00:00:17.145 --> 00:00:22.110
+Number of empty receives tells you how many requests to retrieve
+
+00:00:22.110 --> 00:00:27.225
+a message have returned zero because there are no messages waiting in the queue.
+
+00:00:27.225 --> 00:00:29.715
+Number of messages received
+
+00:00:29.715 --> 00:00:33.940
+tells you how many messages have been pulled out of the queue.
+

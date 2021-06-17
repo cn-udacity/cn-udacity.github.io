@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.110
+Break things in production, on purpose.
+
+00:00:04.110 --> 00:00:06.720
+Why would one ever do this?
+
+00:00:06.720 --> 00:00:10.304
+Well, if your systems are supposed to handle failures,
+
+00:00:10.304 --> 00:00:12.045
+shouldn't they handle them?
+
+00:00:12.045 --> 00:00:13.950
+If they can handle them,
+
+00:00:13.950 --> 00:00:17.100
+why would it be bad to periodically test this?
+
+00:00:17.100 --> 00:00:20.490
+Would you put more effort and be more diligent if
+
+00:00:20.490 --> 00:00:23.460
+you knew with 100 percent certainty that
+
+00:00:23.460 --> 00:00:26.130
+critical services would be tested for
+
+00:00:26.130 --> 00:00:30.075
+resilience in production at the peak of your traffic?
+
+00:00:30.075 --> 00:00:32.970
+Chaos Engineering is unique discipline.
+
+00:00:32.970 --> 00:00:36.780
+It involves creating faults to prove readiness.
+
+00:00:36.780 --> 00:00:41.130
+If you go to a team who owns a particular system and tell them that
+
+00:00:41.130 --> 00:00:45.970
+you are going to randomly terminate some of their EC2 instances,
+
+00:00:45.970 --> 00:00:47.820
+what would their reaction be?
+
+00:00:47.820 --> 00:00:50.430
+What should their reaction be?
+
+00:00:50.430 --> 00:00:53.060
+If systems are truly fault tolerant,
+
+00:00:53.060 --> 00:00:56.990
+it literally should not be a problem to cause faults.
+
+00:00:56.990 --> 00:01:01.190
+If people are attesting to the resiliency of their application,
+
+00:01:01.190 --> 00:01:05.605
+then there should be no worry in causing faults in individual components.
+
+00:01:05.605 --> 00:01:10.055
+Let's circle back to the example of the database running out of disk space.
+
+00:01:10.055 --> 00:01:11.705
+In this simple case,
+
+00:01:11.705 --> 00:01:17.390
+the usage pattern was normal and the database just ran out of disk space over time.
+
+00:01:17.390 --> 00:01:19.765
+How would you prevent this?
+
+00:01:19.765 --> 00:01:23.220
+Often, you want multiple levels of alerts.
+
+00:01:23.220 --> 00:01:28.180
+You need to examine your own use case to decide what is appropriate.
+
+00:01:28.180 --> 00:01:31.180
+But you always want to get some warning from
+
+00:01:31.180 --> 00:01:35.845
+a data source that is approaching a point where more disk space will be needed.
+
+00:01:35.845 --> 00:01:38.305
+This warning does not need to wake anyone up.
+
+00:01:38.305 --> 00:01:41.050
+It can be an e-mail that triggers well in
+
+00:01:41.050 --> 00:01:45.250
+advance so that the problem can be avoided without service interruption,
+
+00:01:45.250 --> 00:01:47.685
+but also without panic.
+
+00:01:47.685 --> 00:01:51.545
+How far ahead do you want this alert to trigger?
+
+00:01:51.545 --> 00:01:56.620
+How much time do you need to plan a non-urgent maintenance event?
+
+00:01:56.620 --> 00:01:58.810
+Even after this warning event,
+
+00:01:58.810 --> 00:02:01.765
+you'll want to set the wake up people
+
+00:02:01.765 --> 00:02:06.095
+alert before the database completely runs out of disk space.
+
+00:02:06.095 --> 00:02:09.755
+Again, why wait until things are actively broken
+
+00:02:09.755 --> 00:02:14.005
+when things can be alerted on with some time to avoid any downtime.
+
+00:02:14.005 --> 00:02:17.930
+The level for warning and urgent alerts are up to you.
+
+00:02:17.930 --> 00:02:20.285
+You'll need to understand your business needs,
+
+00:02:20.285 --> 00:02:25.830
+your SLAs, and your platform to know what appropriate values are.
+

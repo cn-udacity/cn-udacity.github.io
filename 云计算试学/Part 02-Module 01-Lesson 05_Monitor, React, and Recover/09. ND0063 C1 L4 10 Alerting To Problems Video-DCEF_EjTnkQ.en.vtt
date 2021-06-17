@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.175
+CloudWatch has many components.
+
+00:00:02.175 --> 00:00:03.765
+Alerting is one of them,
+
+00:00:03.765 --> 00:00:08.325
+although CloudWatch itself does not actually try to get in touch with you.
+
+00:00:08.325 --> 00:00:11.910
+CloudWatch integrates with other AWS services,
+
+00:00:11.910 --> 00:00:17.605
+and from those services you can take actions to get people out of bed to resolve issues.
+
+00:00:17.605 --> 00:00:23.235
+CloudWatch alarms is where you describe the conditions that you want to alert on.
+
+00:00:23.235 --> 00:00:29.345
+You can say, if the database CPU utilization goes over 85 percent,
+
+00:00:29.345 --> 00:00:31.060
+I want to do something.
+
+00:00:31.060 --> 00:00:34.400
+CloudWatch alarms is flexible to your needs.
+
+00:00:34.400 --> 00:00:38.870
+It lets you determine not just what level to alert at,
+
+00:00:38.870 --> 00:00:41.570
+but also how to interpret a given metric.
+
+00:00:41.570 --> 00:00:44.120
+You can describe your alerts in greater detail.
+
+00:00:44.120 --> 00:00:47.885
+For example, if the database CPU utilization,
+
+00:00:47.885 --> 00:00:54.130
+one minute average is over 85 percent for three out of five minutes,
+
+00:00:54.130 --> 00:00:55.815
+I want to do something.
+
+00:00:55.815 --> 00:00:57.740
+As you build your systems,
+
+00:00:57.740 --> 00:01:01.685
+you will need to consider things like momentary spikes of utilization
+
+00:01:01.685 --> 00:01:06.920
+and decide if they are impactful or not impactful to your business.
+
+00:01:06.920 --> 00:01:13.080
+You may be wondering what does do something mean. Good question.
+
+00:01:13.080 --> 00:01:15.740
+You've reached the, it's time to do
+
+00:01:15.740 --> 00:01:20.105
+something point on metric within your system. Now what?
+
+00:01:20.105 --> 00:01:25.510
+CloudWatch alarms allows you to trigger an action based on an alert condition.
+
+00:01:25.510 --> 00:01:31.175
+These actions are all centered around sending events to SNS topics.
+
+00:01:31.175 --> 00:01:33.680
+Anything you can do with SNS,
+
+00:01:33.680 --> 00:01:35.195
+you can do with an alert.
+
+00:01:35.195 --> 00:01:39.710
+SNS allows you to directly send emails or text messages.
+
+00:01:39.710 --> 00:01:45.035
+It also allows you to trigger Lambda functions and send HTTP requests.
+
+00:01:45.035 --> 00:01:49.175
+These last two are key integration points with outside systems.
+
+00:01:49.175 --> 00:01:53.180
+When something is critical enough that it should wake people up,
+
+00:01:53.180 --> 00:01:56.915
+you can use third parties who specialize in doing just that.
+
+00:01:56.915 --> 00:02:02.060
+Products like PagerDuty or VictorOps can receive events from SNS.
+
+00:02:02.060 --> 00:02:07.115
+You can set up support rotations and multiple levels of alerting, mobile app messaging,
+
+00:02:07.115 --> 00:02:09.200
+texts, phone calls, etc,
+
+00:02:09.200 --> 00:02:13.830
+so that the alarm keeps escalating until someone deals with it.
+

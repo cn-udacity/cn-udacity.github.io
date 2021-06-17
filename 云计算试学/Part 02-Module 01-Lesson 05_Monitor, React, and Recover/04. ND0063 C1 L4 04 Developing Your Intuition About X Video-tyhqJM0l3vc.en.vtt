@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.210
+How much is enough when it comes to monitoring and alerting?
+
+00:00:03.210 --> 00:00:06.765
+Any system or component that should it fail,
+
+00:00:06.765 --> 00:00:08.460
+would cause serious issues,
+
+00:00:08.460 --> 00:00:10.710
+needs, monitoring, and alerting.
+
+00:00:10.710 --> 00:00:14.385
+Covering 90 percent of your services important components,
+
+00:00:14.385 --> 00:00:17.940
+but still leave you blind to 10 percent of the problems that will occur.
+
+00:00:17.940 --> 00:00:21.420
+Be diligent about identifying critical components,
+
+00:00:21.420 --> 00:00:24.105
+and finding ways to monitor and alert on them.
+
+00:00:24.105 --> 00:00:26.445
+Monitoring and alerting are critical,
+
+00:00:26.445 --> 00:00:29.085
+but once you've been alerted to an issue,
+
+00:00:29.085 --> 00:00:30.450
+how do you find that problem?
+
+00:00:30.450 --> 00:00:33.765
+Your ability to track down issues, debug problems,
+
+00:00:33.765 --> 00:00:37.245
+and get to the root cause of an outage, are equally important.
+
+00:00:37.245 --> 00:00:39.405
+When you design and build systems,
+
+00:00:39.405 --> 00:00:43.940
+make sure that you're thinking from the start about how you would debug your platform.
+
+00:00:43.940 --> 00:00:48.830
+Include comprehensive logging, make extensive use of metric collection,
+
+00:00:48.830 --> 00:00:52.390
+ensure that you can quickly analyze your logs and metrics.
+
+00:00:52.390 --> 00:00:57.710
+Know what normal looks like as you will then be able to spot the abnormalities.
+
+00:00:57.710 --> 00:01:01.055
+How do you ensure that you can not only recover from failure,
+
+00:01:01.055 --> 00:01:03.565
+but recover quickly and safely?
+
+00:01:03.565 --> 00:01:07.000
+How do you know that your database backups are complete?
+
+00:01:07.000 --> 00:01:10.105
+How do you know that your backup systems will come online?
+
+00:01:10.105 --> 00:01:12.635
+Practice. If you don't practice,
+
+00:01:12.635 --> 00:01:16.384
+if you don't actually try out your processes and procedures,
+
+00:01:16.384 --> 00:01:21.510
+you won't know, and the middle of an outage is the wrong time to find that out.
+

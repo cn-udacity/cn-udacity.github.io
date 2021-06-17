@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.435
+In this exercise, you're asked to create a Lambda function,
+
+00:00:03.435 --> 00:00:05.025
+run that Lambda function,
+
+00:00:05.025 --> 00:00:07.050
+and then observe the metrics from
+
+00:00:07.050 --> 00:00:10.845
+that Lambda function that get propagated into CloudWatch.
+
+00:00:10.845 --> 00:00:13.125
+Here, I have a Lambda function.
+
+00:00:13.125 --> 00:00:15.765
+Note that its name is Udacity.
+
+00:00:15.765 --> 00:00:19.440
+I've run this Lambda function several times.
+
+00:00:19.440 --> 00:00:23.160
+Now, let's head over to CloudWatch and take a look at what is
+
+00:00:23.160 --> 00:00:26.655
+actually sent to CloudWatch metrics from this Lambda function.
+
+00:00:26.655 --> 00:00:31.200
+Go over to the CloudWatch service user interface.
+
+00:00:31.200 --> 00:00:33.375
+We've got a lot of information here.
+
+00:00:33.375 --> 00:00:38.175
+Now, look down at the left-hand side from the menu and pick Metrics.
+
+00:00:38.175 --> 00:00:41.545
+We see a space for graph at the top,
+
+00:00:41.545 --> 00:00:45.230
+and the different metric categories at the bottom.
+
+00:00:45.230 --> 00:00:47.375
+So you're going to go to Lambda,
+
+00:00:47.375 --> 00:00:50.870
+and then you want to search by function name.
+
+00:00:50.870 --> 00:00:53.960
+Again, here we note that the Lambda function
+
+00:00:53.960 --> 00:00:57.565
+that we're just actually running was called the Udacity.
+
+00:00:57.565 --> 00:01:03.230
+Now, we see at the top we have our Udacity function and on the right side,
+
+00:01:03.230 --> 00:01:06.215
+we see the different metrics available for that function.
+
+00:01:06.215 --> 00:01:11.960
+So we check the box next to the Udacity Lambda functions invocations.
+
+00:01:11.960 --> 00:01:15.140
+We can see our graph shows some data.
+
+00:01:15.140 --> 00:01:21.344
+What's currently showing us is we can see in graphed metrics,
+
+00:01:21.344 --> 00:01:23.325
+this is showing us the average.
+
+00:01:23.325 --> 00:01:25.775
+So this is showing us a five-minute average
+
+00:01:25.775 --> 00:01:29.635
+of how many times this Lambda function was invoked.
+
+00:01:29.635 --> 00:01:31.700
+Here, we have some other options.
+
+00:01:31.700 --> 00:01:35.300
+We can change it from five-minutes down to one minute,
+
+00:01:35.300 --> 00:01:39.820
+and we can see that it was run during some minutes and not in others.
+
+00:01:39.820 --> 00:01:44.705
+We can also change from an average to the sum,
+
+00:01:44.705 --> 00:01:48.050
+or any of these other things: minimum, maximum.
+
+00:01:48.050 --> 00:01:51.320
+We change it to the sum, we can see we've got some more data,
+
+00:01:51.320 --> 00:01:53.425
+some more interesting data.
+
+00:01:53.425 --> 00:01:56.550
+We can also change the time range that we can look at.
+
+00:01:56.550 --> 00:01:59.515
+So this is currently showing us three hours.
+
+00:01:59.515 --> 00:02:02.480
+Since we've all been running this Lambda recently,
+
+00:02:02.480 --> 00:02:04.685
+we can switch just a one-hour view.
+
+00:02:04.685 --> 00:02:07.325
+Then we see how we've got some spikes,
+
+00:02:07.325 --> 00:02:11.030
+some different information over the course of the last hour or so.
+
+00:02:11.030 --> 00:02:13.550
+If we go back to All metrics,
+
+00:02:13.550 --> 00:02:16.685
+we can also look at other things such as duration.
+
+00:02:16.685 --> 00:02:22.560
+Here we can see the actual duration of the Lambda function.
+
+00:02:22.560 --> 00:02:27.375
+We can have different sums or different time periods per metric,
+
+00:02:27.375 --> 00:02:28.870
+and then we can graph these,
+
+00:02:28.870 --> 00:02:33.270
+and use these graphs to understand what's been going on with our applications.
+

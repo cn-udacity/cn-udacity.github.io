@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.185
+In this exercise, you'll be asked to create and run
+
+00:00:04.185 --> 00:00:08.745
+a lambda function and then monitor it with CloudWatch metrics.
+
+00:00:08.745 --> 00:00:12.730
+Let's take a look at how to create and run a lambda function.
+
+00:00:12.730 --> 00:00:16.560
+In the lambda service, we create function,
+
+00:00:16.560 --> 00:00:19.545
+we can author it from scratch,
+
+00:00:19.545 --> 00:00:22.630
+we give our function a name,
+
+00:00:23.450 --> 00:00:26.085
+we can pick our runtime.
+
+00:00:26.085 --> 00:00:28.620
+For this example, it doesn't make a whole lot of difference.
+
+00:00:28.620 --> 00:00:30.360
+If you're comfortable with the language,
+
+00:00:30.360 --> 00:00:31.490
+you can feel free to do that.
+
+00:00:31.490 --> 00:00:33.385
+We'll just use node,
+
+00:00:33.385 --> 00:00:36.395
+and then we create the function.
+
+00:00:36.395 --> 00:00:38.690
+Once our function is created,
+
+00:00:38.690 --> 00:00:42.170
+what we want to do is configure a test event.
+
+00:00:42.170 --> 00:00:44.215
+As we look and see,
+
+00:00:44.215 --> 00:00:47.705
+a newly created lambda function will have some boilerplate code.
+
+00:00:47.705 --> 00:00:49.320
+That doesn't really do much.
+
+00:00:49.320 --> 00:00:52.035
+It will print out a log message, and that's all it does.
+
+00:00:52.035 --> 00:00:54.795
+That's all we need to do in this exercise.
+
+00:00:54.795 --> 00:00:59.165
+What we want to do now is actually invoke the lambda function.
+
+00:00:59.165 --> 00:01:02.845
+We can do this through the lambda user interface.
+
+00:01:02.845 --> 00:01:05.890
+To do this, we have to set up a test event.
+
+00:01:05.890 --> 00:01:08.935
+We click this drop down next to the test button,
+
+00:01:08.935 --> 00:01:11.540
+see the configure test events.
+
+00:01:11.540 --> 00:01:14.850
+Doesn't make a whole lot of difference.
+
+00:01:14.850 --> 00:01:18.410
+What we put in that, this would be the data that's passed into our lambda.
+
+00:01:18.410 --> 00:01:22.680
+Again, because we have a boilerplate lambda that's not actually doing any work,
+
+00:01:22.680 --> 00:01:25.000
+it doesn't really matter what we put here.
+
+00:01:25.000 --> 00:01:28.990
+Let's just name it and then we'll save this test event.
+
+00:01:28.990 --> 00:01:33.350
+Once we do that, we can see that the name that we provided is in the drop-down.
+
+00:01:33.350 --> 00:01:37.160
+Then all we have to do is simply click the test button.
+
+00:01:37.160 --> 00:01:42.475
+We'll see that the lambda user interface will tell us that the execution was successful.
+
+00:01:42.475 --> 00:01:45.795
+This is now run the lambda function one time.
+
+00:01:45.795 --> 00:01:48.710
+If we keep clicking on the test button,
+
+00:01:48.710 --> 00:01:51.670
+it will just keep invoking the lambda function.
+
+00:01:51.670 --> 00:01:56.105
+For the exercise, you'll want to run the lambda several times,
+
+00:01:56.105 --> 00:02:00.965
+give it a few minutes to let the logs and metrics actually propagate,
+
+00:02:00.965 --> 00:02:06.120
+and then you want to head over to CloudWatch and look for the metrics there. Good luck.
+

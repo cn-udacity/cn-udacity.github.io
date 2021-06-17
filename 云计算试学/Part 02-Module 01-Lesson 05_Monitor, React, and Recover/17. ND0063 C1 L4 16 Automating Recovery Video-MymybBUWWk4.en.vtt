@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.730
+Computers react faster than humans.
+
+00:00:02.730 --> 00:00:04.980
+If you can automate problem recovery,
+
+00:00:04.980 --> 00:00:08.070
+then you will have less downtime and more sleep.
+
+00:00:08.070 --> 00:00:11.880
+Problems that are standard will have standard solutions.
+
+00:00:11.880 --> 00:00:16.185
+If an EC2 instance fails because its underlying hardware fails,
+
+00:00:16.185 --> 00:00:18.375
+the solution is to create a new instance.
+
+00:00:18.375 --> 00:00:21.090
+Automating this reaction is straightforward.
+
+00:00:21.090 --> 00:00:24.130
+You still want to know about automated recovery.
+
+00:00:24.130 --> 00:00:27.230
+If your automated recovery measures are executing
+
+00:00:27.230 --> 00:00:30.685
+more frequently than normal, you should investigate.
+
+00:00:30.685 --> 00:00:33.890
+You may not need to wake people up in the middle of the night,
+
+00:00:33.890 --> 00:00:38.000
+but do create lesser notifications about these activities.
+
+00:00:38.000 --> 00:00:40.445
+Automation is a fantastic tool,
+
+00:00:40.445 --> 00:00:43.945
+but don't allow your automation to make the problem worse.
+
+00:00:43.945 --> 00:00:46.460
+If your database has suddenly started using
+
+00:00:46.460 --> 00:00:51.455
+more disk space and you have automation in place to add more automatically,
+
+00:00:51.455 --> 00:00:53.990
+you may wind up adding tremendous amounts of
+
+00:00:53.990 --> 00:00:57.350
+disk space and not addressing the underlying problem,
+
+00:00:57.350 --> 00:01:01.090
+which might be that something is mistakenly adding new data.
+
+00:01:01.090 --> 00:01:06.790
+Several AWS services can autoscale to help you with some automated recovery.
+
+00:01:06.790 --> 00:01:10.800
+Dynamodb, RDS disk space scaling,
+
+00:01:10.800 --> 00:01:15.510
+EC2 AutoScaling Groups, and Lambda are examples of these services.
+
+00:01:15.510 --> 00:01:20.725
+They all have some ability to scale up in response to changes in your workload.
+
+00:01:20.725 --> 00:01:25.445
+Configuring these services to do so can be tremendously valuable.
+
+00:01:25.445 --> 00:01:29.465
+Keep in mind that some things will scale up automatically,
+
+00:01:29.465 --> 00:01:32.095
+but will not scale down so gracefully.
+
+00:01:32.095 --> 00:01:34.890
+RDS disk space is like this,
+
+00:01:34.890 --> 00:01:36.350
+and the only way to reduce
+
+00:01:36.350 --> 00:01:41.700
+RDS disk space is to migrate your data to a new database instance.
+

@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.430
+How do you determine what amount of
+
+00:00:02.430 --> 00:00:06.945
+free disk space is low enough on a database that you should be alerting on?
+
+00:00:06.945 --> 00:00:13.095
+The answer is you need to consider your historical usage of your database disk space,
+
+00:00:13.095 --> 00:00:15.840
+and you should give yourself at least a week.
+
+00:00:15.840 --> 00:00:19.570
+There's really no set amount of disk space to alert on.
+
+00:00:19.570 --> 00:00:24.210
+You need to consider your company's usage and the use case for that database.
+
+00:00:24.210 --> 00:00:29.049
+You really want to give yourself plenty of time to react to the situation.
+

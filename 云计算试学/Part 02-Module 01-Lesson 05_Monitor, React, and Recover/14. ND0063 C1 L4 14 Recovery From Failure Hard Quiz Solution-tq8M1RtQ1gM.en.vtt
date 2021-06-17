@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+If the cause of an issue is not immediately obvious,
+
+00:00:03.615 --> 00:00:07.545
+what things should you look at to help you identify the root cause?
+
+00:00:07.545 --> 00:00:09.855
+The answer is, you should look at
+
+00:00:09.855 --> 00:00:13.675
+the recent changes that have been made and your documentation.
+
+00:00:13.675 --> 00:00:16.605
+Changes that occurred several weeks ago are
+
+00:00:16.605 --> 00:00:20.490
+unlikely to be affecting a newly occurring problem.
+
+00:00:20.490 --> 00:00:22.680
+While the AWS bill,
+
+00:00:22.680 --> 00:00:24.765
+does contain a lot of useful information,
+
+00:00:24.765 --> 00:00:28.239
+it is not likely to help you in this situation.
+

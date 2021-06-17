@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.100
+Failure will happen.
+
+00:00:02.100 --> 00:00:05.220
+Someone will update your production infrastructure
+
+00:00:05.220 --> 00:00:07.770
+thinking they are working in your development environment,
+
+00:00:07.770 --> 00:00:13.305
+or someone will forget to pay a bill and some component of your system will go down.
+
+00:00:13.305 --> 00:00:15.450
+Things fail all the time,
+
+00:00:15.450 --> 00:00:17.175
+expect things to fail,
+
+00:00:17.175 --> 00:00:20.520
+and be prepared to handle the situation when they do.
+
+00:00:20.520 --> 00:00:24.915
+You need to understand why something has failed before you can fix it.
+
+00:00:24.915 --> 00:00:30.525
+Finding the cause of an issue starts when you're designing and architecting a system.
+
+00:00:30.525 --> 00:00:33.960
+Making systems observable and debuggable
+
+00:00:33.960 --> 00:00:37.815
+is important for running and diagnosing systems later.
+
+00:00:37.815 --> 00:00:40.985
+Some things simple to find,
+
+00:00:40.985 --> 00:00:44.435
+especially if you have setup thorough alerts.
+
+00:00:44.435 --> 00:00:49.025
+If you get an alert saying that your database has run out of disk space,
+
+00:00:49.025 --> 00:00:52.985
+you should look to see if the disc consumption patterns are normal.
+
+00:00:52.985 --> 00:00:57.925
+If so you can probably add more disc space and go back to sleep.
+
+00:00:57.925 --> 00:01:00.860
+Other problems are harder to track down.
+
+00:01:00.860 --> 00:01:05.735
+You usually want to start at a high level and look for areas of suspicion.
+
+00:01:05.735 --> 00:01:08.800
+For example, if you get the same alert,
+
+00:01:08.800 --> 00:01:11.260
+your database being out of disk space.
+
+00:01:11.260 --> 00:01:14.480
+But your normal usage pattern shows that you should have
+
+00:01:14.480 --> 00:01:18.350
+three more months of runway before you would need to add disk space.
+
+00:01:18.350 --> 00:01:21.665
+You'll need to dig deeper to find out what happened.
+
+00:01:21.665 --> 00:01:25.420
+Your first clue is that the database is out of space.
+
+00:01:25.420 --> 00:01:29.030
+From there, you can use the CloudWatch metrics to look at
+
+00:01:29.030 --> 00:01:34.420
+your historical usage and determine if there has been a sharp increase in that usage.
+
+00:01:34.420 --> 00:01:36.375
+Why? What changed?
+
+00:01:36.375 --> 00:01:37.955
+Deployment release notes,
+
+00:01:37.955 --> 00:01:42.080
+application logs, platform changes are all things to look at.
+
+00:01:42.080 --> 00:01:47.255
+Understanding what has changed is the key to finding the root cause.
+
+00:01:47.255 --> 00:01:49.275
+What are things that could change?
+
+00:01:49.275 --> 00:01:51.725
+When investigating the cause of issues,
+
+00:01:51.725 --> 00:01:54.425
+look to all sources of information.
+
+00:01:54.425 --> 00:01:57.625
+Understand what changes your company has made.
+
+00:01:57.625 --> 00:02:01.385
+Look to your logs to see what your applications are telling you.
+
+00:02:01.385 --> 00:02:04.070
+Look at services like CloudTrail to see
+
+00:02:04.070 --> 00:02:07.610
+a complete history of what has gone on with your AWS account.
+
+00:02:07.610 --> 00:02:09.465
+Who has changed what,
+
+00:02:09.465 --> 00:02:12.785
+and could it have anything to do with what has gone wrong?
+
+00:02:12.785 --> 00:02:17.225
+Did your company make a change that coincides with the issue starting,
+
+00:02:17.225 --> 00:02:20.260
+this is a good sign that you should look internally.
+
+00:02:20.260 --> 00:02:23.060
+Did a third party vendor make a change?
+
+00:02:23.060 --> 00:02:26.405
+Make sure that you know what your dependencies are.
+
+00:02:26.405 --> 00:02:32.360
+How to identify if they're having issues and who to contact to ask to restore service.
+
+00:02:32.360 --> 00:02:35.660
+Time is another element that can break your system.
+
+00:02:35.660 --> 00:02:38.695
+Over time, things expire.
+
+00:02:38.695 --> 00:02:42.695
+SSL certificates and licenses are good examples.
+
+00:02:42.695 --> 00:02:46.385
+These can also be hard to track down and can take time to fix.
+
+00:02:46.385 --> 00:02:50.830
+So being diligent about keeping tabs on things that expire is imperative.
+
+00:02:50.830 --> 00:02:53.900
+The second part of the process is to fix the issue.
+
+00:02:53.900 --> 00:02:56.135
+Once you understand what has gone wrong,
+
+00:02:56.135 --> 00:02:57.680
+then you can fix the issue.
+
+00:02:57.680 --> 00:03:02.755
+This is where your planning documentation and backup plans really matter.
+
+00:03:02.755 --> 00:03:07.385
+Again, you'll use monitoring to ensure that you have fixed the issue.
+
+00:03:07.385 --> 00:03:09.410
+As things return to normal,
+
+00:03:09.410 --> 00:03:12.530
+your monitoring information will confirm things are back on
+
+00:03:12.530 --> 00:03:17.100
+track and your alerting system should start to turn green.
+

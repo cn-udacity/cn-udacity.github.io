@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+We have now completed all the lessons in this course.
+
+00:00:03.615 --> 00:00:07.140
+We began by discussing AWS regions and
+
+00:00:07.140 --> 00:00:11.430
+availability zones and how they are core to AWS resiliency.
+
+00:00:11.430 --> 00:00:14.850
+We built VPCs and networks and looked at some of
+
+00:00:14.850 --> 00:00:18.660
+the options we have for connectivity within AWS.
+
+00:00:18.660 --> 00:00:22.995
+Then we studied AWS application service redundancy.
+
+00:00:22.995 --> 00:00:27.380
+We learned which types of AWS services offer what levels of
+
+00:00:27.380 --> 00:00:33.395
+redundancy and how much effort it takes to achieve those levels of redundancy.
+
+00:00:33.395 --> 00:00:40.690
+We created multi AZ and multi-region data stores and worked through fail-over scenarios.
+
+00:00:40.690 --> 00:00:44.180
+Next, we examined business objectives and
+
+00:00:44.180 --> 00:00:47.720
+thought about how to interface with other functions of our business,
+
+00:00:47.720 --> 00:00:54.740
+as well as what key metrics are for both non-technical colleagues as well as customers.
+
+00:00:54.740 --> 00:00:58.639
+We created SLAs, estimated outage timelines,
+
+00:00:58.639 --> 00:01:00.845
+and planned how to handle them.
+
+00:01:00.845 --> 00:01:06.155
+Lastly, after gaining knowledge about how to keep our platforms up and running,
+
+00:01:06.155 --> 00:01:09.155
+we worked on what to do when those platforms fail,
+
+00:01:09.155 --> 00:01:11.030
+how to prepare for it,
+
+00:01:11.030 --> 00:01:12.980
+and how to react to it.
+
+00:01:12.980 --> 00:01:18.980
+This toolkit provides the foundation you need to build resilient cloud applications.
+
+00:01:18.980 --> 00:01:25.260
+You are now ready to start architecting your own highly available solutions in the cloud.
+

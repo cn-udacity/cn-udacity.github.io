@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.225
+In this lesson, you've worked on monitoring your systems
+
+00:00:03.225 --> 00:00:06.945
+and learning about the AWS tools and features for doing so.
+
+00:00:06.945 --> 00:00:12.810
+You practiced using CloudWatch metrics to find and view AWS metrics.
+
+00:00:12.810 --> 00:00:17.460
+Then we looked at the next step to monitoring, alerting.
+
+00:00:17.460 --> 00:00:21.120
+We created an alert and examined the options that CloudWatch
+
+00:00:21.120 --> 00:00:24.780
+alarms gives us for bringing attention to problems.
+
+00:00:24.780 --> 00:00:29.385
+Once our systems reach out and ask for help via our alerting,
+
+00:00:29.385 --> 00:00:31.260
+we need to take action.
+
+00:00:31.260 --> 00:00:34.980
+We've looked at the steps involved in diagnosing problems,
+
+00:00:34.980 --> 00:00:38.460
+how to consider these from the beginning of system design,
+
+00:00:38.460 --> 00:00:41.815
+and how to bring systems back online.
+
+00:00:41.815 --> 00:00:45.290
+Finally, we discussed automating the recovery of
+
+00:00:45.290 --> 00:00:50.400
+our systems and the benefits and considerations in doing so.
+

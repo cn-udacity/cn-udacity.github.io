@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.830
+You're doing great. We've covered foundational AWS redundancy concepts,
+
+00:00:04.830 --> 00:00:08.235
+redundancy on AWS application services,
+
+00:00:08.235 --> 00:00:12.570
+and looked at how this all ties in to the objectives of your business.
+
+00:00:12.570 --> 00:00:17.980
+Now we're going to look at how you find and react to failures within your platform.
+
+00:00:17.980 --> 00:00:22.770
+In this lesson, we'll go over some of the techniques and technologies around both
+
+00:00:22.770 --> 00:00:27.690
+keeping track of your platform state as well as recovering from failures that occur.
+
+00:00:27.690 --> 00:00:32.960
+Monitoring is crucial to understanding what is happening in your systems.
+
+00:00:32.960 --> 00:00:36.485
+The counterpart to monitoring is alerting.
+
+00:00:36.485 --> 00:00:40.895
+Alerting allows your platform to tell you when something is wrong.
+
+00:00:40.895 --> 00:00:43.190
+Without monitoring and alerting,
+
+00:00:43.190 --> 00:00:46.670
+you are clueless about what is happening within your application.
+
+00:00:46.670 --> 00:00:50.600
+When failures occur, and they will how you recover from
+
+00:00:50.600 --> 00:00:55.570
+them comes down to identifying the cause of the issue and rectifying it.
+
+00:00:55.570 --> 00:00:58.095
+To correct problems within your systems,
+
+00:00:58.095 --> 00:01:03.240
+we'll wrap up by looking at techniques for automating the recovery from failure.
+

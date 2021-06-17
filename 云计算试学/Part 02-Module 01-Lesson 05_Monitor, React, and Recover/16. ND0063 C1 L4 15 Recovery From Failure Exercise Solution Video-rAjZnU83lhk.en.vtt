@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.409
+In this exercise, you are asked to configure AWS CloudTrail
+
+00:00:04.409 --> 00:00:06.780
+so that you can keep track of all the events and
+
+00:00:06.780 --> 00:00:10.500
+actions that are happening within your AWS account.
+
+00:00:10.500 --> 00:00:13.800
+We go to AWS CloudTrail.
+
+00:00:13.800 --> 00:00:18.880
+We can look at the configured trails.
+
+00:00:19.760 --> 00:00:26.565
+We pick the item that has the name that we have used to create a new trail.
+
+00:00:26.565 --> 00:00:30.680
+Now you can see the various options that we've set up for this particular trail,
+
+00:00:30.680 --> 00:00:34.060
+whether or not we apply it to all regions and then,
+
+00:00:34.060 --> 00:00:38.570
+exactly what events windup going into this particular trail.
+
+00:00:38.570 --> 00:00:41.840
+Then towards the bottom, we can see what we've configured in
+
+00:00:41.840 --> 00:00:45.140
+terms of where to store this particular set of data.
+
+00:00:45.140 --> 00:00:49.440
+We can see we've stored this in our Udacity Cloud Trail folder.
+
+00:00:50.000 --> 00:00:55.055
+This is useful for keeping track of large amounts of events.
+
+00:00:55.055 --> 00:00:58.820
+Also, when you want to go see recent events,
+
+00:00:58.820 --> 00:01:04.220
+you can go straight back to the dashboard and under recent events,
+
+00:01:04.220 --> 00:01:06.900
+click "View all events".
+
+00:01:07.490 --> 00:01:12.170
+Viewing all events gives you a good way to see and search for
+
+00:01:12.170 --> 00:01:17.700
+recent events and find out what may have happened most recently within your AWS account.
+
+00:01:17.860 --> 00:01:20.630
+As you can see, there's lots of data here.
+
+00:01:20.630 --> 00:01:22.130
+We can expand these and we can get
+
+00:01:22.130 --> 00:01:27.330
+more information and see the entire event if we want to.
+
+00:01:29.900 --> 00:01:33.890
+There's a lot of information and AWS has other tools
+
+00:01:33.890 --> 00:01:37.430
+such as AWS Athena to help search through them,
+
+00:01:37.430 --> 00:01:40.130
+but using the dashboard is a great way to
+
+00:01:40.130 --> 00:01:44.280
+search through and find what's been going on recently in your account.
+

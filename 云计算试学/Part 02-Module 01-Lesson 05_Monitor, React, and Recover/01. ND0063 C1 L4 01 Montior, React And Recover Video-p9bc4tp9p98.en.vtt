@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.400
+Building resilient platforms means making them as fault tolerant as possible,
+
+00:00:04.400 --> 00:00:09.255
+but it also means making sure you're prepared to deal with failures when they do occur.
+
+00:00:09.255 --> 00:00:13.230
+In this lesson, you'll practice monitoring, reacting,
+
+00:00:13.230 --> 00:00:19.030
+and recovering your service when those failures do happen, and they will.
+

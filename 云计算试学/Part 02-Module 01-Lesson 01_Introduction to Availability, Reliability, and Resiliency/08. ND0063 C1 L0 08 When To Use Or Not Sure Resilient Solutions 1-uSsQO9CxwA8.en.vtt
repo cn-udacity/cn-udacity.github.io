@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.160
+Generally speaking, resilient systems are more expensive than non-resilient systems.
+
+00:00:05.160 --> 00:00:08.025
+They can also be more complex to run and maintain.
+
+00:00:08.025 --> 00:00:11.100
+Thus, you should consider the trade-offs to
+
+00:00:11.100 --> 00:00:14.100
+decide when you need resiliency and when you don't.
+
+00:00:14.100 --> 00:00:15.900
+Think through the use case and
+
+00:00:15.900 --> 00:00:19.665
+business requirements of a particular environment before deciding,
+
+00:00:19.665 --> 00:00:21.900
+we should be building out full redundancy.
+
+00:00:21.900 --> 00:00:25.785
+For development environments, resiliency is usually not needed.
+
+00:00:25.785 --> 00:00:30.160
+For mission critical production systems, it's a requirement.
+

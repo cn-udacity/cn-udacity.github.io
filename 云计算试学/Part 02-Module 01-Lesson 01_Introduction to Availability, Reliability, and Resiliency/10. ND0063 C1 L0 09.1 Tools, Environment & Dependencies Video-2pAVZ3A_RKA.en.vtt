@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.205
+In this course, we'll mainly be using
+
+00:00:02.205 --> 00:00:06.450
+the AWS Console to interact the different services in AWS.
+
+00:00:06.450 --> 00:00:09.840
+We'll be exploring many different services,
+
+00:00:09.840 --> 00:00:13.020
+and most of the usage that will cover and
+
+00:00:13.020 --> 00:00:18.325
+consume throughout this course will be covered by the AWS Free Tier.
+
+00:00:18.325 --> 00:00:22.865
+To take as quick look or through some of the AWS Console,
+
+00:00:22.865 --> 00:00:24.440
+you should have a AWS account.
+
+00:00:24.440 --> 00:00:29.525
+If you don't already can sign up for one at aws.amazon.com,
+
+00:00:29.525 --> 00:00:32.845
+and we'll be looking at several different services.
+
+00:00:32.845 --> 00:00:34.215
+To highlight a few of them,
+
+00:00:34.215 --> 00:00:35.850
+this is the EC2 Console,
+
+00:00:35.850 --> 00:00:38.880
+where you go to create EC2 instances.
+
+00:00:38.880 --> 00:00:41.070
+Looking at the VPC service,
+
+00:00:41.070 --> 00:00:45.685
+this is where we'll spend some time looking through VPCs networking,
+
+00:00:45.685 --> 00:00:49.655
+and the different options for network access,
+
+00:00:49.655 --> 00:00:55.590
+both internal and external to your AWS VPCs and networking.
+
+00:00:55.730 --> 00:01:00.320
+We'll also spend some time looking at DynamoDB,
+
+00:01:00.320 --> 00:01:09.090
+Amazons non-relational database service, and also S3.
+
+00:01:09.090 --> 00:01:12.000
+Amazon servers for object storage,
+
+00:01:12.000 --> 00:01:16.470
+these are buckets where we can put objects files.
+
+00:01:16.470 --> 00:01:19.500
+We'll be looking at a lot of different options within S3,
+
+00:01:19.500 --> 00:01:22.379
+the different storage tiers and different components,
+
+00:01:22.379 --> 00:01:25.030
+and features that make up S3.
+

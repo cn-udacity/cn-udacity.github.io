@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+In this lesson, we'll start by reviewing
+
+00:00:02.040 --> 00:00:06.465
+the course prerequisites and history of the high-level concepts.
+
+00:00:06.465 --> 00:00:09.915
+We'll discuss what makes these topics important.
+
+00:00:09.915 --> 00:00:14.475
+Today's consumers expect services to be up and running around the clock.
+
+00:00:14.475 --> 00:00:17.160
+So your application should be no different.
+
+00:00:17.160 --> 00:00:20.580
+Finally, I get a glimpse at the course project,
+
+00:00:20.580 --> 00:00:25.710
+where you will build a highly resilient service that can survive many mishaps.
+
+00:00:25.710 --> 00:00:30.130
+You'll also see how to rollback the clock when things go wrong.
+

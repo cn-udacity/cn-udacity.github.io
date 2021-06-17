@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.535
+High availability, also called HA design is critical and modern systems.
+
+00:00:05.535 --> 00:00:08.850
+HA systems has standby component's ready in
+
+00:00:08.850 --> 00:00:12.730
+waiting to takeover supporting your application at a moments notice.
+
+00:00:12.730 --> 00:00:16.755
+The standby systems have up to the second copies of your data.
+
+00:00:16.755 --> 00:00:20.130
+Today's platforms are expected to be highly available.
+
+00:00:20.130 --> 00:00:22.935
+Building for fail over must be considered at
+
+00:00:22.935 --> 00:00:26.415
+every level of a system and must be part of the initial plan.
+
+00:00:26.415 --> 00:00:30.030
+Allowing for any individual component to fail and
+
+00:00:30.030 --> 00:00:33.885
+having a standby system able to take over is no small task.
+
+00:00:33.885 --> 00:00:37.860
+But HA design allows for platform systems to
+
+00:00:37.860 --> 00:00:42.045
+remain available regardless of any given server failing.
+
+00:00:42.045 --> 00:00:45.720
+Customers rely on software as a service systems.
+
+00:00:45.720 --> 00:00:48.635
+Thus HA design is table stakes,
+
+00:00:48.635 --> 00:00:53.255
+not only critical infrastructure applications are highly available these days.
+
+00:00:53.255 --> 00:00:58.730
+Netflix, for example, has highly redundant geographically distributed platform.
+
+00:00:58.730 --> 00:01:03.170
+In this course, you'll look and going beyond handling individual component failures,
+
+00:01:03.170 --> 00:01:06.810
+and how you can handle entire data center outrages
+

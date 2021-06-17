@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.320
+HA systems used to be extremely hard to build and maintain.
+
+00:00:04.320 --> 00:00:06.659
+These systems were very expensive,
+
+00:00:06.659 --> 00:00:08.550
+relied on custom hardware,
+
+00:00:08.550 --> 00:00:11.010
+and required experts to operate them.
+
+00:00:11.010 --> 00:00:15.975
+They are used by governments and only a handful of industries such as telecommunications.
+
+00:00:15.975 --> 00:00:18.600
+More recently, HA has become more
+
+00:00:18.600 --> 00:00:22.155
+achievable with commodity hardware and open-source software.
+
+00:00:22.155 --> 00:00:25.680
+It still requires extensive time to set up and run.
+
+00:00:25.680 --> 00:00:28.590
+These systems do not need custom hardware,
+
+00:00:28.590 --> 00:00:31.880
+they required even more expertise to maintain.
+
+00:00:31.880 --> 00:00:36.260
+The software was often open-source with no company to provide support.
+
+00:00:36.260 --> 00:00:40.190
+Today, in Cloud infrastructures like AWS,
+
+00:00:40.190 --> 00:00:44.095
+highly available systems can be set up with a few clicks.
+
+00:00:44.095 --> 00:00:47.775
+Some knowledge is required to configure and test these systems,
+
+00:00:47.775 --> 00:00:50.495
+but the barrier to entry has been lowered dramatically,
+
+00:00:50.495 --> 00:00:54.780
+opening up these capabilities to far more organizations.
+

@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.380
+In this course project,
+
+00:00:01.380 --> 00:00:05.070
+you'll build a Multi-Availability Zone Multi-Region Database.
+
+00:00:05.070 --> 00:00:06.990
+You'll then demonstrate how to use
+
+00:00:06.990 --> 00:00:10.710
+this database across these geographic regions and finally,
+
+00:00:10.710 --> 00:00:15.945
+you'll then fail that database over from one geographic location to another.
+
+00:00:15.945 --> 00:00:19.620
+You'll also create aversion website and demonstrate
+
+00:00:19.620 --> 00:00:23.340
+how its protected from accidental or intentional disruption.
+
+00:00:23.340 --> 00:00:25.635
+You'll practice by rolling back
+
+00:00:25.635 --> 00:00:29.740
+the website to previous version to restore normal operation.
+

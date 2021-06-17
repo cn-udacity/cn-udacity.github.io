@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.885
+Availability, reliability, resilience.
+
+00:00:03.885 --> 00:00:07.560
+Availability is how often a system operates as expected.
+
+00:00:07.560 --> 00:00:12.030
+This is typically measured as a percentage of the time a system is running.
+
+00:00:12.030 --> 00:00:15.270
+Reliability is how likely something is to be
+
+00:00:15.270 --> 00:00:18.990
+operating as expected at any given point in time.
+
+00:00:18.990 --> 00:00:26.440
+Resiliency is how quickly and easily a system can be brought back online after an outage.
+

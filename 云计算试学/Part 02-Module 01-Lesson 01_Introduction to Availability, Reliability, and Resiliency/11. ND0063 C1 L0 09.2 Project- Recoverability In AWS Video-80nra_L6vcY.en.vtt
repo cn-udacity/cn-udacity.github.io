@@ -4,28 +4,36 @@ Language: en
 
 00:00:00.000 --> 00:00:01.380
 In this course project,
+在这个过程中
 
 00:00:01.380 --> 00:00:05.070
 you'll build a Multi-Availability Zone Multi-Region Database.
+您将构建多可用性区域多区域数据库 
 
 00:00:05.070 --> 00:00:06.990
 You'll then demonstrate how to use
+然后演示如何使用
 
 00:00:06.990 --> 00:00:10.710
 this database across these geographic regions and finally,
+这些地理区域之间的数据库
 
 00:00:10.710 --> 00:00:15.945
 you'll then fail that database over from one geographic location to another.
+然后将数据库从一个地理位置转移到另一个地理位置 
 
 00:00:15.945 --> 00:00:19.620
 You'll also create aversion website and demonstrate
+您还将创建厌恶网站并演示
 
 00:00:19.620 --> 00:00:23.340
 how its protected from accidental or intentional disruption.
+如何防止意外或故意中断 
 
 00:00:23.340 --> 00:00:25.635
 You'll practice by rolling back
+你回滚道
 
 00:00:25.635 --> 00:00:29.740
 the website to previous version to restore normal operation.
-
+用于恢复正常操作的先前版本的 Web 站点 

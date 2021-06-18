@@ -4,37 +4,48 @@ Language: en
 
 00:00:00.000 --> 00:00:04.005
 In this course, you'll use the highly available constructs within
+在此过程中 您将在以下时间内使用高可用性构造
 
 00:00:04.005 --> 00:00:08.175
 AWS to create highly available and resilient systems and networks.
+AWS 将创建高度可用且具有弹性的系统和网络 
 
 00:00:08.175 --> 00:00:10.740
 You'll build resources in the different regions and
+您将在不同区域中构建资源
 
 00:00:10.740 --> 00:00:14.550
 availability zones that make up the backbone of AWS Cloud.
+提供 AWS Cloud 主干的可用性专区 
 
 00:00:14.550 --> 00:00:19.875
 Next, you'll design and build resilient and scalable solutions within AWS,
+接下来 您将在 AWS 中设计并构建弹性和可扩展的解决方案 
 
 00:00:19.875 --> 00:00:25.275
 application services that allow for resiliency and geographic scalability.
+应用程序服务 可实现弹性和地理可扩展性 
 
 00:00:25.275 --> 00:00:28.185
 Then, you'll explore connection between
+然后你就会探索
 
 00:00:28.185 --> 00:00:32.640
 all these technical aspects and business operations and objectives.
+所有这些技术方面以及业务运营和目标 
 
 00:00:32.640 --> 00:00:38.505
 Understanding this relationship is key to delivering results for the whole organization.
+理解这一关系是实现整个组织成果的关键 
 
 00:00:38.505 --> 00:00:42.225
 Finally, you'll practice what to do when things fail.
+最后 当事情失败时 你会练习做什么 
 
 00:00:42.225 --> 00:00:45.540
 Things will fail, and here you'll gain knowledge and
+事情会失败你会得到知识
 
 00:00:45.540 --> 00:00:49.690
 skills to watch for and react to system failures.
-
+对系统故障进行监视和反应的技能 

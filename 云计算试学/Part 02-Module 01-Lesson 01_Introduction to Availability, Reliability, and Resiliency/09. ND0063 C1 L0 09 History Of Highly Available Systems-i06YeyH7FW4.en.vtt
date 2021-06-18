@@ -4,49 +4,64 @@ Language: en
 
 00:00:00.000 --> 00:00:04.320
 HA systems used to be extremely hard to build and maintain.
+房委会所採用的系统 在建造和保养方面极为困难 
 
 00:00:04.320 --> 00:00:06.659
 These systems were very expensive,
+这些系统非常昂贵
 
 00:00:06.659 --> 00:00:08.550
 relied on custom hardware,
+依赖于定制硬件 
 
 00:00:08.550 --> 00:00:11.010
 and required experts to operate them.
+并要求专家进行操作 
 
 00:00:11.010 --> 00:00:15.975
 They are used by governments and only a handful of industries such as telecommunications.
+它们被政府使用 只有少数几个行业 如电信业 
 
 00:00:15.975 --> 00:00:18.600
 More recently, HA has become more
+最近 医管局越来越多
 
 00:00:18.600 --> 00:00:22.155
 achievable with commodity hardware and open-source software.
+可以通过商品硬件和开源软件实现 
 
 00:00:22.155 --> 00:00:25.680
 It still requires extensive time to set up and run.
+它仍然需要大量时间来设置和运行 
 
 00:00:25.680 --> 00:00:28.590
 These systems do not need custom hardware,
+这些系统不需要定制硬件 
 
 00:00:28.590 --> 00:00:31.880
 they required even more expertise to maintain.
+他们需要更多的专业知识来维持
 
 00:00:31.880 --> 00:00:36.260
 The software was often open-source with no company to provide support.
+该软件常常是开源的 没有公司提供支持 
 
 00:00:36.260 --> 00:00:40.190
 Today, in Cloud infrastructures like AWS,
+今天 在 AWS 这样的云基础架构中 
 
 00:00:40.190 --> 00:00:44.095
 highly available systems can be set up with a few clicks.
+可以通过几次单击来设置高可用性系统 
 
 00:00:44.095 --> 00:00:47.775
 Some knowledge is required to configure and test these systems,
+需要一些知识来配置和测试这些系统 
 
 00:00:47.775 --> 00:00:50.495
 but the barrier to entry has been lowered dramatically,
+但进入的障碍已经大大降低
 
 00:00:50.495 --> 00:00:54.780
 opening up these capabilities to far more organizations.
-
+向更多的组织开放这些能力 

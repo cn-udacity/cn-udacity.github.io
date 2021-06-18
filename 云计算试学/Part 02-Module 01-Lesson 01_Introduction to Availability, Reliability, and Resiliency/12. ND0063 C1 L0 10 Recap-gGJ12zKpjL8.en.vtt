@@ -4,28 +4,36 @@ Language: en
 
 00:00:00.000 --> 00:00:03.375
 We've briefly review the learning objectives of the course,
+我们简要回顾了课程的学习目标 
 
 00:00:03.375 --> 00:00:05.190
 talked about why they're important,
+说为什么他们很重要
 
 00:00:05.190 --> 00:00:07.275
 and how they apply to business goals.
+以及它们如何适用于商业目标 
 
 00:00:07.275 --> 00:00:09.900
 You have seen, how to decide when to use
+你看了 怎么用
 
 00:00:09.900 --> 00:00:14.100
 these systems and reviewed the history of this technology in the industry.
+这些系统并回顾了这一技术在业界的历史 
 
 00:00:14.100 --> 00:00:19.335
 Next, we will look at the foundational component's of high availability in AWS.
+接下来 我们将查看 AWS 中高可用性的基础组件 
 
 00:00:19.335 --> 00:00:23.805
 Later, we will move on to building with resilient application services,
+稍后 我们将继续进行弹性应用服务的建设 
 
 00:00:23.805 --> 00:00:25.350
 before we get to considering
+在我们考虑
 
 00:00:25.350 --> 00:00:30.280
 our business goals and then, observability and recoverability.
-
+我们的业务目标还有观测能力和可恢复性

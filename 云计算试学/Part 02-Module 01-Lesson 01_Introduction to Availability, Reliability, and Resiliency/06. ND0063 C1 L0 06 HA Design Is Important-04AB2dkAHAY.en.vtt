@@ -4,52 +4,68 @@ Language: en
 
 00:00:00.000 --> 00:00:05.535
 High availability, also called HA design is critical and modern systems.
+高可用性 也称为 HA 设计 是关键的现代系统 
 
 00:00:05.535 --> 00:00:08.850
 HA systems has standby component's ready in
+HA 系统具有备用组件已就绪
 
 00:00:08.850 --> 00:00:12.730
 waiting to takeover supporting your application at a moments notice.
+在时刻注意支持您的应用程序 
 
 00:00:12.730 --> 00:00:16.755
 The standby systems have up to the second copies of your data.
+备用系统具有数据的第二个副本 
 
 00:00:16.755 --> 00:00:20.130
 Today's platforms are expected to be highly available.
+今天的平台预计将会高度可用 
 
 00:00:20.130 --> 00:00:22.935
 Building for fail over must be considered at
+必须考虑构建故障转移
 
 00:00:22.935 --> 00:00:26.415
 every level of a system and must be part of the initial plan.
+系统的每个级别 并且必须是初始计划的一部分 
 
 00:00:26.415 --> 00:00:30.030
 Allowing for any individual component to fail and
+允许任何单个组件失败 并且
 
 00:00:30.030 --> 00:00:33.885
 having a standby system able to take over is no small task.
+拥有一个能够接管的备用系统是没有小任务的 
 
 00:00:33.885 --> 00:00:37.860
 But HA design allows for platform systems to
+但是 HA 设计允许平台系统
 
 00:00:37.860 --> 00:00:42.045
 remain available regardless of any given server failing.
+无论任何给定服务器发生故障 都将保持可用 
 
 00:00:42.045 --> 00:00:45.720
 Customers rely on software as a service systems.
+客户依赖软件作为服务系统 
 
 00:00:45.720 --> 00:00:48.635
 Thus HA design is table stakes,
+因此 房委会的设计是有表利害关系的 
 
 00:00:48.635 --> 00:00:53.255
 not only critical infrastructure applications are highly available these days.
+这几天不仅是关键的基础设施应用
 
 00:00:53.255 --> 00:00:58.730
 Netflix, for example, has highly redundant geographically distributed platform.
+例如  Netflix 具有高度冗余的地理分布平台 
 
 00:00:58.730 --> 00:01:03.170
 In this course, you'll look and going beyond handling individual component failures,
+在此过程中 您将查看并超越处理个别组件故障 
 
 00:01:03.170 --> 00:01:06.810
 and how you can handle entire data center outrages
-
+以及如何处理整个数据中心的事件

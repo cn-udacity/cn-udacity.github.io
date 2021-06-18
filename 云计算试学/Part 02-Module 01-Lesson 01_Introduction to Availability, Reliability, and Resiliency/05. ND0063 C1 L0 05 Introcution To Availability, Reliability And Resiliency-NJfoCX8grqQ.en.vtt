@@ -4,19 +4,24 @@ Language: en
 
 00:00:00.000 --> 00:00:03.885
 Availability, reliability, resilience.
+可用性 可靠性 弹性 
 
 00:00:03.885 --> 00:00:07.560
 Availability is how often a system operates as expected.
+可用性是系统按预期运行的频率 
 
 00:00:07.560 --> 00:00:12.030
 This is typically measured as a percentage of the time a system is running.
+这通常以系统运行时的百分比来度量 
 
 00:00:12.030 --> 00:00:15.270
 Reliability is how likely something is to be
+可靠性是
 
 00:00:15.270 --> 00:00:18.990
 operating as expected at any given point in time.
+在任何给定时间点按预期运行 
 
 00:00:18.990 --> 00:00:26.440
 Resiliency is how quickly and easily a system can be brought back online after an outage.
-
+弹性是在中断后 系统可以快速和轻松地重新联机的方式 

@@ -4,70 +4,92 @@ Language: en
 
 00:00:00.000 --> 00:00:02.205
 In this course, we'll mainly be using
+在这个过程中 我们主要会使用
 
 00:00:02.205 --> 00:00:06.450
 the AWS Console to interact the different services in AWS.
+AWS 控制台 以交互 AWS 中的不同服务 
 
 00:00:06.450 --> 00:00:09.840
 We'll be exploring many different services,
+我们会探索很多不同的服务
 
 00:00:09.840 --> 00:00:13.020
 and most of the usage that will cover and
+大部分的使用会覆盖和
 
 00:00:13.020 --> 00:00:18.325
 consume throughout this course will be covered by the AWS Free Tier.
+整个过程将被 AWS Free Tier 覆盖 
 
 00:00:18.325 --> 00:00:22.865
 To take as quick look or through some of the AWS Console,
+要快速查看或通过某些 AWS 控制台 
 
 00:00:22.865 --> 00:00:24.440
 you should have a AWS account.
+你应该有个 AWS 账户
 
 00:00:24.440 --> 00:00:29.525
 If you don't already can sign up for one at aws.amazon.com,
+如果您还不可以在 aws.amazon.com上报名 
 
 00:00:29.525 --> 00:00:32.845
 and we'll be looking at several different services.
+我们会看几种不同的服务
 
 00:00:32.845 --> 00:00:34.215
 To highlight a few of them,
+为了突出其中的几个
 
 00:00:34.215 --> 00:00:35.850
 this is the EC2 Console,
+这是 EC2 控制台 
 
 00:00:35.850 --> 00:00:38.880
 where you go to create EC2 instances.
+用于创建 EC2 实例的位置 
 
 00:00:38.880 --> 00:00:41.070
 Looking at the VPC service,
+查看 VPC 服务 
 
 00:00:41.070 --> 00:00:45.685
 this is where we'll spend some time looking through VPCs networking,
+这就是我们在 VPC 网络上花点时间
 
 00:00:45.685 --> 00:00:49.655
 and the different options for network access,
+以及网络访问的不同选项 
 
 00:00:49.655 --> 00:00:55.590
 both internal and external to your AWS VPCs and networking.
+您的 AWS VPC 和网络的内部和外部 
 
 00:00:55.730 --> 00:01:00.320
 We'll also spend some time looking at DynamoDB,
+我们还会花些时间看看 DynamoDB
 
 00:01:00.320 --> 00:01:09.090
 Amazons non-relational database service, and also S3.
+Amazons 非关系数据库服务和 S3 
 
 00:01:09.090 --> 00:01:12.000
 Amazon servers for object storage,
+用于对象存储的 Amazon 服务器 
 
 00:01:12.000 --> 00:01:16.470
 these are buckets where we can put objects files.
+这些是存储对象文件的存储区 
 
 00:01:16.470 --> 00:01:19.500
 We'll be looking at a lot of different options within S3,
+我们会在 S3内看到很多不同的选择
 
 00:01:19.500 --> 00:01:22.379
 the different storage tiers and different components,
+不同的存储层和不同的组件 
 
 00:01:22.379 --> 00:01:25.030
 and features that make up S3.
-
+以及组成 S3的功能部件 

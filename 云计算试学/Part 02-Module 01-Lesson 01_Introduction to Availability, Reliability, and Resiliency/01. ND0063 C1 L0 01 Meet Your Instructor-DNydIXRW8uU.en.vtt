@@ -4,28 +4,36 @@ Language: en
 
 00:00:00.000 --> 00:00:02.355
 Hello. Welcome to the availability,
+你好 欢迎来到
 
 00:00:02.355 --> 00:00:04.680
 reliability, and resiliency course.
+可靠性和弹性课程 
 
 00:00:04.680 --> 00:00:08.340
 My name is Tom [inaudible] and I've been in the software industry for many years,
+我的名字叫汤姆 [ 内听 ] 我在软件行业多年 
 
 00:00:08.340 --> 00:00:10.755
 as both the developer and an architect.
+作为开发商和建筑师
 
 00:00:10.755 --> 00:00:12.270
 In the last 10 years,
+在过去的 10 年里
 
 00:00:12.270 --> 00:00:15.255
 I spent a lot of time working with AWS Ecosystem.
+我花了很多时间与 AWS 生态系统合作 
 
 00:00:15.255 --> 00:00:18.209
 I built multiple, highly available,
+我建造了多个高度可用的
 
 00:00:18.209 --> 00:00:22.095
 high-throughput, low-latency systems on top of AWS.
+AWS 顶部的高吞吐量 低延迟系统 
 
 00:00:22.095 --> 00:00:25.510
 I'm really excited to get started, so let's go.
-
+我真的很兴奋能开始了我们走吧

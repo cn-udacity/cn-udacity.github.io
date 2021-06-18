@@ -4,31 +4,40 @@ Language: en
 
 00:00:06.139 --> 00:00:11.399
 One of the things I'm working on now as an open-source project
+我现在做的是一个开源项目
 
 00:00:11.400 --> 00:00:16.245
 together with people from a variety of companies all over the world,
+和世界各地的各种公司的人一起
 
 00:00:16.245 --> 00:00:18.420
 is something called the core guidelines,
+是核心准则
 
 00:00:18.420 --> 00:00:20.220
 which is a set of rules,
+这是一套规则
 
 00:00:20.219 --> 00:00:22.019
 that among other things says,
+其他的事情都说
 
 00:00:22.019 --> 00:00:26.189
 "These are the places where you're not strongly typed,
+这些都是你没有强打字的地方
 
 00:00:26.190 --> 00:00:28.140
 where you can get yourself into trouble."
+你可以把自己惹上麻烦 "
 
 00:00:28.140 --> 00:00:31.875
 We're going to leak some buffer overflows and all the other good stuff.
+我们会泄露一些缓冲溢出和其他好的东西 
 
 00:00:31.875 --> 00:00:33.600
 However, we know where they are,
+但是我们知道他们在哪里
 
 00:00:33.600 --> 00:00:38.740
 and we provide you with tools that can guarantee you don't do it.
-
+我们为你提供了可以保证你不做的工具

@@ -4,118 +4,156 @@ Language: en
 
 00:00:00.000 --> 00:00:03.600
 This program is organized into four courses;
+该方案分为四个课程 ;
 
 00:00:03.600 --> 00:00:10.259
 foundations, object-oriented programming, memory management and concurrency.
+基础 面向对象编程 内存管理和并行 
 
 00:00:10.259 --> 00:00:12.734
 In the foundations course,
+在地基上
 
 00:00:12.734 --> 00:00:18.794
 you'll learn about C plus plus syntax and how to compile and run C plus plus programs.
+您将了解 C + 语法以及如何编译和运行 C + + 程序 
 
 00:00:18.795 --> 00:00:22.429
 You'll also learn about the input and output features of the language,
+您还会了解语言的输入和输出功能 
 
 00:00:22.429 --> 00:00:25.850
 as well as how to declare and initialize variables,
+以及如何声明和初始化变量 
 
 00:00:25.850 --> 00:00:29.600
 structure your code using conditionals and loops,
+使用条件和循环来构造代码 
 
 00:00:29.600 --> 00:00:32.405
 and organize your code using functions.
+并组织您的代码使用功能 
 
 00:00:32.405 --> 00:00:35.615
 In the object oriented-programming course,
+在面向对象编程过程中 
 
 00:00:35.615 --> 00:00:39.359
 you'll learn how to further organize your code into classes,
+你会学习如何进一步把你的代码组织成班级
 
 00:00:39.359 --> 00:00:44.090
 and you'll learn how to expose interfaces to those classes to other users.
+并且您将了解如何向其他用户公开这些类的接口 
 
 00:00:44.090 --> 00:00:47.630
 You'll also learn how to declare certain interfaces to be
+您还将学习如何将某些接口声明为
 
 00:00:47.630 --> 00:00:51.590
 public and certain to be private using access modifiers.
+使用访问修饰符的公共和特定于私有 
 
 00:00:51.590 --> 00:00:53.840
 You'll cover the core concepts of
+您将涵盖以下核心概念 :
 
 00:00:53.840 --> 00:00:57.800
 object-oriented programming generally including encapsulation,
+面向对象程序设计 一般包括封装 
 
 00:00:57.799 --> 00:01:00.994
 abstraction, inheritance and polymorphism,
+抽象 继承和多态性 
 
 00:01:00.994 --> 00:01:02.750
 and you'll learn how to implement
+你会学会如何实施
 
 00:01:02.750 --> 00:01:05.959
 those features using the C plus plus programming language.
+这些功能使用 C + + 编程语言 
 
 00:01:05.959 --> 00:01:10.069
 You'll close this course by learning about generic programming and how to
+您将通过了解通用编程以及如何
 
 00:01:10.069 --> 00:01:14.679
 use C plus plus templates to make your code more generic.
+使用 C + + 模板使您的代码更通用 
 
 00:01:14.680 --> 00:01:16.690
 In the next course,
+在接下来的课程中
 
 00:01:16.689 --> 00:01:18.500
 you'll learn about memory management.
+您将了解内存管理 
 
 00:01:18.500 --> 00:01:22.625
 Memory is incredibly important to the C plus plus programming language.
+记忆对 C + + 编程语言非常重要 
 
 00:01:22.625 --> 00:01:26.704
 You'll learn how to pass around both references and pointers,
+你会学会如何通过引用和指针
 
 00:01:26.704 --> 00:01:29.299
 and you'll learn about the differences between memory on
+你会了解记忆之间的差异
 
 00:01:29.299 --> 00:01:32.284
 the stack and memory allocated from the heap.
+从堆分配的堆栈和内存 
 
 00:01:32.284 --> 00:01:37.789
 You'll also learn how to take advantage of scope and use the resource acquisition
+您还将学习如何利用范围和使用资源获取
 
 00:01:37.790 --> 00:01:43.405
 is initialization paradigm in order to keep track of memory that's used by your program.
+是初始化范例 以便跟踪程序所使用的内存 
 
 00:01:43.405 --> 00:01:46.640
 You'll close this course by learning about smart pointers,
+您将通过了解智能指针来关闭此课程 
 
 00:01:46.640 --> 00:01:49.879
 which are the best way to keep track of pointers and
+这是跟踪指针的最好方法
 
 00:01:49.879 --> 00:01:53.814
 dynamically allocated memory in modern C plus plus.
+在现代 C + +中动态分配内存 
 
 00:01:53.814 --> 00:01:56.474
 The final course is concurrency.
+最后的课程是并行的 
 
 00:01:56.474 --> 00:02:02.194
 In this course, you'll learn how to organize your code using both processes and threads,
+在此课程中 您将学习如何使用流程和线程来组织代码 
 
 00:02:02.194 --> 00:02:06.199
 and you'll learn how to synchronize and communicate between threads.
+然后学习如何在线程之间进行同步和通信 
 
 00:02:06.200 --> 00:02:10.699
 In particular, you'll learn about features of the C plus plus programming language that
+尤其是 您将了解 C + + 编程语言的特点 
 
 00:02:10.699 --> 00:02:15.849
 support concurrent multi-threaded programming including promises and futures,
+支持并发多线程编程 包括承诺和期货 
 
 00:02:15.849 --> 00:02:18.060
 and mutexes, and locks.
+还有互斥锁
 
 00:02:18.060 --> 00:02:20.995
 By the time you're done with all four of these courses,
+当你完成所有四种课程的时候
 
 00:02:20.995 --> 00:02:25.490
 you will be a terrific C plus plus developer.
-
+你会是个了不起的 C + 开发商

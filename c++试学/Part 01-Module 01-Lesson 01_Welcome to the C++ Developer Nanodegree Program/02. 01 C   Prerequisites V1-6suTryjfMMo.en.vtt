@@ -4,55 +4,72 @@ Language: en
 
 00:00:00.000 --> 00:00:02.895
 The prerequisites for this Nanodegree program,
+这个 Nanodegren 计划的必备条件
 
 00:00:02.895 --> 00:00:07.650
 are that you should be an intermediate level software programmer in any language.
+您应该是任何语言的中级软件程序员 
 
 00:00:07.650 --> 00:00:11.745
 As long as you know concepts like variables, conditionals,
+只要你知道变量 条件 
 
 00:00:11.744 --> 00:00:16.214
 loops, and functions, you're ready to learn C++.
+循环 功能 您已准备好学习 C++ 
 
 00:00:16.214 --> 00:00:21.120
 We also expect that you know how to execute programs ideally from the terminal,
+我们还期望您知道如何理想地从终端执行程序 
 
 00:00:21.120 --> 00:00:23.984
 and that you're familiar with software debugging.
+你熟悉软件调试
 
 00:00:23.984 --> 00:00:27.079
 It will be helpful if you're familiar with concepts
+熟悉概念会有帮助的
 
 00:00:27.079 --> 00:00:29.734
 like classes in object-oriented programming,
+比如面向对象程序设计中的类
 
 00:00:29.734 --> 00:00:31.789
 but that's not required.
+但这不是必需的
 
 00:00:31.789 --> 00:00:35.210
 If you feel like you need to learn a little bit more about
+如果你觉得需要多了解一点
 
 00:00:35.210 --> 00:00:38.914
 software programming before proceeding on with this Nanodegree,
+软件编程 然后再继续此 Nanodegres  
 
 00:00:38.914 --> 00:00:43.820
 then I suggest either Udacity's intro to programming Nanodegree program,
+那我建议要么 Udacity 简介 Nanodegres 节目
 
 00:00:43.820 --> 00:00:47.344
 or our intro to self-driving cars Nanodegree program.
+或者我们的自驾汽车 Nanodegres 计划
 
 00:00:47.344 --> 00:00:50.269
 Our intro to programming Nanodegree program
+我们的 intro 编程 Nanodegres 程序
 
 00:00:50.270 --> 00:00:53.165
 will teach you the basics of software engineering,
+会教你软件工程的基础知识
 
 00:00:53.164 --> 00:00:56.284
 and our intro to self-driving cars Nanodegree program
+还有我们的自驾汽车 Nanodegren 计划
 
 00:00:56.284 --> 00:00:59.149
 will teach you the basics of software engineering,
+会教你软件工程的基础知识
 
 00:00:59.149 --> 00:01:06.429
 C++ specifically, along with topics like machine learning, physics, and mathematics.
-
+特别是 C++  还有机器学习 物理和数学 

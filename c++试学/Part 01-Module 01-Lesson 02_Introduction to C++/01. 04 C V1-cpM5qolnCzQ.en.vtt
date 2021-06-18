@@ -4,25 +4,32 @@ Language: en
 
 00:00:00.470 --> 00:00:04.979
 C++ is a compiled high performance programming language.
+C++ 是一种编译的高性能编程语言 
 
 00:00:04.980 --> 00:00:08.880
 It's particularly important for applications that have to run really
+对于必须运行的应用程序来说 这特别重要
 
 00:00:08.880 --> 00:00:13.589
 close to hardware like robots or automobiles.
+像机器人或汽车一样接近硬件
 
 00:00:13.589 --> 00:00:17.609
 C++ has a reputation perhaps unfairly earned for
+C++ 的名声也许是不公平的
 
 00:00:17.609 --> 00:00:21.780
 being a complex programming language that's difficult to master.
+是复杂的编程语言很难掌握
 
 00:00:21.780 --> 00:00:28.050
 It is true that C++ is a broad language with many different features.
+诚然  C++ 是一种具有许多不同特征的广义语言 
 
 00:00:28.050 --> 00:00:33.990
 In this program, you're going to learn the most modern and elegant features of
+在这个节目中 你将学习最现代和优雅的特点
 
 00:00:33.990 --> 00:00:41.079
 C++ so that you can write code that is both easy to develop and runs extremely fast.
-
+C++  这样您就可以编写既容易开发 又运行速度极快的代码 

@@ -4,46 +4,60 @@ Language: en
 
 00:00:00.000 --> 00:00:02.940
 Here I am with Visual Studio Code.
+这里我使用 Visual Studio 代码 
 
 00:00:02.940 --> 00:00:04.304
 I've just opened the editor.
+我刚打开了编辑
 
 00:00:04.304 --> 00:00:06.509
 I'm going to create a new file.
+我要创建一个新的文件 
 
 00:00:06.509 --> 00:00:08.594
 The first thing I'm going to do is save it.
+我要做的第一件事就是拯救它
 
 00:00:08.595 --> 00:00:10.530
 I'll save it in my temp directory.
+我会把它保存在临时目录里
 
 00:00:10.529 --> 00:00:12.660
 We'll call it hello.cpp.
+我们会叫它 hello.cpp
 
 00:00:12.660 --> 00:00:23.199
 I will write include iostream and create a main function.
+我将写包括 iostream  并创建一个 main 函数 
 
 00:00:23.329 --> 00:00:33.045
 I'll say std cout ''Hello world''. Then I'll save that.
+我会说 " 你好世界 " 那我就省了吧
 
 00:00:33.045 --> 00:00:36.690
 The next thing I'll do is I will open up a terminal down here.
+接下来我要做的就是在这里打开一个终端 
 
 00:00:36.689 --> 00:00:38.699
 I'll go to my temp directory.
+我去我的 temp 目录
 
 00:00:38.700 --> 00:00:40.304
 I've already installed g++.
+我已经安装了 + + 
 
 00:00:40.304 --> 00:00:43.484
 So if I check, I have g++.
+所以如果我检查一下 我有 g++ 
 
 00:00:43.484 --> 00:00:48.375
 So I can write g++ hello.cpp.
+所以我可以写 g++ hello.cpp 
 
 00:00:48.375 --> 00:00:50.869
 That should give me an a.out file.
+那应该给我一个 a.out 文件
 
 00:00:50.869 --> 00:00:54.269
 It does and it prints "Hello World". All set.
-
+它确实印上了 " Hello World "   一切都好了

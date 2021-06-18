@@ -4,52 +4,68 @@ Language: en
 
 00:00:00.000 --> 00:00:02.984
 When people talk about Modern C++,
+当人们谈论现代 C+ + 时
 
 00:00:02.984 --> 00:00:06.314
 they're often referring to the C++ 11 release,
+它们通常是指 C++ 11 发行版
 
 00:00:06.315 --> 00:00:10.785
 which introduced a whole range of new features into the programming language.
+在编程语言中引入了一系列的新功能
 
 00:00:10.785 --> 00:00:13.859
 Move semantics, variadic templates,
+移动语义 可变模板 
 
 00:00:13.859 --> 00:00:16.769
 initializer lists, the auto keyword,
+初始化程序列表 自动关键字 
 
 00:00:16.769 --> 00:00:19.320
 lambda expressions, null pointer,
+lambda 表达式 空指针 
 
 00:00:19.320 --> 00:00:23.160
 constant expression, range-based four loops, and smart pointers,
+常量表达式 基于范围的四环和智能指针 
 
 00:00:23.160 --> 00:00:26.160
 all came into the C++ programming language as part
+都变成了 C++ 编程语言
 
 00:00:26.160 --> 00:00:30.210
 of C++ 11 and changed the language dramatically.
+C++ 11 改变了语言
 
 00:00:30.210 --> 00:00:34.250
 C++ 14 was a relatively minor release,
+C++ 14 是一个比较小的版本 
 
 00:00:34.250 --> 00:00:36.979
 and C++ 17 was a major release,
+和 C++ 17 是一个主要的发行版
 
 00:00:36.979 --> 00:00:40.125
 although not as big as the C++ 11 release.
+虽然不像 C++ 11 发行版那么大 
 
 00:00:40.125 --> 00:00:45.619
 C++ 17 includes standard file system within the standard library,
+C++ 17 包括标准库中的标准文件系统 
 
 00:00:45.619 --> 00:00:49.189
 standard string view, parallel implementations of
+标准字符串视图 并行实现
 
 00:00:49.189 --> 00:00:53.359
 many of the standard library algorithms, and inline variables.
+许多标准库算法和内联变量 
 
 00:00:53.359 --> 00:00:59.075
 C++ 20 is scheduled as a minor release but will contain concepts
+C++ 20 已调度为次要发行版 但将包含概念
 
 00:00:59.075 --> 00:01:05.730
 which are an important tool for improving generic programming with templates in C++.
-
+它是在 C++中使用模板改进通用编程的重要工具 

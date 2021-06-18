@@ -4,67 +4,88 @@ Language: en
 
 00:00:00.000 --> 00:00:04.695
 This nanodegree program requires you to complete five different projects.
+此纳米级程序要求您完成五个不同的项目 
 
 00:00:04.695 --> 00:00:07.890
 The first project is the route planner project,,
+第一个项目是路线规划师项目  
 
 00:00:07.889 --> 00:00:12.254
 in which you'll build a route planner to find a route between
+在此期间 您将构建路线规划程序以在
 
 00:00:12.255 --> 00:00:17.325
 any two points in a real city using data from the OpenStreetMap Project.
+使用 OpenStreetMap 项目的数据 在真实城市中的任何两个点 
 
 00:00:17.324 --> 00:00:20.919
 The second project is the system monitor project,
+第二个项目是系统监控项目 
 
 00:00:20.920 --> 00:00:26.310
 in which you'll implement your own version of the top program that identifies
+您将在其中实施您自己的顶级程序版本 以标识
 
 00:00:26.309 --> 00:00:29.189
 variables relevant to your system and prints out
+与系统相关的变量并打印出
 
 00:00:29.190 --> 00:00:32.895
 information about all the different processes running on your computer.
+有关计算机上运行的所有不同进程的信息 
 
 00:00:32.895 --> 00:00:36.630
 The third project is the garbage collector project,
+第三个项目是垃圾收集器项目 
 
 00:00:36.630 --> 00:00:40.530
 in which you'll build your own version of smart pointers,
+你将会建立自己的智能指针版本
 
 00:00:40.530 --> 00:00:45.700
 a way to keep track of dynamically allocated memory and prevent memory leaks.
+跟踪动态分配的内存并防止内存泄漏 
 
 00:00:45.700 --> 00:00:49.215
 The fourth project is a traffic simulation.
+第四个项目是交通模拟 
 
 00:00:49.215 --> 00:00:50.960
 In this project, you'll use
+在这个项目中 你会使用
 
 00:00:50.960 --> 00:00:55.880
 concurrent multi-threaded programming to organize traffic flow through a city.
+同时进行多线程编程以组织流量流经城市 
 
 00:00:55.880 --> 00:00:58.745
 Each vehicle will run on its own thread,
+每辆车都在自己的线上运行
 
 00:00:58.744 --> 00:01:00.890
 and you'll use thread synchronization and
+然后你就会使用线程同步
 
 00:01:00.890 --> 00:01:04.189
 communication to help the vehicles navigate intersections,
+沟通 帮助车辆浏览路口 
 
 00:01:04.189 --> 00:01:07.129
 and help traffic flow smoothly through the city.
+并帮助交通顺利通过城市 
 
 00:01:07.129 --> 00:01:11.899
 The final project of this nanodegree program is the Capstone project.
+这个纳米级项目的最终项目是 Capstone 项目 
 
 00:01:11.900 --> 00:01:16.460
 In this project, you'll build your own C++ application using
+在此项目中 您将使用以下项构建自己的 C++ 应用程序 :
 
 00:01:16.459 --> 00:01:18.619
 many of the different skills and techniques that
+很多不同的技能和技巧
 
 00:01:18.620 --> 00:01:21.870
 you've learned as part of this nanodegree program.
-
+你已经学会了这个纳米级的计划

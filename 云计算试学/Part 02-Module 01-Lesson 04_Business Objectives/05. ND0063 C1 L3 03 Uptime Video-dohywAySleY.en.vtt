@@ -4,106 +4,140 @@ Language: en
 
 00:00:00.000 --> 00:00:04.830
 Uptime is usually measured as a percentage of time that assistance is available.
+正常运行时间通常以可用时间的百分比来衡量 
 
 00:00:04.830 --> 00:00:12.270
 99.9 percent is a standard uptime provided by many Service Level Agreements or SLAs.
+99.9% 是许多服务级别协议或 SLA 提供的标准正常运行时间 
 
 00:00:12.270 --> 00:00:18.780
 This means that your service should be up and running normally 99.9 percent of the time,
+这意味着您的服务应该正常运行并正常运行 99.9% 的时间 
 
 00:00:18.780 --> 00:00:21.435
 typically measured over the course of a month.
+通常是在一个月内测得的
 
 00:00:21.435 --> 00:00:24.705
 You will agree on this metric with your customers.
+您将与客户商定该指标 
 
 00:00:24.705 --> 00:00:27.810
 You are attesting to the fact that you can keep
+你在证明你能保持
 
 00:00:27.810 --> 00:00:31.140
 your platform available that percentage of the time,
+你的平台占了时间的百分比
 
 00:00:31.140 --> 00:00:35.130
 and your customer finds that amount of time to be acceptable.
+您的客户会发现您可以接受的时间量 
 
 00:00:35.130 --> 00:00:37.785
 Depending on your product and industry,
+根据您的产品和行业 
 
 00:00:37.785 --> 00:00:41.565
 your SLA may define a higher or lower uptime.
+您的 SLA 可能定义较高或更低的正常运行时间 
 
 00:00:41.565 --> 00:00:46.685
 You will also likely face penalties if you do not achieve your uptime commitment.
+如果您不履行您的正常工作时间承诺 您也可能面临处罚 
 
 00:00:46.685 --> 00:00:48.890
 This usually comes in the form of
+这通常以
 
 00:00:48.890 --> 00:00:52.640
 monetary or service credits that you would owe your customers.
+您将欠客户的货币或服务积分 
 
 00:00:52.640 --> 00:00:55.695
 Meeting your SLA requires diligence.
+满足您的 SLA 需要注意 
 
 00:00:55.695 --> 00:00:58.850
 You will need to track your platforms uptime so that you can
+您需要跟踪平台正常运行时间 以便您可以
 
 00:00:58.850 --> 00:01:03.620
 demonstrate to your customers that you are measuring it and meeting commitments.
+向您的客户演示您正在测量它并履行承诺 
 
 00:01:03.620 --> 00:01:06.980
 In order to maintain a high level of uptime,
+为了维持高水平的 uptime 
 
 00:01:06.980 --> 00:01:10.445
 you need to have redundancy throughout your service.
+您需要在整个服务中具有冗余 
 
 00:01:10.445 --> 00:01:14.915
 Uptime is usually referred to as a number of nines.
+Uptime 通常称为多个 n 
 
 00:01:14.915 --> 00:01:24.245
 For example, an SLA of 99.9 percent is referred to as having three nines of availability.
+例如  99.9% 的 SLA 被称为具有三种可用性 
 
 00:01:24.245 --> 00:01:28.960
 You will also hear terms such as three and a half nines.
+你也会听到三个半的词 
 
 00:01:28.960 --> 00:01:33.715
 This would mean 99.95 percent uptime.
+这将意味着 99.95% 的正常运行时间 
 
 00:01:33.715 --> 00:01:36.320
 To reach a moderate level of uptime,
+要达到中等水平的 uptime 
 
 00:01:36.320 --> 00:01:38.810
 you cannot have a single point of failure.
+你就不能有单一的失败点
 
 00:01:38.810 --> 00:01:43.790
 A single point of failure is any one component that were it to fail,
+唯一的失败点是任何一个失败的成分
 
 00:01:43.790 --> 00:01:47.515
 would take down a system until it were repaired or replaced.
+将会对系统进行修复或更换 
 
 00:01:47.515 --> 00:01:49.935
 Any single point of failure will,
+任何单一的失败点
 
 00:01:49.935 --> 00:01:51.455
 at some point, fail.
+有些时候失败了
 
 00:01:51.455 --> 00:01:53.660
 You could call this Murphy's law,
+你可以称之为墨菲定律
 
 00:01:53.660 --> 00:01:58.380
 but really it's just probability, everything fails eventually.
+但这只是概率事件最终都失败了
 
 00:01:58.380 --> 00:02:04.610
 When this happens, the time required to recover will likely cause you to miss your SLA.
+发生这种情况时 恢复所需的时间很可能会导致您错过 SLA 
 
 00:02:04.610 --> 00:02:08.635
 Be thoughtful of all the things that need to be redundant;
+要考虑所有需要冗余的东西 ;
 
 00:02:08.635 --> 00:02:12.614
 databases, networking, servers, caches,
+数据库 网络 服务器 高速缓存 
 
 00:02:12.614 --> 00:02:17.300
 also staff, people who know how to fix things and not just one
+也是工作人员 懂得修东西的人 不只是一个
 
 00:02:17.300 --> 00:02:22.980
 person because people go on vacation or sleep through emergency pager alerts.
-
+因为人们通过紧急寻呼机警报来度假或睡觉 

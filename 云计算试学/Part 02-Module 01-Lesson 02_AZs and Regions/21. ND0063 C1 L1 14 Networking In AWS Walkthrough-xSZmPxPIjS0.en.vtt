@@ -4,67 +4,88 @@ Language: en
 
 00:00:00.000 --> 00:00:05.620
 In this exercise, we're setting up a NAT gateway and private subnet.
+在此练习中 我们将设置 NAT 网关和专用子网 
 
 00:00:06.230 --> 00:00:10.995
 We can find our NAT gateways in VPC.
+我们可以在 VPC中找到我们的 NAT 网关 
 
 00:00:10.995 --> 00:00:16.380
 We look at our NAT gateway that is built.
+我们查看已构建的 NAT 网关 
 
 00:00:16.380 --> 00:00:20.970
 The routing table should have the NAT gateway as the target.
+路由表应该将 NAT 网关作为目标 
 
 00:00:20.970 --> 00:00:23.445
 So once we create a NAT gateway,
+一旦我们创建了 NAT 网关
 
 00:00:23.445 --> 00:00:28.110
 we will then want to use and include that NAT gateway within a routing table.
+然后 我们将使用并包含该 NAT 网关在路由表中 
 
 00:00:28.110 --> 00:00:34.485
 So we can see we have a NAT gateway here in our new VPC.
+我们可以看到我们在新的 VPC中有一个 NAT 网关 
 
 00:00:34.485 --> 00:00:37.990
 What we'll want to do is look at our routing tables.
+我们要做的是看看我们的路由表 
 
 00:00:40.340 --> 00:00:50.295
 We can see that in our routing table that we set up, we have,
+我们可以看到在我们设置的路由表中 我们有 
 
 00:00:50.295 --> 00:00:53.240
 again as we saw in other exercises,
+就像我们在其他演习中看到的一样
 
 00:00:53.240 --> 00:00:56.660
 that we've got a local route,
+我们有一条当地路线
 
 00:00:56.660 --> 00:01:03.915
 and then we've got the default or the 0.0.0/0 route within our route table,
+然后我们在航线表中找到了默认的或 0.0.0/0 的路线
 
 00:01:03.915 --> 00:01:08.450
 this time we're pointing at the NAT gateway that we just took a look at.
+这一次我们指向的是我们刚刚看到的 NAT 网关 
 
 00:01:08.660 --> 00:01:11.455
 Once you've got the route table set up,
+一旦你有了路线表
 
 00:01:11.455 --> 00:01:15.110
 then it's a matter of looking at our subnets and
+那是看我们的子网
 
 00:01:15.110 --> 00:01:19.640
 having the subnets also set up to use this route table.
+子网也设置为使用此路由表 
 
 00:01:19.640 --> 00:01:23.350
 So we have a subnet here for this exercise.
+所以我们在这里有一个子网来进行这项工作 
 
 00:01:23.350 --> 00:01:24.920
 Within the subnet view,
+在子网视图中 
 
 00:01:24.920 --> 00:01:26.900
 we can look at the route table again to see that
+我们可以再看看路线表看看
 
 00:01:26.900 --> 00:01:29.285
 we're pointing at the route table we just looked at,
+我们指向的是我们刚刚看到的路线表
 
 00:01:29.285 --> 00:01:34.980
 and now anything within this subnet we'll use obviously this route table.
+现在这个子网里的任何东西我们都会使用这个路由表
 
 00:01:34.980 --> 00:01:40.050
 This route table has a default route going through our NAT gateway
-
+此路由表具有穿过我们的 NAT 网关的缺省路由

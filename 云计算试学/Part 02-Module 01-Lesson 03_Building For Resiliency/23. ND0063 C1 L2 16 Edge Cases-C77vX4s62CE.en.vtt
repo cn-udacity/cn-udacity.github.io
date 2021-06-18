@@ -4,40 +4,52 @@ Language: en
 
 00:00:00.000 --> 00:00:05.330
 Using the right services involves considering their cost and level of redundancy.
+使用正确的服务涉及考虑其成本和冗余程度 
 
 00:00:05.330 --> 00:00:08.475
 This combination can make for odd trade-offs.
+这种组合可以做奇怪的权衡取舍 
 
 00:00:08.475 --> 00:00:11.445
 For example, you might be better off running
+例如 您可以更好地运行
 
 00:00:11.445 --> 00:00:17.189
 the same lambda function in two different regions than have the same work done twice.
+两个不同区域的 lambda 函数的工作时间比两次相同 
 
 00:00:17.189 --> 00:00:19.995
 This could be far cheaper than trying to run
+这可能比尝试运行更便宜
 
 00:00:19.995 --> 00:00:23.490
 another service in a multi-region configuration.
+多区域配置中的另一个服务 
 
 00:00:23.490 --> 00:00:27.744
 Once you are familiar with a wide array of AWS services,
+一旦您熟悉广泛的 AWS 服务 
 
 00:00:27.744 --> 00:00:31.280
 you can use your knowledge of their multi-AZ or
+你可以用自己的多 AZ 或
 
 00:00:31.280 --> 00:00:38.110
 multi-region abilities to select services to achieve your platform's availability needs.
+选择服务以实现平台的可用性需求的多区域能力 
 
 00:00:38.110 --> 00:00:40.065
 As Dr. Sue says,
+正如苏医生所说
 
 00:00:40.065 --> 00:00:41.660
 "Think left and think right,
+" 左右思考 
 
 00:00:41.660 --> 00:00:43.160
 and think low and think high.
+好好想想
 
 00:00:43.160 --> 00:00:47.340
 Oh, the things you can think up if only you try."
-
+哦 只要你努力就能想到的事情  "

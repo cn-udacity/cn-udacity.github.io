@@ -4,118 +4,156 @@ Language: en
 
 00:00:00.000 --> 00:00:05.640
 DynamoDB is a non-relational database created by AWS.
+" 发电机 " 是由 AWS 创建的非关系数据库 
 
 00:00:05.640 --> 00:00:12.330
 For a database, DynamoDB has relatively few knobs and dials for configuration.
+对于数据库  DynamoDB 具有相对较少的旋钮和用于配置的 dials  
 
 00:00:12.330 --> 00:00:15.900
 In DynamoDB, you create one table.
+在 " 发电机数据库 " 中 创建一个表 
 
 00:00:15.900 --> 00:00:21.320
 With relational databases, we typically think of a database as a collection of tables.
+对于关系数据库 我们通常认为数据库是表的集合 
 
 00:00:21.320 --> 00:00:26.420
 But in DynamoDB, one database consists of just one table.
+但是在 DynamoDB 中 一个数据库仅包含一个表 
 
 00:00:26.420 --> 00:00:34.335
 The tables you create in DynamoDB have one primary key and an optional sort key.
+在 DynamoDB 中创建的表具有一个主键和一个可选排序键 
 
 00:00:34.335 --> 00:00:38.450
 You can create additional indices on the table so that you
+您可以在表上创建其他索引 以便
 
 00:00:38.450 --> 00:00:43.535
 can in effect have multiple primary or sort keys on the table.
+实际上 可以在表上具有多个主键或排序键 
 
 00:00:43.535 --> 00:00:48.095
 That's the entire data model for DynamoDB.
+这是 DynamoDB 的整个数据模型 
 
 00:00:48.095 --> 00:00:50.405
 It is simple and straightforward,
+简单明了
 
 00:00:50.405 --> 00:00:52.925
 but yet still quite powerful.
+但仍然相当强大
 
 00:00:52.925 --> 00:00:56.795
 The read and write throughput of DynamoDB is measured
+度量动态数据库的读写吞吐量
 
 00:00:56.795 --> 00:01:00.535
 and charged by the number of operations per second.
+并按每秒操作数进行充电 
 
 00:01:00.535 --> 00:01:04.990
 You decide how much reading and writing you'll be doing per second,
+你决定你每天的阅读量和写作量
 
 00:01:04.990 --> 00:01:08.605
 and simply set those values on the table or index.
+并简单地将这些值设置在表或索引上 
 
 00:01:08.605 --> 00:01:13.150
 You also have options to pay on demand for this usage,
+您还可以根据需求付费使用此产品 
 
 00:01:13.150 --> 00:01:19.605
 so that you don't have to pick a number or you can let the capacity auto scale over time.
+这样你就不必选择一个数字 也可以让容量自动随时间推移 
 
 00:01:19.605 --> 00:01:23.185
 Again, compared to a traditional relational database,
+与传统的关系数据库相比 
 
 00:01:23.185 --> 00:01:25.660
 this is drastically simpler.
+这就更简单了
 
 00:01:25.660 --> 00:01:28.195
 Don't let the simplicity fool you though.
+别让简单的事愚弄你
 
 00:01:28.195 --> 00:01:33.025
 DynamoDB is quite powerful and suitable for many workloads.
+发电机非常强大 适合许多工作负载 
 
 00:01:33.025 --> 00:01:38.020
 DynamoDB can scale to handle tens of millions of requests a
+可扩展数据库以处理数以千万计的请求
 
 00:01:38.020 --> 00:01:43.360
 second while automatically scaling up and down as required.
+第二个过程是根据需要自动向上和向下扩展 
 
 00:01:43.360 --> 00:01:46.805
 DynamoDB is resilient by default.
+缺省情况下  " 发电机 " 具有弹性 
 
 00:01:46.805 --> 00:01:49.270
 AWS runs the service across
+AWS 在以下范围内运行服务 :
 
 00:01:49.270 --> 00:01:53.800
 multiple availability zones and takes care of replicating your data,
+多个可用性区域 并注意复制您的数据 
 
 00:01:53.800 --> 00:01:59.465
 so that any single availability zone failure would not impact your DynamoDB tables.
+因此 任何单一可用性区域故障都不会影响 DynamoDB 表 
 
 00:01:59.465 --> 00:02:01.495
 This is a big deal.
+这是个很大的交易
 
 00:02:01.495 --> 00:02:07.635
 You don't have to think or worry about configuring DynamoDB to be Multi-AZ.
+您不必考虑或担心将 DynamoDB 配置为多 AZ 
 
 00:02:07.635 --> 00:02:10.945
 You also don't have to decide on the cost trade-offs,
+你也不用考虑成本权衡
 
 00:02:10.945 --> 00:02:12.580
 since the cost of running in
+因为跑步的成本
 
 00:02:12.580 --> 00:02:17.490
 multiple availability zones is baked into the base price of the service.
+将多个可用性区域烘烤到服务的基本价格中 
 
 00:02:17.490 --> 00:02:22.240
 Speaking of cost, while some of this functionality may sound expensive,
+说到成本 虽然其中一些功能可能很昂贵 
 
 00:02:22.240 --> 00:02:25.480
 it is often the case that DynamoDB is actually
+DynamoDB 实际上就是
 
 00:02:25.480 --> 00:02:29.735
 cheaper than a server-based database such as RDS.
+比基于服务器的数据库 ( 如 RDS) 更便宜 
 
 00:02:29.735 --> 00:02:34.280
 This is because DynamoDB lets you pay only for what you use,
+这是因为 DynamoDB 让你只支付你使用的东西 
 
 00:02:34.280 --> 00:02:40.400
 whereas a dedicated server or servers cost you money 24 hours a day,
+而专用服务器或服务器每天花费 24 小时
 
 00:02:40.400 --> 00:02:43.010
 365 days a year,
+一年 365 天
 
 00:02:43.010 --> 00:02:46.510
 366 days in a leap year.
-
+在闰年里 366 天

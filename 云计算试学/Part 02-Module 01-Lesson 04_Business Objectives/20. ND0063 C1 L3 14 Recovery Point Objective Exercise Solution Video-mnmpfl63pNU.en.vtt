@@ -4,76 +4,100 @@ Language: en
 
 00:00:00.000 --> 00:00:06.480
 In this exercise, you are asked to create an RDS MySQL database with backups enabled,
+在此练习中 将要求您创建启用了备份的 RDS MySQL 数据库 
 
 00:00:06.480 --> 00:00:09.300
 and then execute a point in time recovery.
+然后执行时间点恢复 
 
 00:00:09.300 --> 00:00:12.090
 Let's walk through and see how it goes.
+让我们走过来看看它是如何发生的 
 
 00:00:12.090 --> 00:00:15.135
 We have a database that has been created.
+我们拥有已创建的数据库 
 
 00:00:15.135 --> 00:00:17.969
 So if we select our Database,
+所以如果我们选择了数据库
 
 00:00:17.969 --> 00:00:23.355
 go into "Actions" and choose "Restore" to point in time.
+进入 "操作 "  然后选择 "复原" 以时间点 
 
 00:00:23.355 --> 00:00:27.450
 When you restore from a snapshot or to a point in time,
+从快照复原或复原到时间点时 
 
 00:00:27.450 --> 00:00:29.085
 we always get a new database.
+我们总是会有一个新的数据库
 
 00:00:29.085 --> 00:00:31.310
 So we don't actually change the running database,
+所以我们不会改变运行中的数据库
 
 00:00:31.310 --> 00:00:33.560
 we get a second database.
+我们会有第二个数据库
 
 00:00:33.560 --> 00:00:36.155
 So what this is actually asking us is to give it
+所以这其实是要我们给它
 
 00:00:36.155 --> 00:00:39.875
 information about where to start this new database from.
+有关从何处启动此新数据库的信息 
 
 00:00:39.875 --> 00:00:43.580
 So you can see, we can either pick the latest restorable time,
+你可以看到 我们可以选择最新的可复原时间 
 
 00:00:43.580 --> 00:00:45.440
 which is basically now,
+基本上就是现在
 
 00:00:45.440 --> 00:00:47.600
 or we can pick a custom time.
+或者我们可以选择定制时间
 
 00:00:47.600 --> 00:00:49.490
 So we pick a custom time,
+所以我们选了一个定制时间
 
 00:00:49.490 --> 00:00:52.250
 we can roll back several days in the past.
+我们可以回到过去的几天
 
 00:00:52.250 --> 00:00:55.069
 So we can pick a point yesterday,
+我们可以从昨天开始
 
 00:00:55.069 --> 00:00:59.085
 we can pick our time, say 6:00 AM,
+我们可以选择时间 AM 6:00
 
 00:00:59.085 --> 00:01:07.325
 and the only other thing that we need to specify is the Database Instance Identifier,
+唯一需要指定的是数据库实例标识 
 
 00:01:07.325 --> 00:01:09.920
 which is just the database name.
+这只是数据库的名称
 
 00:01:10.370 --> 00:01:15.500
 That's it. Everything else is the same as it will inherit all the characteristics of
+就这样 所有其他的都是一样的 因为它将继承所有
 
 00:01:15.500 --> 00:01:20.545
 the original database and then we say yes, launch database instance.
+原始数据库 然后我们说 " 是 "  启动数据库实例 
 
 00:01:20.545 --> 00:01:22.470
 That will go off and create,
+它将会熄灭并产生
 
 00:01:22.470 --> 00:01:27.420
 and soon we'll have a database restored to yesterday at 6:00 AM.
-
+很快我们就会有一个数据库恢复到昨天 AM 6:00

@@ -4,13 +4,16 @@ Language: en
 
 00:00:00.000 --> 00:00:03.450
 Which are true about elastic load balancers?
+弹性负载均衡器的情况如何 ?
 
 00:00:03.450 --> 00:00:07.900
 An elastic load balancer can span multiple availability zones.
+弹性负载均衡器可以跨多个可用性区域 
 
 00:00:07.900 --> 00:00:12.660
 Also an elastic load balancers IP addresses will change over time.
+此外 弹性负载均衡器 IP 地址将随时间变化 
 
 00:00:12.660 --> 00:00:17.470
 However, an elastic load balancer cannot span regions.
-
+但是 弹性负载均衡器不能跨区域 

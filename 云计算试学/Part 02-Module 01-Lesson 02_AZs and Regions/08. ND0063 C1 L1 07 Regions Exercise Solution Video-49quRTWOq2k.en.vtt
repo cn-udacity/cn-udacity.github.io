@@ -4,37 +4,48 @@ Language: en
 
 00:00:00.000 --> 00:00:02.490
 When we create resources in one region,
+当我们在一个地区创造资源时
 
 00:00:02.490 --> 00:00:04.515
 they only appear in that one region.
+它们只出现在那个区域
 
 00:00:04.515 --> 00:00:06.975
 For example, as we can see,
+例如 我们可以看到 
 
 00:00:06.975 --> 00:00:10.560
 we've got an EC2 instance in the Ohio region.
+我们在俄亥俄地区有个 EC2 的实例
 
 00:00:10.560 --> 00:00:13.600
 If we switch to another region,
+如果我们切换到另一个区域
 
 00:00:14.660 --> 00:00:19.950
 we will see that that instance is no longer visible.
+我们就会看到这个实例已经看不起来了 
 
 00:00:20.050 --> 00:00:27.885
 This happens because we have to manage most resources within AWS on a per region basis.
+发生这种情况的原因是 我们必须根据每个区域管理 AWS 内部的大部分资源 
 
 00:00:27.885 --> 00:00:30.989
 A few of the AWS global services,
+一些 AWS 全球服务 
 
 00:00:30.989 --> 00:00:36.285
 such as IAM or Cloudfront are managed on a global scale.
+例如  IAM 或 Cloudfront 在全球范围内进行管理 
 
 00:00:36.285 --> 00:00:39.170
 But all of these individual services,
+但所有这些个人服务
 
 00:00:39.170 --> 00:00:41.270
 most services within AWS,
+AWS 中的大部分服务 
 
 00:00:41.270 --> 00:00:45.030
 you must pay attention to which region you're looking at.
-
+你一定要注意你要看哪个区域

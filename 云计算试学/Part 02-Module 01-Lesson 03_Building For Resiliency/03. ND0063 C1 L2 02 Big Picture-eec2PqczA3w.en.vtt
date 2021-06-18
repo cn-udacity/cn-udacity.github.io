@@ -4,40 +4,52 @@ Language: en
 
 00:00:00.000 --> 00:00:04.095
 Resiliency doesn't stop with a region or VPC.
+弹性不会随区域或 VPC停止 
 
 00:00:04.095 --> 00:00:07.530
 Creating a platform that is holistically available
+创建整体可用的平台
 
 00:00:07.530 --> 00:00:11.265
 requires resiliency throughout each part of your service.
+在服务的每个部分都需要弹性 
 
 00:00:11.265 --> 00:00:13.380
 To have a resilient platform,
+要有一个弹性平台
 
 00:00:13.380 --> 00:00:15.810
 all parts of it need to be fault tolerant.
+它的所有部分都需要容错
 
 00:00:15.810 --> 00:00:19.995
 As you decide if a service needs to tolerate failures,
+当您决定服务是否需要容忍失败时 
 
 00:00:19.995 --> 00:00:23.610
 you can let that decision drive choices about whether to
+您可以让该决策选择是否
 
 00:00:23.610 --> 00:00:28.350
 spend the time and dollars to make your applications resilient.
+花费时间和美元使您的应用程序具有弹性 
 
 00:00:28.350 --> 00:00:30.300
 Should you desire to,
+如果你愿意
 
 00:00:30.300 --> 00:00:35.645
 AWS provides you the tools you need to make all components resilient.
+AWS 为您提供了使所有组件具有弹性所需的工具 
 
 00:00:35.645 --> 00:00:39.650
 In this lesson, you'll practice driving redundancy
+在本课程中 您将练习驱动冗余
 
 00:00:39.650 --> 00:00:44.135
 throughout your system by ensuring that not only the underlying network,
+在整个系统中 确保不仅是底层网络 
 
 00:00:44.135 --> 00:00:49.680
 but also the individual services on top of it are highly available.
-
+但也有高度的个人服务 

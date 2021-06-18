@@ -4,79 +4,104 @@ Language: en
 
 00:00:00.000 --> 00:00:01.949
 The Recovery Time Objective,
+恢复时间目标 
 
 00:00:01.949 --> 00:00:06.900
 or RTO, is the maximum duration of a service interruption.
+或 RTO  是服务中断的最大持续时间 
 
 00:00:06.900 --> 00:00:10.545
 This is the time that you agree to in your SLA.
+这是您在 SLA中同意的时间 
 
 00:00:10.545 --> 00:00:14.910
 Of course, it is possible that you will fail to meet your RTO.
+当然 您可能无法满足您的 RTO 
 
 00:00:14.910 --> 00:00:19.305
 In this case, any penalties in your contracts will come into play.
+在此情况下 您的合同中的任何惩罚都将生效 
 
 00:00:19.305 --> 00:00:22.260
 RTO is similar to uptime,
+RTO 类似于 uptime 
 
 00:00:22.260 --> 00:00:24.330
 but it is measured per incident,
+但每宗事件都有
 
 00:00:24.330 --> 00:00:26.730
 rather than on a monthly basis.
+而不是按月计算
 
 00:00:26.730 --> 00:00:30.330
 Really, your RTO should be small enough so that
+你的 RTO 应该足够小
 
 00:00:30.330 --> 00:00:34.539
 at least one outage would still fit within your uptime SLA.
+至少一次中断在您的正常服务等级协议中仍然适用 
 
 00:00:34.539 --> 00:00:37.320
 Otherwise, you can meet your RTO,
+否则你可以见见你的 RTO
 
 00:00:37.320 --> 00:00:41.320
 SLA, but still miss your overall uptime SLA.
+SLA  但仍未满足您的总体正常运行时间 SLA 
 
 00:00:41.320 --> 00:00:46.325
 As with uptime, you need to carefully consider what RTO you can support.
+与正常运行时间一样 您需要仔细考虑您可以支持的 RTO  
 
 00:00:46.325 --> 00:00:49.190
 All of the critical parts of your platform must be
+平台的所有关键部分都必须是
 
 00:00:49.190 --> 00:00:52.945
 designed for recovery within your RTO timeframe.
+用于在 RTO 时间范围内进行恢复 
 
 00:00:52.945 --> 00:00:56.645
 Lots of things must happen to restore service to your platform.
+为您的平台恢复服务必须发生许多事情 
 
 00:00:56.645 --> 00:00:58.565
 When thinking about RTO,
+当想到 RTO时
 
 00:00:58.565 --> 00:01:03.830
 don't forget about the human factor type of things such as getting people out of bed,
+别忘了人的因素类型比如把人从床上
 
 00:01:03.830 --> 00:01:06.230
 or searching for the right documentation.
+或寻找正确的文档 
 
 00:01:06.230 --> 00:01:09.500
 Your RTO should be the sum of the time it takes to
+你的 RTO 应该是
 
 00:01:09.500 --> 00:01:13.000
 complete all of the components of a recovery from failure.
+完成从故障恢复的所有组件 
 
 00:01:13.000 --> 00:01:16.535
 If it takes two hours to restore a database from a backup,
+如果从备份中恢复数据库需要两个小时 
 
 00:01:16.535 --> 00:01:19.145
 you cannot have a one hour RTO.
+您不能有一个小时 RTO 
 
 00:01:19.145 --> 00:01:22.850
 Be sure you have plans for staff to be on-call,
+请确保您有员工来电的计划
 
 00:01:22.850 --> 00:01:26.090
 and that those staff know how to recover your systems,
+那些员工知道如何恢复你的系统
 
 00:01:26.090 --> 00:01:31.500
 or at least get in touch with other subject matter experts as needed.
-
+或者至少可以根据需要与其他主题专家联系 

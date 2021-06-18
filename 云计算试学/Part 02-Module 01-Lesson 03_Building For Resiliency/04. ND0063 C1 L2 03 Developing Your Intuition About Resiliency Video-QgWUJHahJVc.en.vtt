@@ -4,49 +4,64 @@ Language: en
 
 00:00:00.000 --> 00:00:03.015
 But you never thought of the a redundant umbrella.
+但你从来没有想到过一个多余的雨伞 
 
 00:00:03.015 --> 00:00:09.025
 Most AWS services are either inherently redundant or can be configured to be redundant.
+大多数 AWS 服务本身都是冗余的 或者可以配置为冗余 
 
 00:00:09.025 --> 00:00:11.670
 It will be important that you learn to recognize which
+重要的是你必须学会承认
 
 00:00:11.670 --> 00:00:15.405
 services come redundant by default and which do not.
+服务在缺省情况下会出现冗余 而不会出现冗余 
 
 00:00:15.405 --> 00:00:19.635
 Most services have a varying degree of redundancy.
+大多数服务具有不同程度的冗余 
 
 00:00:19.635 --> 00:00:24.270
 You can make cost versus benefit decisions for your use case.
+您可以为您的用例做出成本与效益决策 
 
 00:00:24.270 --> 00:00:27.870
 Sometimes, high availability is absolutely critical.
+有时 高可用性绝对至关重要 
 
 00:00:27.870 --> 00:00:30.585
 Sometimes, it's just nice to have,
+有时候真的很高兴
 
 00:00:30.585 --> 00:00:32.830
 and sometimes it's unnecessary.
+有时是不必要的
 
 00:00:32.830 --> 00:00:35.985
 Costs often plays a factor in these decisions.
+成本往往在这些决策中发挥作用 
 
 00:00:35.985 --> 00:00:40.100
 To have a service run in a ultra redundant, active,
+要使服务在超冗余的活动中运行 
 
 00:00:40.100 --> 00:00:44.165
 active multi-region configuration always cost more
+活动多区域配置总是花费更多
 
 00:00:44.165 --> 00:00:48.965
 than running it on a single application server in one availability zone.
+而不是在一个可用性区域中的单个应用程序服务器上运行 
 
 00:00:48.965 --> 00:00:51.140
 There are circumstances for both.
+这两种情况都有 
 
 00:00:51.140 --> 00:00:55.025
 You must decide and be able to justify that decision.
+你必须做出决定 并能够为这一决定辩护 
 
 00:00:55.025 --> 00:00:59.580
 Also, consider what is required for a given use case.
-
+另外 请考虑给定用例的必需内容 

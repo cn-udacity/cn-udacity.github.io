@@ -4,64 +4,84 @@ Language: en
 
 00:00:00.000 --> 00:00:02.610
 We've covered a lot of ground in this lesson.
+我们在这一课中已经覆盖了很多
 
 00:00:02.610 --> 00:00:05.355
 You've looked at a number of AWS services,
+你看过一些 AWS 服务
 
 00:00:05.355 --> 00:00:08.520
 a few of their abilities and importantly how
+他们有几种能力更重要的是
 
 00:00:08.520 --> 00:00:12.715
 these services can be made multi AZ or multi-region.
+这些服务可以做成多个 AZ 或多区域 
 
 00:00:12.715 --> 00:00:17.599
 You've seen how server-based services and compute services
+您已看到基于服务器的服务和计算服务
 
 00:00:17.599 --> 00:00:23.200
 get spread out into multiple subnets which lead to multiple availability zones.
+将其扩展至多个子网 这些子网将导致多个可用性区域 
 
 00:00:23.200 --> 00:00:28.250
 You've set up DynamoDB to work in a multi-region mode by working with
+您已设置 DynamoDB 以在多区域方式下工作
 
 00:00:28.250 --> 00:00:35.330
 global tables and you've used advanced features to manage your data in the multi AZ,
+全局表 您已使用高级功能来管理多个 AZ中的数据 
 
 00:00:35.330 --> 00:00:38.100
 by default S3 service.
+缺省 S3   S3 服务 
 
 00:00:38.100 --> 00:00:43.010
 Finally, you worked with AWS compute services to understand how
+最后 您与 AWS 计算服务合作 了解如何
 
 00:00:43.010 --> 00:00:48.125
 to take generic custom servers and run them redundantly as well.
+以使用通用定制服务器 并以冗余方式运行这些服务器 
 
 00:00:48.125 --> 00:00:50.810
 You should now have a good handle on which
+你现在应该好好处理
 
 00:00:50.810 --> 00:00:54.485
 services are suitable for which type of redundancy needs.
+服务适合哪种类型的冗余需求 
 
 00:00:54.485 --> 00:01:00.580
 You've also seen some of the built-in redundancy in AWS native services.
+您还在 AWS 本机服务中看到了一些内置的冗余 
 
 00:01:00.580 --> 00:01:05.360
 Using this knowledge to select the appropriate services for your use case,
+使用此知识为您的用例选择适当的服务 
 
 00:01:05.360 --> 00:01:07.535
 will save you a lot of time and effort
+会为您节省大量的时间和精力
 
 00:01:07.535 --> 00:01:10.480
 instead of trying to use the wrong tool for the job.
+而不是用错误的工具来找工作
 
 00:01:10.480 --> 00:01:14.270
 We've seen the basics of high availability in AWS and
+我们在 AWS 中看到了高可用性的基础知识
 
 00:01:14.270 --> 00:01:18.245
 now how to build a resilient application services.
+现在如何构建弹性应用程序服务 
 
 00:01:18.245 --> 00:01:20.420
 Soon, we'll get to considering
+很快我们就会考虑
 
 00:01:20.420 --> 00:01:25.880
 our business goals and then observability and recoverability.
-
+我们的业务目标和可观察性和可恢复性 

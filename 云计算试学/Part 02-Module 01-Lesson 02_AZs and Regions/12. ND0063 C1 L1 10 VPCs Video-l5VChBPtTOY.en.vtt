@@ -4,172 +4,228 @@ Language: en
 
 00:00:00.000 --> 00:00:01.710
 The term Virtual Private Cloud,
+术语虚拟私有云 
 
 00:00:01.710 --> 00:00:04.680
 or VPC for short, sounds pretty intimidating.
+或者简称 VPC 听起来挺吓人的
 
 00:00:04.680 --> 00:00:08.730
 Really, every part of the acronym is a little intense.
+真的 首字母缩写词的每一部分都有点紧张 
 
 00:00:08.730 --> 00:00:13.800
 Virtual, private, and cloud all have a lot of connotations.
+虚拟 私有和云都有很多内涵 
 
 00:00:13.800 --> 00:00:16.065
 So what is a VPC?
+什么是 VPC?
 
 00:00:16.065 --> 00:00:19.410
 If you've configured a traditional network infrastructure,
+如果您配置了传统的网络基础架构 
 
 00:00:19.410 --> 00:00:22.060
 you'll find VPCs fairly familiar.
+你会发现 VPC 相当熟悉
 
 00:00:22.060 --> 00:00:24.880
 A VPC is primarily a network.
+VPC 主要是一个网络 
 
 00:00:24.880 --> 00:00:30.160
 It's virtual because any resource you create in AWS is virtual.
+它是虚拟的 因为在 AWS 中创建的任何资源都是虚拟的 
 
 00:00:30.160 --> 00:00:32.685
 It's private because it's yours.
+这是私人的因为这是你的
 
 00:00:32.685 --> 00:00:34.840
 Just like a physical network that you own,
+就像你拥有的物理网络
 
 00:00:34.840 --> 00:00:37.910
 you control what goes in and out of the network,
+你控制了网络的发生和发生
 
 00:00:37.910 --> 00:00:41.555
 and you decide where to put your service within the network.
+并决定将您的服务置于网络中的位置 
 
 00:00:41.555 --> 00:00:44.255
 The cloud part is really redundant to virtual,
+云部分真的是多余的虚拟的 
 
 00:00:44.255 --> 00:00:46.565
 and it just makes it sound extra special.
+这让它变得格外特别
 
 00:00:46.565 --> 00:00:51.410
 VPCs are isolated private networks that are
+VPC 是孤立的专用网络 
 
 00:00:51.410 --> 00:00:56.860
 customizable to your needs and are region-specific.
+可定制为您的需求 并且是特定于区域的 
 
 00:00:56.860 --> 00:00:59.690
 There are some aspects of VPCs that are
+VPC 的某些方面是
 
 00:00:59.690 --> 00:01:03.655
 more AWS constructs than they are strictly networking.
+与严格联网相比  AWS 构造更多 
 
 00:01:03.655 --> 00:01:05.615
 Security groups, for example,
+例如 安全组
 
 00:01:05.615 --> 00:01:09.190
 are similar to firewalls but not exactly the same.
+与防火墙相似 但不完全相同 
 
 00:01:09.190 --> 00:01:12.470
 The way that traffic gets into and out of
+交通进入和离开的方式
 
 00:01:12.470 --> 00:01:16.795
 a VPC is a little different, similar but different.
+一个 VPC 有点不同 类似但不一样 
 
 00:01:16.795 --> 00:01:22.485
 AWS provides constructs to allow traffic from the Internet directly to your service,
+AWS 提供构造以允许流量直接从因特网到您的服务 
 
 00:01:22.485 --> 00:01:28.570
 or you can have traffic flow outbound through network address translation devices.
+或者您可以通过网络地址转换设备进行流量出站 
 
 00:01:28.570 --> 00:01:30.345
 We'll look more at this later.
+我们回头再看看
 
 00:01:30.345 --> 00:01:32.820
 You can connect VPCs together.
+您可以将 VPC 连接在一起 
 
 00:01:32.820 --> 00:01:38.840
 You can peer two VPCs in your account even if they're in different regions.
+您可以在帐户中对等两个 VPC  即使它们位于不同的区域 
 
 00:01:38.840 --> 00:01:42.935
 You can connect two VPCs from different AWS accounts,
+您可以从不同的 AWS 帐户连接两个 VPC  
 
 00:01:42.935 --> 00:01:46.300
 although, obviously, you should be cautious about doing this.
+虽然很明显你应该谨慎从事这件事
 
 00:01:46.300 --> 00:01:50.020
 How many VPCs you use is up to you.
+您使用的 VPC 有多少 
 
 00:01:50.020 --> 00:01:53.575
 Depending on what network components you use,
+根据您使用的网络组件 
 
 00:01:53.575 --> 00:01:56.665
 a VPC can have almost no cost.
+一个 VPC 几乎没有成本 
 
 00:01:56.665 --> 00:02:01.255
 Given this, you have a lot of freedom to decide what makes sense for you.
+鉴于这一点 你有很多自由决定什么是对你有意义的 
 
 00:02:01.255 --> 00:02:04.960
 If you're running your application in one region,
+如果你在一个地区运行应用程序
 
 00:02:04.960 --> 00:02:09.714
 you can run a fully multi AZ mode with just one VPC.
+您可以仅使用一个 VPC运行完全多 AZ 方式 
 
 00:02:09.714 --> 00:02:16.389
 Having one VPC per region is actually the default setup within AWS.
+每个区域有一个 VPC 实际上是 AWS 中的缺省设置 
 
 00:02:16.389 --> 00:02:21.220
 AWS now creates a default VPC for you in every region.
+AWS 现在在每个区域为您创建缺省 VPC  
 
 00:02:21.220 --> 00:02:23.795
 However, you can delete this if you desire.
+但是 如果您愿意 可以将其删除 
 
 00:02:23.795 --> 00:02:26.925
 You can have multiple VPCs per region.
+每个区域可以有多个 VPC  
 
 00:02:26.925 --> 00:02:31.260
 You can treat multiple VPCs as entirely standalone networks,
+您可以将多个 VPC 视为完全独立的网络 
 
 00:02:31.260 --> 00:02:35.740
 or you can connect them together to form a larger network hierarchy.
+或者可以将它们连接在一起以形成更大的网络层次结构 
 
 00:02:35.740 --> 00:02:40.760
 Really, you can combine VPCs in just about any way that you would like.
+实际上 您可以将 VPC 与您所希望的任何方式结合起来 
 
 00:02:40.760 --> 00:02:45.170
 You can also connect your office or data center directly to
+您还可以直接将办公室或数据中心连接到
 
 00:02:45.170 --> 00:02:50.185
 your VPC and thus extend your office network into AWS.
+您的 VPC  从而将您的办公网络扩展到 AWS 
 
 00:02:50.185 --> 00:02:53.630
 So what things are in a VPC?
+那么  VPC中有哪些东西 ?
 
 00:02:53.630 --> 00:02:59.005
 Anything that is instance-based will run inside of VPC.
+基于实例的任何内容都将在 VPC内部运行 
 
 00:02:59.005 --> 00:03:04.530
 For example, RDS, ElastiCache, DocumentDB,
+例如  RDS  ElastiCache  DocumentDB 
 
 00:03:04.530 --> 00:03:08.690
 Elasticsearch, EMR, EC2, Load Balancers,
+Elasticsearch  EMR  EC2 负载均衡器 
 
 00:03:08.690 --> 00:03:12.745
 Neptune, Redshift, lots of things.
+Neptune   Redshift 很多东西 
 
 00:03:12.745 --> 00:03:16.010
 What are the things that do not run inside of a VPC?
+未在 VPC 内部运行的内容是什么 ?
 
 00:03:16.010 --> 00:03:22.025
 The more service-oriented AWS services tend to not run in a VPC.
+更面向服务的 AWS 服务通常不会在 VPC中运行 
 
 00:03:22.025 --> 00:03:26.895
 Any of the global services as well as several core services,
+任何全球服务以及若干核心服务 
 
 00:03:26.895 --> 00:03:34.045
 such as SNS or SQS are actually services that are accessed directly over the Internet.
+例如 SNS 或 SQS 实际上是直接通过因特网访问的服务 
 
 00:03:34.045 --> 00:03:40.130
 Some of these include S3, DynamoDB, CloudFront, SNS,
+其中一些包括 S3  DynamoDB  CloudFront  SNS 
 
 00:03:40.130 --> 00:03:43.625
 SQS, SES, Route 53,
+SQS   SES  Route 53 
 
 00:03:43.625 --> 00:03:47.880
 API Gateway, IAM, and Cloud Trail.
-
+API Gateway  IAM和 Cloud Trail 

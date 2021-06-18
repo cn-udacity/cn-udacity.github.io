@@ -4,31 +4,40 @@ Language: en
 
 00:00:00.000 --> 00:00:03.990
 Be very cautious when it comes to committing to uptime numbers.
+如果要落实更新号 请非常谨慎 
 
 00:00:03.990 --> 00:00:09.330
 Do the math and make sure that you can reasonably achieve the numbers being asked for.
+执行数学 并确保您可以合理地实现所要求的数字 
 
 00:00:09.330 --> 00:00:12.810
 Allow downtime will be the number of minutes that
+允许停机时间将是
 
 00:00:12.810 --> 00:00:16.410
 you are allowed to be down without violating your SLA.
+您可以在不违反 SLA的情况下关闭 
 
 00:00:16.410 --> 00:00:20.570
 Allow downtime is typically measured on a monthly basis.
+允许停机时间通常按月测量 
 
 00:00:20.570 --> 00:00:23.355
 Since different months have different lengths,
+因为不同的月份有不同的长度
 
 00:00:23.355 --> 00:00:28.005
 SLAs often use a 30-day measurement to calculate downtime,
+SLA 经常使用 30 天的测量来计算停机时间 
 
 00:00:28.005 --> 00:00:30.660
 even for months that have a different number of days.
+甚至几个月的时间也不一样
 
 00:00:30.660 --> 00:00:33.435
 Let's get out the calculator and do some math.
+让我们拿出计算器 做一些数学运算 
 
 00:00:33.435 --> 00:00:39.430
 How much downtime would a 99 percent SLA allow for?
-
+99% SLA 允许多少停机时间 ?

@@ -4,43 +4,56 @@ Language: en
 
 00:00:00.000 --> 00:00:03.510
 One area that AWS networking differs
+AWS 网络不同的一个区域
 
 00:00:03.510 --> 00:00:07.425
 from a traditional network is in debugging network traffic.
+来自传统网络正在调试网络流量 
 
 00:00:07.425 --> 00:00:09.435
 On a traditional network,
+在传统网络上
 
 00:00:09.435 --> 00:00:14.205
 you could use a packet sniffer to examine the traffic flowing across your network.
+您可以使用包嗅探器来检查流经网络的流量 
 
 00:00:14.205 --> 00:00:19.365
 Because of the layers of virtualization that all of the AWS network is built on,
+由于所有构建 AWS 网络的虚拟化层 
 
 00:00:19.365 --> 00:00:21.370
 and for security reasons,
+出于安全考虑
 
 00:00:21.370 --> 00:00:24.430
 you are not allowed to examine packets as freely.
+不允许您随意检查包 
 
 00:00:24.430 --> 00:00:29.320
 AWS has tools and services that aid in the network debugging.
+AWS 具有用于帮助网络调试的工具和服务 
 
 00:00:29.320 --> 00:00:32.780
 VPC Flow logs show you information about
+VPC 流日志显示有关
 
 00:00:32.780 --> 00:00:38.210
 network flows which includes the source and destination of a particular traffic flow,
+包括特定业务流的源和目的地的网络流 
 
 00:00:38.210 --> 00:00:40.465
 but not the packets themselves.
+但包裹本身并不是
 
 00:00:40.465 --> 00:00:43.580
 Traffic Mirroring is a recent feature,
+" 流量镜像 " 是最近的一个功能部件 
 
 00:00:43.580 --> 00:00:45.679
 but it does allow for packets inspection,
+但它能让信息包检查
 
 00:00:45.679 --> 00:00:51.330
 but it's not quite as simple as putting a network interface into promiscuous mode.
-
+但这并不像把网络接口变成混杂模式那么简单 

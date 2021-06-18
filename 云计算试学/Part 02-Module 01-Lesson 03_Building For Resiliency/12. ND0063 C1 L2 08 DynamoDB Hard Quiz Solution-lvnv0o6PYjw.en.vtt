@@ -4,19 +4,24 @@ Language: en
 
 00:00:00.000 --> 00:00:02.985
 Which are true about DynamoDB Streams?
+DynamoDB Streams 的真实情况如何 ?
 
 00:00:02.985 --> 00:00:08.040
 DynamoDB Streams include all of the changes that happen to a DynamoDB table.
+" 发电机 " 流包括发生在 DynamoDB 表中的所有更改 
 
 00:00:08.040 --> 00:00:11.790
 This includes: creates, updates and deletes.
+这包括: 创建 更新和删除 
 
 00:00:11.790 --> 00:00:15.120
 DynamoDB Streams are used as part of
+" 发电机 " 流用作
 
 00:00:15.120 --> 00:00:20.160
 DynamoDB global tables and they can be used to stream across regions.
+ADB 全局表 可用于跨区域流 
 
 00:00:20.160 --> 00:00:26.590
 However, DynamoDB Streams are not necessary for backing up a DynamoDB table.
-
+但是  DynamoDB Streams 不需要备份 DynamoDB 表 

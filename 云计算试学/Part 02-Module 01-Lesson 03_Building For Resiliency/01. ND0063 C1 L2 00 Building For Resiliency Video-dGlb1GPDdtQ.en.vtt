@@ -4,19 +4,24 @@ Language: en
 
 00:00:00.000 --> 00:00:02.730
 In this lesson, we'll look at redundancy and
+在本课程中 我们将查看冗余和
 
 00:00:02.730 --> 00:00:06.855
 resiliency within individual AWS application services.
+单个 AWS 应用程序服务中的弹性 
 
 00:00:06.855 --> 00:00:09.780
 We've already looked at some foundational pieces within
+我们已经研究了一些基本的部分
 
 00:00:09.780 --> 00:00:13.410
 AWS of creating high availability infrastructure.
+创建高可用性基础结构的 AWS  
 
 00:00:13.410 --> 00:00:14.805
 Now we'll learn more about
+现在我们将更多地了解
 
 00:00:14.805 --> 00:00:19.450
 the individual AWS services and how to make those highly available.
-
+个人 AWS 服务以及如何使这些服务高度可用 

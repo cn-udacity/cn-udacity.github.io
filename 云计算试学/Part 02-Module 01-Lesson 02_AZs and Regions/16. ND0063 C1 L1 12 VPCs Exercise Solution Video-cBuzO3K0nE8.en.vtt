@@ -4,97 +4,128 @@ Language: en
 
 00:00:00.000 --> 00:00:02.310
 When looking at your new VPC,
+在查看您的新 VPC时 
 
 00:00:02.310 --> 00:00:07.470
 take note of all the things that are required to create a useful VPC.
+请注意创建有用的 VPC 所需的所有内容 
 
 00:00:07.470 --> 00:00:10.995
 You need the VPC itself, a routing table,
+您需要 VPC 本身 一个路由表 
 
 00:00:10.995 --> 00:00:16.350
 a subnet, and if you want to connect externally, an Internet gateway.
+子网 如果要在外部连接 则是因特网网关 
 
 00:00:16.350 --> 00:00:20.895
 You also need all of these things connected together in the correct way.
+您还需要所有这些东西以正确的方式连接在一起 
 
 00:00:20.895 --> 00:00:23.950
 Let's look through the things that have been created,
+让我们看看那些创造的东西
 
 00:00:23.950 --> 00:00:26.410
 and how they relate to each other.
+以及它们之间的关系
 
 00:00:27.620 --> 00:00:31.785
 Looking at the newly created VPC,
+查看新创建的 VPC 
 
 00:00:31.785 --> 00:00:33.990
 we can see a few things about it.
+我们可以看到一些关于它的东西 
 
 00:00:33.990 --> 00:00:41.480
 In particular, make note of the CIDR address that was picked while we created the VPC,
+特别是 请记下我们在创建 VPC时提取的 CIDR 地址 
 
 00:00:41.480 --> 00:00:46.615
 in this case, 10.0.0.0/16.
+在本案中  10.0.0.0/16.
 
 00:00:46.615 --> 00:00:49.005
 Next, we'll take a look at the subnet.
+接下来 我们就来看看子网 
 
 00:00:49.005 --> 00:00:52.195
 When we look at our subnet list,
+当我们看我们的子网列表时
 
 00:00:52.195 --> 00:00:57.185
 we see all the subnets for all of the VPCs that we have.
+我们可以看到所有我们拥有的所有 VPC 的子网 
 
 00:00:57.185 --> 00:01:01.770
 We want to filter this by our newly created VPC.
+我们希望通过我们新建的 VPC进行过滤 
 
 00:01:02.600 --> 00:01:09.080
 As we can see, we have one subnet created as part of this VPC.
+我们可以看到 我们有一个子网作为 VPC的一部分创建 
 
 00:01:09.080 --> 00:01:11.015
 Now that we're looking at the subnet,
+现在我们正在看这个子网
 
 00:01:11.015 --> 00:01:13.590
 we can also look at the route table.
+我们也可以看看路线表 
 
 00:01:13.790 --> 00:01:19.400
 Here we can see that both the VPC network address,
+在这里我们可以看到 VPC 网络地址
 
 00:01:19.400 --> 00:01:24.650
 10.0.0/16 is in the route table,
+10.0.0/ 10.0.0/ 16 在路线表中
 
 00:01:24.650 --> 00:01:26.510
 as well as another entry,
+还有另一个入口
 
 00:01:26.510 --> 00:01:34.625
 the 0.0.0.0/0 entry is really what's called a default route.
+0.0.0.0/0 的条目就是所谓的默认路由 
 
 00:01:34.625 --> 00:01:37.705
 So anything that doesn't match the first role,
+任何与第一个角色不匹配的东西
 
 00:01:37.705 --> 00:01:40.950
 goes to this route entry and
+转至该路由条目并
 
 00:01:40.950 --> 00:01:44.475
 the target for that is the Internet gateway that was created.
+目标是创建的因特网网关 
 
 00:01:44.475 --> 00:01:47.880
 From here, we can go and look at our Internet gateway.
+从这里 我们可以去看看我们的互联网网关 
 
 00:01:47.880 --> 00:01:53.350
 As we can see, the Internet gateway is attached to our newly created VPC.
+我们可以看到 因特网网关连接到我们新创建的 VPC 
 
 00:01:53.350 --> 00:01:56.780
 All of these elements connected together,
+所有这些元素连接在一起
 
 00:01:56.780 --> 00:02:02.560
 form a VPC that is actually useful to us where we can put instances in this subnet.
+形成一个 VPC  它实际上对我们有用 我们可以在这个子网中放置实例 
 
 00:02:02.560 --> 00:02:05.715
 They will then use the associated route table,
+然后他们将使用关联的路由表 
 
 00:02:05.715 --> 00:02:08.350
 which routes traffic through the Internet gateway,
+通过互联网网关传递流量
 
 00:02:08.350 --> 00:02:14.340
 and thus makes us a publicly accessible subnet within our new VPC.
-
+从而使我们成为新的 VPC中可公开访问的子网 

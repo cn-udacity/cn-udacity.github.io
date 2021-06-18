@@ -4,55 +4,72 @@ Language: en
 
 00:00:00.000 --> 00:00:03.120
 Availability Zones or AZs and Regions are
+可用性区域或 AZS 和区域是
 
 00:00:03.120 --> 00:00:07.635
 the core components within AWS that allow local and global redundancy.
+允许本地和全局冗余的 AWS 中的核心组件 
 
 00:00:07.635 --> 00:00:10.770
 Proper usage of these key resources is crucial for
+正确使用这些关键资源对于
 
 00:00:10.770 --> 00:00:14.220
 anyone building high availability systems on AWS.
+任何人在 AWS 上建立高可用性系统 
 
 00:00:14.220 --> 00:00:18.120
 An AWS region contains multiple availability zones.
+AWS 区域包含多个可用性区域 
 
 00:00:18.120 --> 00:00:21.600
 These availability zones allow for fault isolation within
+这些可用性区域允许在
 
 00:00:21.600 --> 00:00:26.820
 a region and provide the simplest way to achieve a significant level of redundancy.
+并提供最简单的方法来实现大量冗余 
 
 00:00:26.820 --> 00:00:29.730
 The AWS global infrastructure is made up of
+AWS 全球基础架构由
 
 00:00:29.730 --> 00:00:33.120
 multiple geographic regions spread around the world.
+多个地理区域分布在世界各地
 
 00:00:33.120 --> 00:00:37.410
 These regions are connected via high speed private network,
+这些区域通过高速专用网络连接 
 
 00:00:37.410 --> 00:00:39.690
 but the regions themselves are independent.
+但这些地区本身是独立的 
 
 00:00:39.690 --> 00:00:44.430
 Availability Zones and regions our containers for AWS networking.
+可用性专区和区域用于 AWS 联网的容器 
 
 00:00:44.430 --> 00:00:46.985
 Networking in AWS is setup via
+在 AWS 中建立网络是通过
 
 00:00:46.985 --> 00:00:52.990
 isolated Virtual Private Clouds or VPCs that exist in one AWS region.
+隔离的虚拟专用云或 VPC 存在于一个 AWS 区域中 
 
 00:00:52.990 --> 00:00:56.405
 You will get to see how you can have multiple of
+你会看到你有多大的
 
 00:00:56.405 --> 00:01:02.065
 your own custom networks within AWS allowing you complete control and security.
+AWS 中的您自己的定制网络 允许您完成控制和安全性 
 
 00:01:02.065 --> 00:01:04.600
 In this lesson, we will explore VPCs
+在本课中 我们将探索 VPC
 
 00:01:04.600 --> 00:01:08.940
 themselves and also the networking that is configured within them.
-
+以及在这些网络中配置的网络 

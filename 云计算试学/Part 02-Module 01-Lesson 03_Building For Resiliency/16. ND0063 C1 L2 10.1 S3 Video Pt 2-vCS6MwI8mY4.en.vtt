@@ -4,58 +4,76 @@ Language: en
 
 00:00:00.000 --> 00:00:03.195
 Standard storage is standard.
+标准存储是标准存储 
 
 00:00:03.195 --> 00:00:07.695
 If you have objects that you will access regularly, keep them here.
+如果您有将定期访问的对象 请将其保留在此处 
 
 00:00:07.695 --> 00:00:11.785
 Infrequently accessed or IA is a great option
+不经常访问或 IA 是一个伟大的选项
 
 00:00:11.785 --> 00:00:16.445
 for important data that you will use occasionally, but not frequently.
+对于您将偶尔使用但不经常使用的重要数据 
 
 00:00:16.445 --> 00:00:19.750
 You access the data in the exact same way,
+以完全相同的方式访问数据 
 
 00:00:19.750 --> 00:00:24.820
 but you are charged less for storage and more for accessing the objects.
+但对于存储和访问对象的更多信息 您的收费更少 
 
 00:00:24.820 --> 00:00:29.855
 Thus, if you don't access these objects often you will save money.
+因此 如果您不经常访问这些对象 那么将节省资金 
 
 00:00:29.855 --> 00:00:34.120
 If you don't know what your access patterns will be for your data,
+如果您不知道您的访问模式将针对您的数据 
 
 00:00:34.120 --> 00:00:36.910
 you can use intelligent tiering.
+你可以用智能的分层
 
 00:00:36.910 --> 00:00:40.300
 This automatically moves objects between
+这将自动在以下对象之间移动对象 :
 
 00:00:40.300 --> 00:00:44.675
 standard and infrequently accessed to help you optimize costs.
+标准且不经常访问 以帮助您优化成本 
 
 00:00:44.675 --> 00:00:48.275
 Glacier is called glacier to imply
+冰川被称为冰川
 
 00:00:48.275 --> 00:00:53.720
 colder storage or storage that is not as immediately accessible.
+较冷的存储器或存储器无法立即访问 
 
 00:00:53.720 --> 00:00:58.720
 This is a good choice for backups or data that you're unlikely to need often.
+这是您不太可能需要的备份或数据的好选择 
 
 00:00:58.720 --> 00:01:03.845
 This option is less expensive than standard warmer storage classes.
+此选项比标准更温暖的存储类更便宜 
 
 00:01:03.845 --> 00:01:08.375
 Glacier deep archive is even colder storage.
+冰川深库是更冷的储藏室
 
 00:01:08.375 --> 00:01:15.440
 Again, best for items that you need to keep but may never or very rarely access.
+同样 对于您需要保留但可能从不或很少访问的项 最好是 
 
 00:01:15.440 --> 00:01:21.035
 This storage tier can take up to 12 hours to give you access to your data,
+此存储层最多需要 12 小时才能让您访问您的数据 
 
 00:01:21.035 --> 00:01:24.810
 but again, this tier cost even less.
-
+但这层的成本更低

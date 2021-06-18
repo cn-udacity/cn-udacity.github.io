@@ -4,43 +4,56 @@ Language: en
 
 00:00:00.000 --> 00:00:01.605
 Let's get started with the lesson,
+我们开始上课吧
 
 00:00:01.605 --> 00:00:03.705
 regions and availability zones.
+区域和可用性区域 
 
 00:00:03.705 --> 00:00:07.080
 Later, we'll get into service level resiliency,
+稍后 我们将进入服务级别弹性 
 
 00:00:07.080 --> 00:00:10.455
 understanding business objectives, and reacting to failure.
+了解业务目标 并对故障作出反应 
 
 00:00:10.455 --> 00:00:12.300
 In this lesson, you will learn about
+在本课中 您将了解有关
 
 00:00:12.300 --> 00:00:16.860
 the physical and networking infrastructure that AWS provides.
+AWS 提供的物理和网络基础结构 
 
 00:00:16.860 --> 00:00:22.560
 You'll built infrastructure that uses many of the capabilities of AWSs global footprint.
+您将构建使用许多 AWS 全球足迹功能的基础架构 
 
 00:00:22.560 --> 00:00:26.145
 You'll begin at the highest level with AWS regions.
+您将从最高级的 AWS 区域开始 
 
 00:00:26.145 --> 00:00:31.140
 Then, we'll dive in and look at availability zones that live within regions.
+然后 我们将潜入并查看区域内的可用性区域 
 
 00:00:31.140 --> 00:00:35.055
 You will learn to distinguish between resources and specific regions
+您将学习区分资源和特定区域
 
 00:00:35.055 --> 00:00:39.355
 versus the global AWS services which span all regions.
+与跨所有区域的全球 AWS 服务相比 
 
 00:00:39.355 --> 00:00:45.145
 Within regions are VPCs which are your own personal networks within AWS.
+在区域内  VPC 是您自己在 AWS 内的个人网络 
 
 00:00:45.145 --> 00:00:49.880
 You will explore AWS networking by creating a new VPC and modifying
+您将通过创建新的 VPC 和修改来探索 AWS 网络
 
 00:00:49.880 --> 00:00:55.440
 its network layout and access within the VPC private network.
-
+其在 VPC 专用网络中的网络布局和接入 

@@ -4,112 +4,148 @@ Language: en
 
 00:00:00.000 --> 00:00:03.390
 VPCs are closely related to IP networks.
+VPC 与 IP 网络密切相关 
 
 00:00:03.390 --> 00:00:05.655
 In order to set up a VPC,
+为了建立一个 VPC
 
 00:00:05.655 --> 00:00:08.605
 we need to provide it a network range.
+我们需要提供一个网络范围
 
 00:00:08.605 --> 00:00:11.790
 Let's look briefly at what a network range is.
+让我们简单来看一下网络的范围是什么 
 
 00:00:11.790 --> 00:00:16.830
 A network range is a consecutive set of IP addresses.
+网络范围是连续的一组 IP 地址 
 
 00:00:16.830 --> 00:00:20.295
 In order to more concisely describe a network range,
+为了更简洁地描述一个网络范围 
 
 00:00:20.295 --> 00:00:23.370
 AWS uses CIDR notation.
+AWS 使用 CIDR 表示法 
 
 00:00:23.370 --> 00:00:29.325
 CIDR is an acronym for Classless Inter-Domain Routing,
+CIDR 是无类域间路由的首字母缩写词 
 
 00:00:29.325 --> 00:00:32.370
 but we don't really need to worry about what all that means.
+但我们不需要担心这意味着什么
 
 00:00:32.370 --> 00:00:36.415
 CIDR notation is comprised of an IP address,
+CIDR 表示法由 IP 地址组成 
 
 00:00:36.415 --> 00:00:40.470
 followed by a slash, followed by a number.
+后跟一个斜杠 后跟一个数字 
 
 00:00:40.470 --> 00:00:45.030
 The IP address is the first address in the network range.
+IP 地址是网络范围内的第一个地址 
 
 00:00:45.030 --> 00:00:49.610
 The number after the slash tells us how big the range is.
+斜杠后的数字告诉我们的范围有多大 
 
 00:00:49.610 --> 00:00:51.605
 The smaller the number,
+数字越小
 
 00:00:51.605 --> 00:00:54.640
 the more addresses in the network range.
+网络范围内的地址越多 
 
 00:00:54.640 --> 00:00:59.780
 Well, technically we can use any number between zero and 32.
+严格来说 我们可以使用零到 32之间的任何数字 
 
 00:00:59.780 --> 00:01:02.780
 If we stick to 16 or 24,
+如果我们坚持 16 或 24
 
 00:01:02.780 --> 00:01:04.385
 things stay a lot simpler.
+事情就更简单了
 
 00:01:04.385 --> 00:01:07.055
 If we use /16,
+如果我们用 /16
 
 00:01:07.055 --> 00:01:14.495
 we use the maximum of the second half of the IP address as the end of the network range.
+我们将 IP 地址的后半部分的最大值用作网络范围的末尾 
 
 00:01:14.495 --> 00:01:21.620
 So 10.2.0.0/16 goes from
+所以 10.2.0.0/ 16 从
 
 00:01:21.620 --> 00:01:28.875
 10.2.0.0 to 10.2.245.255.
+10.2.0.0 10.2.0.0 到 10.2.245.255
 
 00:01:28.875 --> 00:01:31.480
 If we use a slash 24,
+如果我们用 24
 
 00:01:31.480 --> 00:01:37.100
 we use the maximum of the last quarter of the IP or
+我们使用最后一个季度的 IP 或
 
 00:01:37.100 --> 00:01:42.450
 10.2.0.0/24 would go
+10.2.0.0/ 10.2.0.0/ 24
 
 00:01:42.450 --> 00:01:51.120
 from 10.2.0.0 to 10.2.0.255.
+从 10.2.0.0 到 10.2.0.255
 
 00:01:51.120 --> 00:01:55.210
 The detailed mechanics of using CIDR notation to determine
+使用 CIDR 表示法确定
 
 00:01:55.210 --> 00:01:59.200
 a network range involve a topic called bit masking.
+网络范围涉及称为位掩码的主题 
 
 00:01:59.200 --> 00:02:01.225
 That goes beyond the scope of this course.
+这超出了本课程的范围 
 
 00:02:01.225 --> 00:02:05.080
 For now, you can just remember that /24 means
+现在你还记得 /24 的意思
 
 00:02:05.080 --> 00:02:11.820
 255 addresses and /16 means 65,000 addresses.
+255 个地址和 /16 表示 65000 个地址 
 
 00:02:11.820 --> 00:02:15.770
 You may have run into situations where two computers on a network
+您可能已运行到网络上的两台计算机
 
 00:02:15.770 --> 00:02:19.620
 try to use the same IP address, things don't go well.
+尝试使用相同的 IP 地址 情况不太顺利 
 
 00:02:19.620 --> 00:02:22.515
 They fight and complain, and no one is happy.
+他们打架 抱怨 没有人高兴 
 
 00:02:22.515 --> 00:02:26.530
 When two VPCs have overlapping network ranges,
+当两个 VPC 有重叠的网络范围时 
 
 00:02:26.530 --> 00:02:28.835
 the concept is basically the same.
+这个概念基本上是一样的 
 
 00:02:28.835 --> 00:02:35.190
 You cannot connect two VPCs that have the same or overlapping network ranges.
-
+不能连接两个具有相同或重叠网络范围的 VPC  

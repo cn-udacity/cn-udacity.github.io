@@ -4,106 +4,140 @@ Language: en
 
 00:00:00.000 --> 00:00:02.550
 Isn't downtime just the opposite of uptime?
+停机时间与正常运行时间正好相反吗 ?
 
 00:00:02.550 --> 00:00:05.445
 Why should we talk about it as a separate topic?
+我们为什么要把它作为一个单独的话题来谈呢 ?
 
 00:00:05.445 --> 00:00:08.340
 Downtime has some important caveats.
+停机时间有一些重要的警告 
 
 00:00:08.340 --> 00:00:12.180
 Most platforms are not entirely within your control.
+大多数平台并非完全在您的控制范围内 
 
 00:00:12.180 --> 00:00:15.515
 You might use third-parties for aspects of your platform,
+您可能将第三方用于平台的各个方面 
 
 00:00:15.515 --> 00:00:17.195
 such as email delivery,
+例如电子邮件传递 
 
 00:00:17.195 --> 00:00:20.345
 video streaming, data collection, and hosting.
+视频流 数据收集和托管 
 
 00:00:20.345 --> 00:00:22.805
 Do any of these sound familiar?
+这些听起来很熟悉吗
 
 00:00:22.805 --> 00:00:24.725
 Certainly at a minimum,
+当然至少
 
 00:00:24.725 --> 00:00:26.605
 you know about AWS.
+你知道 AWS 的事
 
 00:00:26.605 --> 00:00:28.740
 What if AWS goes down?
+如果 AWS 停机怎么办 ?
 
 00:00:28.740 --> 00:00:32.854
 How can it be expected to account for all of these services?
+如何能预计到所有这些服务 ?
 
 00:00:32.854 --> 00:00:34.955
 You don't run them all yourself,
+你自己都不做
 
 00:00:34.955 --> 00:00:37.685
 so you can't personally keep them up and running.
+所以你不能亲自让他们跑起来
 
 00:00:37.685 --> 00:00:43.780
 What do you do? You can choose third parties who themselves provide SLAs.
+你是做什么的 您可以选择自己提供 SLA的第三方 
 
 00:00:43.780 --> 00:00:46.310
 Then in your own contracts,
+那就在你自己的合同里
 
 00:00:46.310 --> 00:00:52.040
 you can specify that you only use third parties with a minimum SLA threshold,
+您可以指定仅使用具有最低 SLA 阈值的第三方 
 
 00:00:52.040 --> 00:00:56.555
 but that you are not responsible for the third party downtime.
+但你不会为第三方的宕机负责
 
 00:00:56.555 --> 00:00:58.790
 Well, at least you can try.
+至少你可以试试
 
 00:00:58.790 --> 00:01:01.215
 Your customers may not accept that.
+您的客户可能无法接受 
 
 00:01:01.215 --> 00:01:04.160
 This is where you turn the negotiators within
+这就是你把谈判者变成
 
 00:01:04.160 --> 00:01:07.520
 your organization to work out all of the details so that
+你的组织把所有细节都拿出来
 
 00:01:07.520 --> 00:01:14.945
 both parties and yourself understand what will and will not be your responsibilities.
+双方和自己都明白什么会 也不会是你的责任 
 
 00:01:14.945 --> 00:01:17.480
 Let's talk about some math.
+让我们谈谈数学 
 
 00:01:17.480 --> 00:01:22.790
 If you provide a 99.9 percent SLAs to your customers and
+如果您向客户提供 99.9% SLA
 
 00:01:22.790 --> 00:01:28.345
 your third parties all provide 99.9 percent SLAs to you,
+你的第三方都给你提供了 99.9% 个 SLA  
 
 00:01:28.345 --> 00:01:30.795
 you should be covered, right?
+你应该被掩盖了对吧
 
 00:01:30.795 --> 00:01:36.470
 Only if all of that downtime completely overlaps.
+仅当所有这些停机时间都完全重叠 
 
 00:01:36.470 --> 00:01:43.040
 If you happen to use all of your allotment of downtime in a month and even one of
+如果您碰巧使用了一个月内的所有停机时间 甚至是其中一个
 
 00:01:43.040 --> 00:01:45.860
 your third parties uses any of
+你的第三方使用
 
 00:01:45.860 --> 00:01:51.505
 their allotment and their downtime doesn't fall within your downtime,
+他们的分配和停机时间不会在您的停机时间内
 
 00:01:51.505 --> 00:01:55.505
 you just missed being up for 99.9 percent of the month.
+你错过了 99.9% 个月的时间
 
 00:01:55.505 --> 00:02:00.740
 Obviously, this problem just gets bigger as more third-parties that you use.
+显然 这个问题比你使用的第三方更大 
 
 00:02:00.740 --> 00:02:05.120
 But doing away with third parties is likely not practical either.
+但是 与第三方进行谈判也很可能是不实际的 
 
 00:02:05.120 --> 00:02:10.290
 So make sure you covered this case in writing in your agreements.
-
+所以请确保您在协议中以书面形式覆盖此案例 

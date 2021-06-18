@@ -4,40 +4,52 @@ Language: en
 
 00:00:00.000 --> 00:00:02.460
 In this exercise, you are asked to create
+在此练习中 将要求您创建
 
 00:00:02.460 --> 00:00:07.710
 a DynamoDB table and then transform that table into a global table.
+动态数据库表 然后将该表转换为全局表 
 
 00:00:07.710 --> 00:00:14.040
 You can see here we've created a DynamoDB table with has some basic details, table name.
+您可以在这里看到我们创建了一个 DynamoDB 表 具有一些基本详细信息 表名 
 
 00:00:14.040 --> 00:00:16.725
 Then we set up our primary partition key.
+然后 我们设置了主分区键 
 
 00:00:16.725 --> 00:00:20.715
 Then we have also enabled streaming on the table,
+然后我们也在桌子上启用了分流 
 
 00:00:20.715 --> 00:00:23.655
 which is a requirement for global tables.
+这是对全局表的要求 
 
 00:00:23.655 --> 00:00:27.315
 We move down to our Global Table's tab.
+我们向下移动到 " 全局表 " 选项卡 
 
 00:00:27.315 --> 00:00:32.360
 We can see that we now have the option to add a region to our table.
+我们可以看到 我们现在可以选择在我们的谈判桌上增加一个区域 
 
 00:00:32.360 --> 00:00:38.900
 We add the region by selecting whichever region where we'd like to replicate to.
+我们通过选择我们希望复制到的区域来添加区域 
 
 00:00:38.900 --> 00:00:42.905
 AWS tells us that that region is ready and available,
+AWS 告诉我们那个地区已经准备好了
 
 00:00:42.905 --> 00:00:45.560
 and we create a replica.
+我们创造了一个复制品
 
 00:00:45.560 --> 00:00:49.100
 Once this finishes, we'll have a global table that is
+一旦完成 我们将拥有一个全局表 即
 
 00:00:49.100 --> 00:00:53.880
 writable in multiple regions, and there we go.
-
+在多个区域中可写入 并且存在 

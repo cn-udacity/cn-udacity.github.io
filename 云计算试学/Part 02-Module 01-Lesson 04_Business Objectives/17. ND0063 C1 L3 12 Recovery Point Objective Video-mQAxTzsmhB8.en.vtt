@@ -4,151 +4,200 @@ Language: en
 
 00:00:00.000 --> 00:00:02.385
 Recovery point objective or
+恢复点目标或
 
 00:00:02.385 --> 00:00:07.845
 RPO is the maximum amount of time over which you can lose data.
+RPO 是您可以丢失数据的最大时间量 
 
 00:00:07.845 --> 00:00:11.310
 Customers are generating data within your platform,
+客户正在您的平台内生成数据 
 
 00:00:11.310 --> 00:00:14.880
 and losing that data after it has been generated is
+在生成数据之后丢失数据
 
 00:00:14.880 --> 00:00:18.555
 even worse than not being able to ingest it in the first place,
+更糟糕的是无法在第一个地方摄取
 
 00:00:18.555 --> 00:00:20.580
 which is what downtime would be.
+这就是停工的原因
 
 00:00:20.580 --> 00:00:23.760
 Thus, we separately track the duration of
+因此 我们单独跟踪
 
 00:00:23.760 --> 00:00:27.720
 time over which we are allowed to lose customer data.
+允许我们丢失客户数据的时间 
 
 00:00:27.720 --> 00:00:32.250
 It may sound odd but it's almost always true that losing
+听起来很奇怪但几乎总是失去
 
 00:00:32.250 --> 00:00:36.780
 customer data is worse than not being able to take it in in the first place.
+客户数据比在第一个地方无法使用的数据更差 
 
 00:00:36.780 --> 00:00:39.050
 As a customer, would you rather
+作为客户 您是否愿意
 
 00:00:39.050 --> 00:00:43.630
 an online shopping platform not be available for you to place an order,
+一个网上购物平台不能给你下订单 
 
 00:00:43.630 --> 00:00:47.100
 or that they take your order but then lose it.
+或者他们拿着你的订单就丢了
 
 00:00:47.100 --> 00:00:50.510
 Don't forget to consider that losing it also
+别忘了它也会失去它
 
 00:00:50.510 --> 00:00:54.260
 likely means that they don't know that you ever submitted the order,
+可能意味着他们不知道你提交了命令
 
 00:00:54.260 --> 00:00:58.505
 and thus, they can't come back to you and ask you for your order again,
+所以他们不能再找你问你的命令了
 
 00:00:58.505 --> 00:01:01.355
 your order will simply never show up.
+你的命令根本就不会出现
 
 00:01:01.355 --> 00:01:04.520
 Most data is lost in one of two ways.
+大多数数据以两种方式之一丢失 
 
 00:01:04.520 --> 00:01:08.475
 If your system is up and available to your users but
+如果系统已启动并可供用户使用 但
 
 00:01:08.475 --> 00:01:13.580
 some failure is preventing it from durably storing the information sent to it,
+失败的原因是它无法持久存储发送给它的信息 
 
 00:01:13.580 --> 00:01:16.400
 perhaps your database is a 100 percent full,
+也许你的数据库是 100%
 
 00:01:16.400 --> 00:01:18.545
 then you are losing data.
+那你就会失去数据
 
 00:01:18.545 --> 00:01:22.535
 Systems tend to only have one shot at capturing data,
+系统在捕获数据时只会有一个镜头
 
 00:01:22.535 --> 00:01:25.260
 and if they miss it, the data is gone.
+如果错过了数据就没了
 
 00:01:25.260 --> 00:01:28.805
 It may be possible to determine what data is missed
+可能可以确定遗漏了哪些数据
 
 00:01:28.805 --> 00:01:32.425
 by examining logs or other ancillary data sources,
+通过检查日志或其他辅助数据源 
 
 00:01:32.425 --> 00:01:34.280
 but this can be tricky,
+但这会很棘手
 
 00:01:34.280 --> 00:01:38.090
 time-consuming, and possibly not 100 percent accurate.
+时间消耗 可能不准确 100%  
 
 00:01:38.090 --> 00:01:41.360
 The second way is if you find yourself needing to restore from
+第二种方法是如果你发现自己需要从
 
 00:01:41.360 --> 00:01:47.280
 backup data and your backup is some amount of time old, you will lose data.
+备份数据和备份是旧的 您将丢失数据 
 
 00:01:47.280 --> 00:01:50.570
 If you back up your database once an hour,
+如果一小时后备份数据库
 
 00:01:50.570 --> 00:01:54.065
 then your RPO must be at least one hour.
+那么 RPO 必须至少为 1 小时 
 
 00:01:54.065 --> 00:01:57.770
 If your backup completes at one o'clock and you
+如果您的备份在某个点完成 而您
 
 00:01:57.770 --> 00:02:01.685
 have massive data corruption occur at 1:45,
+大规模的数据腐败发生在 1:45
 
 00:02:01.685 --> 00:02:08.325
 then to use the one o'clock data means that you will lose 45 minutes worth of data,
+那么用一点数据就意味着你损失了 45 分的数据 
 
 00:02:08.325 --> 00:02:13.070
 and the RPO for that incident would be 45 minutes.
+而该事件的 RPO 将为 45 分 
 
 00:02:13.070 --> 00:02:18.060
 Having redundant systems is the key to avoiding recovery in the first place.
+拥有冗余系统是避免首先恢复的关键 
 
 00:02:18.060 --> 00:02:23.380
 Highly available services keep things running and reduce service disruptions.
+高可用性服务可保持运行并减少服务中断 
 
 00:02:23.380 --> 00:02:25.090
 You can use features like
+您可以使用类似的功能
 
 00:02:25.090 --> 00:02:29.530
 S3's version buckets in order to keep older versions of objects.
+S3的版本存储区 以保留较旧版本的对象 
 
 00:02:29.530 --> 00:02:31.525
 In the case of data corruption,
+在数据损坏的情况下 
 
 00:02:31.525 --> 00:02:36.145
 you can simply undo it and revert to a previous iteration of your data.
+您可以将其撤销 并还原为先前的数据迭代 
 
 00:02:36.145 --> 00:02:42.440
 Services like RDS and DynamoDB offer point-in-time data recovery.
+类似 RDS 和 DynamoDB 的服务提供时间点数据恢复 
 
 00:02:42.440 --> 00:02:46.705
 This means that they essentially have a continual backup.
+这意味着它们本质上具有持续的备份 
 
 00:02:46.705 --> 00:02:51.410
 If you were to experience massive data corruption at 1:45,
+如果你在 1:45年经历大规模的数据腐败
 
 00:02:51.410 --> 00:02:58.745
 you can restore your data to 1:44 and have very little data loss and a very small RPO.
+您可以将数据恢复到 1:44  并且数据丢失极少  RPO 很小 
 
 00:02:58.745 --> 00:03:02.375
 Do not overlook the fact that if data corruption occurs
+如果发生数据损坏 请不要忽略这一事实
 
 00:03:02.375 --> 00:03:06.575
 at 1:45 and you don't realize it until 2:15,
+1:45 到 2:15
 
 00:03:06.575 --> 00:03:10.010
 you will still suffer 30 minutes of data loss.
+你还会遭受 30 分的数据损失
 
 00:03:10.010 --> 00:03:15.180
 This is why it is imperative to have strong monitoring and alerting.
-
+因此 必须有强有力的监测和警报 

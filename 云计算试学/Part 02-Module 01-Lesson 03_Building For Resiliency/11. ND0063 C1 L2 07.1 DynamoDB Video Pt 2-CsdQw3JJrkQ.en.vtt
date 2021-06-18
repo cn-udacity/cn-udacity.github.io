@@ -4,124 +4,164 @@ Language: en
 
 00:00:00.000 --> 00:00:03.780
 A DynamoDB Stream is an ongoing flow of events,
+A发电机 DB 流是一个持续的事件流 
 
 00:00:03.780 --> 00:00:07.410
 which includes all changes made to a Dynamo table.
+包括对 Dynamo 表进行的所有更改 
 
 00:00:07.410 --> 00:00:12.060
 This event stream will be empty if there are no changes being made to a table.
+如果未对表进行任何更改 那么此事件流将为空 
 
 00:00:12.060 --> 00:00:15.210
 But when table changes are made,
+但当表改变时
 
 00:00:15.210 --> 00:00:19.770
 an event will be placed into the DynamoDB Stream for each change.
+事件将被放入 DynamoDB 流中的每个更改 
 
 00:00:19.770 --> 00:00:22.919
 This includes all change events: creating,
+这包括所有更改事件: 创建 
 
 00:00:22.919 --> 00:00:26.635
 updating, deleting any item in the table.
+更新 删除表中的任何项 
 
 00:00:26.635 --> 00:00:31.580
 Operations that only read items from table will not be included in the stream.
+仅从表中读取项的操作将不包含在流中 
 
 00:00:31.580 --> 00:00:33.860
 So why do we want this?
+我们为什么要这样呢 ?
 
 00:00:33.860 --> 00:00:38.255
 Streams allow you to take an action on a change to the database.
+流允许您对数据库进行更改 
 
 00:00:38.255 --> 00:00:43.550
 For example, if you wanted to track how many new accounts were created over time,
+例如 如果您想要跟踪随时间推移创建的新帐户数 
 
 00:00:43.550 --> 00:00:48.050
 you could have an application process your stream and take an action on
+您可以让应用程序处理流并对其执行操作
 
 00:00:48.050 --> 00:00:51.710
 each create event or if you wanted to send
+每个创建事件或者如果要发送
 
 00:00:51.710 --> 00:00:56.465
 an INET message to a user for setting a high score in an online game,
+对用户的 INET 消息 用于在在线游戏中设置高分数 
 
 00:00:56.465 --> 00:00:58.970
 you could use a lambda function to compare
+你可以用 lambda 函数来比较
 
 00:00:58.970 --> 00:01:02.090
 any score increases to the current leader board.
+任何分数都将增加到当前领导板 
 
 00:01:02.090 --> 00:01:06.065
 There are many potential uses for DynamoDB Streams,
+DynamoDB Streams 有许多潜在用途 
 
 00:01:06.065 --> 00:01:10.925
 including DynamoDB global tables,
+包括 DynamoDB 全局表 
 
 00:01:10.925 --> 00:01:15.635
 otherwise known as multi-region redundancy.
+否则称为多区域冗余 
 
 00:01:15.635 --> 00:01:20.150
 DynamoDB Streams are used to create global tables.
+" 发电机 " 流用于创建全局表 
 
 00:01:20.150 --> 00:01:26.095
 A global table is a DynamoDB table replicated across regions.
+全局表是跨区域复制的 DynamoDB 表 
 
 00:01:26.095 --> 00:01:32.015
 As you've seen, creating multi-region services is usually not trivial.
+正如您所看到的 创建多区域服务通常不是小事 
 
 00:01:32.015 --> 00:01:36.640
 However, this is one case where it's actually quite simple.
+但是 这是一个非常简单的案例 
 
 00:01:36.640 --> 00:01:40.010
 You enable DynamoDB Streams and then
+启用 DynamoDB Streams  然后
 
 00:01:40.010 --> 00:01:43.505
 select the region to which you would like to replicate your table.
+选择要复制表的区域 
 
 00:01:43.505 --> 00:01:45.955
 AWS takes care of the rest.
+AWS 负责休息 
 
 00:01:45.955 --> 00:01:48.720
 Global tables are active, active.
+全局表是活动的 活动的 
 
 00:01:48.720 --> 00:01:51.635
 This means that you can write to the table in
+这意味着您可以在以下目录中写入表 :
 
 00:01:51.635 --> 00:01:56.125
 any region and the changes propagate to all of the other regions.
+任何区域和更改都传播到所有其他区域 
 
 00:01:56.125 --> 00:02:01.190
 This is different from the read replica model that many RDS services follow,
+这与许多 RDS 服务遵循的读取副本模型不同 
 
 00:02:01.190 --> 00:02:04.525
 where the replicated data can only be read.
+复制的数据只能读取的位置 
 
 00:02:04.525 --> 00:02:10.460
 Being active, active allows you to run services in multiple region and
+活动时 活动允许您在多个区域中运行服务
 
 00:02:10.460 --> 00:02:16.385
 have those applications access the data locally and operate with some autonomy,
+这些应用程序在本地访问数据并运行一些自治 
 
 00:02:16.385 --> 00:02:19.670
 which creates even more redundancy in your environment.
+从而在您的环境中创建更多冗余 
 
 00:02:19.670 --> 00:02:21.980
 DynamoDB takes advantage of
+发电机利用
 
 00:02:21.980 --> 00:02:28.760
 the AWS network backbone to provide low latency data replication across regions.
+AWS 网络主干 用于跨区域提供低延迟数据复制 
 
 00:02:28.760 --> 00:02:34.175
 Multi-region active, active datastores are a big deal.
+多区域活动的活动数据存储器是一个很大的交易 
 
 00:02:34.175 --> 00:02:38.150
 Many databases and services are unable to accomplish this,
+许多数据库和服务无法完成此任务 
 
 00:02:38.150 --> 00:02:42.700
 or they require a large amount of effort to set up and maintain.
+或者需要大量的努力来设置和维护 
 
 00:02:42.700 --> 00:02:44.985
 For use cases that require it,
+对于需要它的用例 
 
 00:02:44.985 --> 00:02:49.140
 DynamoDB offers tremendous resiliency.
-
+" 发电机 " 提供了巨大的弹性 

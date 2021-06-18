@@ -4,49 +4,64 @@ Language: en
 
 00:00:00.000 --> 00:00:05.820
 Regions and availability zones allow anyone to create worldwide infrastructure with ease.
+区域和可用性区域允许任何人轻松创建全球基础结构 
 
 00:00:05.820 --> 00:00:09.615
 They also allow for redundancy within your platform.
+它们还允许在您的平台内进行冗余 
 
 00:00:09.615 --> 00:00:11.835
 By properly using these components,
+通过正确使用这些组件 
 
 00:00:11.835 --> 00:00:16.410
 you can create world-class systems in terms of both scale and reach.
+您可以在规模和范围方面创建世界级的系统 
 
 00:00:16.410 --> 00:00:19.530
 Many organizations build an AWS without
+许多组织构建的 AWS 没有
 
 00:00:19.530 --> 00:00:23.115
 a firm understanding of region's and availability zones.
+对区域和可用性区域的了解 
 
 00:00:23.115 --> 00:00:27.165
 More proficient companies may use availability zones correctly,
+更熟练的公司可以正确使用可用性区域 
 
 00:00:27.165 --> 00:00:28.995
 but run only in one region.
+但只在一个地区运行
 
 00:00:28.995 --> 00:00:32.625
 By understanding and considering multi-region failover,
+通过了解和考虑多区域故障转移 
 
 00:00:32.625 --> 00:00:35.405
 or running actively in multiple regions,
+或者在多个地区积极运行 
 
 00:00:35.405 --> 00:00:39.590
 it'll be well on your way to creating an advanced platform on AWS.
+就能在 AWS 上建立一个高级平台
 
 00:00:39.590 --> 00:00:43.625
 [inaudible] AWS region's and availability zones,
+AWS 区域和可用性区域 
 
 00:00:43.625 --> 00:00:46.370
 you can create a truly global platform.
+您可以创建一个真正的全球平台 
 
 00:00:46.370 --> 00:00:49.490
 You can compete with any other company or service
+您可以与任何其他公司或服务竞争
 
 00:00:49.490 --> 00:00:52.855
 in terms of scale, distribution, and performance.
+在规模 分布和性能方面 
 
 00:00:52.855 --> 00:00:57.010
 Many big-name companies are built on AWS.
-
+许多大公司都建立在 AWS 上 

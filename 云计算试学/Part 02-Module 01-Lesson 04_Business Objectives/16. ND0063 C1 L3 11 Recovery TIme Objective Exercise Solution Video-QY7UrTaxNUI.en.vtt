@@ -4,34 +4,44 @@ Language: en
 
 00:00:00.000 --> 00:00:05.850
 In this exercise, you're asked to compute what an RTO might be for a given situation.
+在此练习中 将要求您计算 RTO 可能针对给定情境的内容 
 
 00:00:05.850 --> 00:00:10.725
 Let's take a look. At time zero, the problem occurs.
+我们来看看 在时间为零的情况下 发生问题 
 
 00:00:10.725 --> 00:00:16.665
 If it takes five minutes for an amount of time to pass before an alert is triggered,
+如果在触发警报之前需要五分钟时间才能传递警报 
 
 00:00:16.665 --> 00:00:20.415
 another minute to actually trigger on call staff,
+还有一分钟就会触发呼叫人员
 
 00:00:20.415 --> 00:00:25.300
 10 minutes to get staff out of bed to get their computers to log on.
+10 分把员工从床上取出来让他们的电脑登录
 
 00:00:25.300 --> 00:00:29.810
 Another 10 minutes before they can really start diagnosing the issue,
+还有 10 分的时间他们才能真正开始诊断这个问题
 
 00:00:29.810 --> 00:00:32.825
 15 minutes to discover the root cause,
+15 分发现根本原因 
 
 00:00:32.825 --> 00:00:36.095
 five more minutes to begin remediation,
+再进行五分钟的修复
 
 00:00:36.095 --> 00:00:40.040
 and another 10 minutes to actually have that remediation completed,
+还有 10 分的修复完成
 
 00:00:40.040 --> 00:00:43.420
 looking at a total time of 56 minutes.
+总时间为 56 分 
 
 00:00:43.420 --> 00:00:49.409
 In this case, an RTO of one hour for this incident would be reasonable.
-
+在此情况下 此事件的一个小时的 RTO 是合理的 

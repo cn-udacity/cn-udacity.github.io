@@ -4,70 +4,92 @@ Language: en
 
 00:00:00.000 --> 00:00:06.420
 In this exercise, you'll be asked to create an RDS database with backups enabled and then
+在此练习中 将要求您创建启用了备份的 RDS 数据库 然后
 
 00:00:06.420 --> 00:00:12.660
 restore that database to a point in time to demonstrate a point in time recovery.
+将该数据库复原到时间点以演示时间点恢复 
 
 00:00:12.660 --> 00:00:16.110
 Let's take a quick look at how to create this database.
+让我们快速了解如何创建此数据库 
 
 00:00:16.110 --> 00:00:22.140
 Within AWS, we go into RDS and we create a database.
+在 AWS 中 我们进入 RDS 并创建数据库 
 
 00:00:22.140 --> 00:00:24.360
 RDS will ask us,
+RDS 会问我们
 
 00:00:24.360 --> 00:00:27.150
 we want a standard or easy create.
+我们想要一个标准或简单的创造
 
 00:00:27.150 --> 00:00:30.160
 Doesn't make a whole lot difference, we'll say standard.
+不会有很大的差别 我们会说标准 
 
 00:00:30.160 --> 00:00:33.214
 We are going to create a MySQL database,
+我们要创建一个 MySQL 数据库
 
 00:00:33.214 --> 00:00:37.385
 scroll through a fair number of options.
+滚动浏览一个公平的选项 
 
 00:00:37.385 --> 00:00:39.785
 You can say dev test,
+你可以说 dev 测试
 
 00:00:39.785 --> 00:00:43.310
 just so that we have a simpler database.
+所以我们有一个更简单的数据库
 
 00:00:43.310 --> 00:00:49.210
 We can leave most of these settings as they are for this exercise.
+我们可以把大部分这些设置留给他们来做 
 
 00:00:49.210 --> 00:00:52.620
 We'll choose a burstable class just to
+我们会选择一个
 
 00:00:52.620 --> 00:00:57.275
 save some money because the larger classes will cost more money.
+省点钱 因为大班会花更多的钱 
 
 00:00:57.275 --> 00:01:00.560
 Then as we scroll all the way down,
+当我们往下滚动时
 
 00:01:00.560 --> 00:01:05.685
 we'll see that there is some additional configuration.
+我们会发现还有一些额外的配置
 
 00:01:05.685 --> 00:01:07.800
 In the additional configuration,
+在附加配置中 
 
 00:01:07.800 --> 00:01:12.655
 I just want to make sure that backups are in fact enabled, which is the default.
+我只想确保备份实际上已启用 这是缺省值 
 
 00:01:12.655 --> 00:01:15.425
 Now with the automatic backups enabled,
+现在启用了自动备份 
 
 00:01:15.425 --> 00:01:19.030
 this is what enables us to actually do the point in time recovery.
+这才使得我们能够真正做到时间点恢复 
 
 00:01:19.030 --> 00:01:21.650
 Which is why this is very important for this exercise,
+所以这对这次演习很重要
 
 00:01:21.650 --> 00:01:25.105
 to make sure that this checkbox is in fact checked.
+以确保此复选框实际上已选中 
 
 00:01:25.105 --> 00:01:28.800
 From there, we'll create our database.
-
+从那里 我们将创建我们的数据库 

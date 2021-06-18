@@ -4,25 +4,32 @@ Language: en
 
 00:00:00.000 --> 00:00:05.490
 The answer is 7.3 hours of allowed downtime per month.
+答案是每月 7.3 小时允许的停机时间 
 
 00:00:05.490 --> 00:00:08.850
 We calculate that by computing the number of minutes in
+我们计算的是
 
 00:00:08.850 --> 00:00:12.750
 a 30-day month and multiplying by one percent,
+30 天乘以 1
 
 00:00:12.750 --> 00:00:19.125
 which comes from subtracting 100 percent from our SLA of 99 percent,
+从我们 99%的 SLA 中减去 100%
 
 00:00:19.125 --> 00:00:22.200
 in order to get how many minutes you're allowed to be down.
+才能让你有多少分钟的时间
 
 00:00:22.200 --> 00:00:26.490
 Realize that every nine you add is
+意识到你加入的每九个人
 
 00:00:26.490 --> 00:00:30.720
 an order of magnitude less time that your system can be down,
+你的系统可以减少的时间
 
 00:00:30.720 --> 00:00:36.850
 and likely at least in order of magnitude harder to actually achieve.
-
+至少能达到更严重的程度

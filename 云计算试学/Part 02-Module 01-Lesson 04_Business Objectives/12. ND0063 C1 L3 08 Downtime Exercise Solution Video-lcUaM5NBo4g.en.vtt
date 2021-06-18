@@ -4,58 +4,76 @@ Language: en
 
 00:00:00.000 --> 00:00:04.950
 All right. Let's take a look at a sample solution for this exercise.
+好吧好吧 让我们来看看这个练习的样本解决方案 
 
 00:00:04.950 --> 00:00:08.910
 ABC company hosted applications.
+ABC 公司托管应用程序 
 
 00:00:08.910 --> 00:00:14.655
 ABC company shall provide general platform uptime of 99.9 percent.
+ABC 公司应提供 99.9% 的通用平台正常运行时间 
 
 00:00:14.655 --> 00:00:19.410
 This will exclude regular maintenance window from 01:00 AM-05:00 AM,
+这将排除 0 1:00 AM-05:00 AM 的常规维护窗口 
 
 00:00:19.410 --> 00:00:22.125
 Central Standard Time every Sunday,
+每个星期天的中央标准时间
 
 00:00:22.125 --> 00:00:25.995
 as well as windows from 01:00 AM-05:00 AM on
+以及来自 01:00 AM-05:00 AM 的窗口
 
 00:00:25.995 --> 00:00:31.155
 other days provided that ABC provides 24 hours of notice.
+其他日子 规定 ABC 提供 24 小时的通知 
 
 00:00:31.155 --> 00:00:39.375
 Our second component to our SLA is that it's covering a third-party components.
+我们 SLA 的第二个组成部分是它覆盖了第三方组件 
 
 00:00:39.375 --> 00:00:42.915
 Some components of our system are beyond our control,
+我们系统的某些组件超出了我们的控制范围
 
 00:00:42.915 --> 00:00:47.525
 and thus we can only pass through the provided SLA of these vendors.
+因此 我们只能通过提供的这些供应商的 SLA  
 
 00:00:47.525 --> 00:00:50.750
 We only work with vendors and provide an SLA of
+我们只与供应商合作并提供 SLA
 
 00:00:50.750 --> 00:00:55.355
 99.9 percent or better for all critical services.
+所有关键服务的 99.9% 或更高 
 
 00:00:55.355 --> 00:00:59.885
 The final component of our SLA covers non-critical components.
+我们 SLA 的最终组件涵盖非关键组件 
 
 00:00:59.885 --> 00:01:03.080
 Those components deemed non-critical,
+这些组件被视为非关键组件 
 
 00:01:03.080 --> 00:01:09.045
 listed below are subject to a 95 percent uptime SLA.
+下面列出的是 95% 的 uptime SLA 
 
 00:01:09.045 --> 00:01:11.825
 These components are not core to our offering
+这些组件不是我们产品的核心
 
 00:01:11.825 --> 00:01:14.915
 but provides certain "nice to have" functionality.
+但提供了一些 " 不错 " 的功能
 
 00:01:14.915 --> 00:01:17.675
 In cases where these services are not available,
+在这些服务不可用的情况下 
 
 00:01:17.675 --> 00:01:22.980
 our platform shall continue to operate and provide core functionality as normal.
-
+我们的平台将继续运作 并提供正常的核心功能 

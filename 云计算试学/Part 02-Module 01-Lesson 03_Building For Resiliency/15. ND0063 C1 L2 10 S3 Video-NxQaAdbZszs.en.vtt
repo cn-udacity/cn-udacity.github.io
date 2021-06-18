@@ -4,106 +4,140 @@ Language: en
 
 00:00:00.000 --> 00:00:01.995
 What is S3?
+什么是 S3?
 
 00:00:01.995 --> 00:00:05.385
 S3 stands for simple storage service.
+S3 代表简单的存储服务 
 
 00:00:05.385 --> 00:00:08.910
 It's one of the first services AWS created.
+这是 AWS 创建的第一个服务 
 
 00:00:08.910 --> 00:00:11.490
 In S3, you create buckets,
+在 S3 中 创建存储区 
 
 00:00:11.490 --> 00:00:13.080
 and in those buckets,
+在那些水桶里
 
 00:00:13.080 --> 00:00:14.550
 you can store objects.
+可以存储对象 
 
 00:00:14.550 --> 00:00:18.345
 An object is for most practical purposes, a file.
+对象是用于大多数实际用途的文件 
 
 00:00:18.345 --> 00:00:20.085
 How much data can you store?
+您可以存储多少数据 ?
 
 00:00:20.085 --> 00:00:24.690
 There is no limit to the number of objects you can store in a bucket.
+您可以存储在存储区中的对象数没有限制 
 
 00:00:24.690 --> 00:00:28.440
 People store exabytes of data in S3.
+人员存储 S3 中的数据的 EB  
 
 00:00:28.440 --> 00:00:32.095
 S3 is designed to store any amount of data,
+S3 旨在存储任何数据量 
 
 00:00:32.095 --> 00:00:34.535
 which is a pretty bold statement.
+这是一个很大胆的声明
 
 00:00:34.535 --> 00:00:37.384
 S3 like most AWS services,
+S3 与大多数 AWS 服务一样 
 
 00:00:37.384 --> 00:00:42.680
 is pay-as-you-go, which means they only pay for what you store in S3.
+是付费的方式 这意味着他们只支付您在 S3中存储的内容 
 
 00:00:42.680 --> 00:00:46.900
 Cost vary on the exact type of S3 storage you use,
+成本因您使用的 S3 存储的准确类型而异 
 
 00:00:46.900 --> 00:00:48.615
 we'll dig in more shortly,
+我们很快就会挖了
 
 00:00:48.615 --> 00:00:57.545
 but overall, the most you pay for S3 is under three cents per gigabyte per month.
+但总体而言  S3 的最高薪酬是每千兆位 / 月三美分以下 
 
 00:00:57.545 --> 00:01:01.450
 As you'll see, you can spend even less than that.
+正如你所看到的 你可以花更少的钱 
 
 00:01:01.450 --> 00:01:04.160
 S3 is highly durable.
+S3 非常耐用 
 
 00:01:04.160 --> 00:01:07.865
 Durability is different than availability.
+耐久性与可用性不同 
 
 00:01:07.865 --> 00:01:14.290
 Durability refers to the likelihood that you will lose something stored in S3.
+耐久性指的是您将丢失存储在 S3中的内容的可能性 
 
 00:01:14.290 --> 00:01:17.715
 The answer is not very likely.
+答案不太可能 
 
 00:01:17.715 --> 00:01:27.815
 Per AWS, S3 is designed to provide 11 nines of durability of objects over a given year.
+每个 AWS S3 被设计成在给定年份提供 11 个物体的耐久性 
 
 00:01:27.815 --> 00:01:33.740
 This durability level corresponds to an average expected loss of
+此耐久性级别对应于以下项的平均预期损失 :
 
 00:01:33.740 --> 00:01:41.035
 0.000000001 percent of objects.
+0.000000001% 0.000000001% 的物体 
 
 00:01:41.035 --> 00:01:47.315
 For example, if you store 10 million objects in Amazon S3,
+例如 如果在 Amazon S3 中存储一千万个对象 
 
 00:01:47.315 --> 00:01:56.295
 you can on average expect to incur a loss of a single object once every 10,000 years.
+你可以平均每 10000 年就会损失一次
 
 00:01:56.295 --> 00:02:02.645
 Not too bad. S3 allows you to replicate your buckets or just part of the bucket.
+不太坏 S3 允许您复制存储区或仅部分存储区 
 
 00:02:02.645 --> 00:02:04.955
 This is useful for redundancy,
+这对于冗余非常有用 
 
 00:02:04.955 --> 00:02:08.705
 but also for applications that have use cases where
+但对于使用情况的应用程序 
 
 00:02:08.705 --> 00:02:13.340
 some parts of your application would like to modify objects in different ways.
+应用程序的某些部分将以不同方式修改对象 
 
 00:02:13.340 --> 00:02:17.885
 You can replicate a bucket within the same region in cases where you want to keep
+您可以在您要保留的案例中复制同一区域内的存储区
 
 00:02:17.885 --> 00:02:23.665
 a clean copy of your uploaded files yet still have a workspace for making changes,
+已上载的文件的干净副本仍具有用于进行更改的工作空间 
 
 00:02:23.665 --> 00:02:27.710
 or you can create a cross-region bucket replica.
+或者您可以创建跨区域存储区副本 
 
 00:02:27.710 --> 00:02:33.600
 A cross-region replica is perfect for multi-region recovery of data.
-
+跨区域副本适用于数据的多区域恢复 

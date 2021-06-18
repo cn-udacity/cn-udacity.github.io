@@ -4,73 +4,96 @@ Language: en
 
 00:00:00.000 --> 00:00:03.690
 It is important to think about needs versus wants.
+考虑需求与需求是很重要的 
 
 00:00:03.690 --> 00:00:08.340
 As you learn about the capabilities of AWS for reliability and redundancy,
+当您了解 AWS 的可靠性和冗余能力时 
 
 00:00:08.340 --> 00:00:10.410
 it is important to consider what level of
+重要的是要考虑
 
 00:00:10.410 --> 00:00:13.965
 availability is required for a use case or environment.
+对于用例或环境 可用性是必需的 
 
 00:00:13.965 --> 00:00:17.250
 Some non-critical cases require no redundancy,
+一些非关键的案例不需要冗余 
 
 00:00:17.250 --> 00:00:22.080
 while production environments typically require significant levels of redundancy.
+而生产环境通常需要大量冗余 
 
 00:00:22.080 --> 00:00:25.470
 In most cases, redundancy has cost.
+在大多数情况下 冗余都有成本 
 
 00:00:25.470 --> 00:00:27.660
 Depending on the services you use,
+根据您使用的服务 
 
 00:00:27.660 --> 00:00:29.460
 redundancy can cost a lot.
+冗余可以花费很多 
 
 00:00:29.460 --> 00:00:32.130
 Typically, redundancy costs at least double.
+通常 冗余成本至少为两倍 
 
 00:00:32.130 --> 00:00:34.449
 For example, in RDS,
+例如 在 RDS中 
 
 00:00:34.449 --> 00:00:38.125
 take the instance cost and double it to have a hot standby,
+把它的成本和双倍的成本提高到一个热备用
 
 00:00:38.125 --> 00:00:41.380
 triple it to have a read replica in another region.
+使它在另一个区域中具有读副本 
 
 00:00:41.380 --> 00:00:43.220
 Review the cost structure for what you're
+查看您的成本结构
 
 00:00:43.220 --> 00:00:46.040
 building and weigh the costs against the benefits.
+将成本与收益进行权衡 
 
 00:00:46.040 --> 00:00:50.515
 Keep in mind that cost comes in multiple forms: there is direct monetary expense,
+请记住 成本采用多种形式: 有直接的货币开支 
 
 00:00:50.515 --> 00:00:52.415
 as well as the cost of complexity,
+以及复杂性的代价
 
 00:00:52.415 --> 00:00:55.010
 which can take the form of higher learning curves or
+可以采用更高学习曲线的形式
 
 00:00:55.010 --> 00:00:58.655
 difficulty in monitoring a system or diagnosing a problem.
+难以监控系统或诊断问题 
 
 00:00:58.655 --> 00:01:01.145
 When considering how to architect a service,
+在考虑如何设计服务时 
 
 00:01:01.145 --> 00:01:03.470
 you should think about how a disruption
+你应该想想
 
 00:01:03.470 --> 00:01:06.410
 or data loss in that service would impact your business.
+或者该服务中的数据丢失会影响您的业务 
 
 00:01:06.410 --> 00:01:09.950
 You'll need to think about what it will take to restore service,
+你需要考虑一下恢复服务需要什么
 
 00:01:09.950 --> 00:01:14.580
 as well as the contractual obligations to which your business has committed.
-
+以及您的业务所承担的合同义务 

@@ -4,46 +4,60 @@ Language: en
 
 00:00:00.000 --> 00:00:04.080
 In this exercise, you'll be asked to create an SLA that
+在此练习中 将要求您创建 SLA  
 
 00:00:04.080 --> 00:00:08.165
 represents the up time and downtime of your platform.
+表示平台的启动时间和停机时间 
 
 00:00:08.165 --> 00:00:12.450
 I've laid out a couple of steps that probably need to be included in your SLA.
+我已经列出了可能需要包含在 SLA中的几个步骤 
 
 00:00:12.450 --> 00:00:16.860
 Section 1 would include your own applications,
+第 1 节将包含您自己的应用程序 
 
 00:00:16.860 --> 00:00:21.030
 that things that your company creates and are critical for your customers.
+你的公司创造的东西对你的顾客至关重要
 
 00:00:21.030 --> 00:00:25.470
 What would be included there and what the SLA would be for those components.
+将包括哪些内容以及 SLA 将用于这些组件的内容 
 
 00:00:25.470 --> 00:00:30.555
 The second part of the SLA would cover things like third-parties,
+SLA 的第二部分将涵盖第三方 
 
 00:00:30.555 --> 00:00:34.020
 and what third party SLAs look like
+还有哪些第三方 SLA
 
 00:00:34.020 --> 00:00:38.385
 or how that comes into play in your relationship with your customers.
+或者在你与客户的关系中如何发挥作用 
 
 00:00:38.385 --> 00:00:43.075
 Finally, I would have a section that covered non-critical components.
+最后 我将有一节讨论非关键部分 
 
 00:00:43.075 --> 00:00:45.920
 Things that are useful or nice to have,
+那些有用或善良的东西
 
 00:00:45.920 --> 00:00:49.625
 but not necessarily critical to the application and
+但不一定对应用至关重要
 
 00:00:49.625 --> 00:00:53.749
 how those would be included or considered by your customers.
+您的客户将如何包括或考虑这些内容 
 
 00:00:53.749 --> 00:00:57.665
 Together, all three of these make up a good picture of what
+这三者共同组成了一个好的画面
 
 00:00:57.665 --> 00:01:02.820
 is or is not covered by your SLA. Good luck.
-
+是或不属于您的 SLA  祝你好运

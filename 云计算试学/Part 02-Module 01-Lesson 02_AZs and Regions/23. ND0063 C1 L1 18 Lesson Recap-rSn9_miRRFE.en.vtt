@@ -4,40 +4,52 @@ Language: en
 
 00:00:00.000 --> 00:00:02.805
 In this lesson, you've covered a lot of material.
+在本课程中 您覆盖了大量的材料 
 
 00:00:02.805 --> 00:00:05.370
 You've learned about the similarities and
+你了解到相似点
 
 00:00:05.370 --> 00:00:08.760
 differences between regions and availability zones.
+区域和可用性区域之间的差异 
 
 00:00:08.760 --> 00:00:14.325
 You've also seen how they form the underpinning of fault tolerance in AWS.
+您还可以看到它们是如何在 AWS中形成容错的基础的 
 
 00:00:14.325 --> 00:00:17.760
 Making proper use of these physical assets
+适当使用这些实物资产
 
 00:00:17.760 --> 00:00:22.110
 allows you to create world-class worldwide platforms.
+允许您创建世界级的全球平台 
 
 00:00:22.110 --> 00:00:27.555
 VPCs and the networking you can create in AWS are closely related.
+VPC 和您可以在 AWS 中创建的网络密切相关 
 
 00:00:27.555 --> 00:00:34.875
 You've looked at many common aspects of creating independent network segments within AWS,
+您已查看在 AWS 中创建独立网络段的许多常见方面 
 
 00:00:34.875 --> 00:00:37.650
 and how you can connect these segments together.
+以及如何将这些分段连接在一起 
 
 00:00:37.650 --> 00:00:41.700
 Now that we've seen the base of high availability in AWS,
+现在我们在 AWS中看到了高可用性的基础
 
 00:00:41.700 --> 00:00:43.310
 we move on to building with
+我们要继续建造
 
 00:00:43.310 --> 00:00:47.675
 resilience services before we get to considering our business goals.
+在我们考虑业务目标之前
 
 00:00:47.675 --> 00:00:51.570
 Then, observability and recoverability
-
+然后 可观察性和可恢复性

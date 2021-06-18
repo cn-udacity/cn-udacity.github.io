@@ -4,31 +4,40 @@ Language: en
 
 00:00:00.000 --> 00:00:06.795
 Which of the following CIDR networks is within 10.0.0.0/16?
+以下 CIDR 网络中的哪一个在 10.0.0.0/16? 内
 
 00:00:06.795 --> 00:00:10.995
 10.0.0.0/16 has a range
+10.0.0.0/16 具有范围
 
 00:00:10.995 --> 00:00:19.590
 of 10.0.0.0 through 10.0.255.255.
+10.0.0.0 10.0.0.0 到 10.0.255.255
 
 00:00:19.590 --> 00:00:24.405
 So answer number one is a completely separate block.
+所以答案一是完全独立的板块 
 
 00:00:24.405 --> 00:00:29.265
 Answer number two is a separate block in another site or block.
+答案 2 是另一个站点或块中的单独块 
 
 00:00:29.265 --> 00:00:34.860
 So it would be in the 10.1.0.0 /16 block.
+所以它会在 10.1.0.0 /16 块中 
 
 00:00:34.860 --> 00:00:37.515
 Answer three and four are both within
+答案三和四都在
 
 00:00:37.515 --> 00:00:46.830
 10.0.0.0/16 as their respective addresses are 10.0.1.0
+10.0.0.0/ 10.0.0.0/ 16 作为各自的地址 10.0.1.0
 
 00:00:46.830 --> 00:00:51.390
 through 10.0.1.255 and
+通过 10.0.1.255 和
 
 00:00:51.390 --> 00:00:59.650
 10.0.0.0 through 10.0.0.255.
-
+10.0.0.0 10.0.0.0 到 10.0.0.255

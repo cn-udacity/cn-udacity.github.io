@@ -4,136 +4,180 @@ Language: en
 
 00:00:00.000 --> 00:00:04.050
 Now that we've learned more about what disaster recovery is overall,
+现在我们已经了解到灾难恢复的总体情况
 
 00:00:04.050 --> 00:00:06.285
 how do we do it in AWS?
+我们如何在 AWS中做呢
 
 00:00:06.285 --> 00:00:10.415
 What tools and services are at our disposal that will help us?
+我们可以使用哪些工具和服务来帮助我们?
 
 00:00:10.415 --> 00:00:12.565
 Geographic recovery.
+地理恢复 
 
 00:00:12.565 --> 00:00:17.445
 Disaster recovery plans are intended to cover major service disruptions.
+灾难恢复计划旨在覆盖主要服务中断 
 
 00:00:17.445 --> 00:00:22.950
 As such, a typical DR plan calls for re-establishing your platform a
+因此 典型的 DR 计划需要重新建立您的平台 
 
 00:00:22.950 --> 00:00:29.565
 minimum of hundreds of miles away into multi-region services.
+至少有  英里远进入多区域服务
 
 00:00:29.565 --> 00:00:34.800
 If you need to prepare to be able to move hundreds of miles in AWS,
+如果你需要准备在 AWS上移动几英里
 
 00:00:34.800 --> 00:00:38.260
 this means you need to be able to move regions.
+这意味着您需要能够移动区域 
 
 00:00:38.260 --> 00:00:40.160
 If you are running active,
+如果您正在运行活动 
 
 00:00:40.160 --> 00:00:43.850
 active in multiple regions, excellent, you're done.
+活跃在多个区域 优秀 您完成了 
 
 00:00:43.850 --> 00:00:46.175
 However, as we've discussed,
+但是我们讨论过
 
 00:00:46.175 --> 00:00:47.855
 the ease of running active,
+活动的轻松
 
 00:00:47.855 --> 00:00:53.150
 active in multiple regions depends a lot on the services that you utilize.
+活动在多个区域中取决于您使用的服务 
 
 00:00:53.150 --> 00:01:00.920
 We've already seen how DynamoDB and S3 can be made multi-region with relative ease.
+我们已经看到 DynamoDB 和 S3 如何能够以相对轻松的方式实现多区域 
 
 00:01:00.920 --> 00:01:04.540
 Some global services such as IAM,
+一些全球服务 如 IAM 
 
 00:01:04.540 --> 00:01:06.545
 a multi-region by default,
+缺省情况下为多区域 
 
 00:01:06.545 --> 00:01:10.120
 while others like CloudFront can be made multi-region.
+而像 CloudFront 这样的其他则可以成为多区域 
 
 00:01:10.120 --> 00:01:13.250
 CloudFront takes your content from your source
+CloudFront 从源获取内容
 
 00:01:13.250 --> 00:01:16.580
 and distributes it from multiple regions around the world.
+并将其分布于世界各地的多个地区 
 
 00:01:16.580 --> 00:01:20.135
 In this sense, it is always multi-region.
+在这个意义上 它总是多区域的 
 
 00:01:20.135 --> 00:01:24.320
 However, by default, the source of your content,
+但是缺省情况下 内容的来源 
 
 00:01:24.320 --> 00:01:27.290
 your origin Cloudfront terms,
+您的原始 Cloudfront 术语 
 
 00:01:27.290 --> 00:01:30.650
 is only in one region and if that region fails,
+只有一个地区如果那个地区失败了
 
 00:01:30.650 --> 00:01:32.800
 your application is down.
+您的应用程序已关闭 
 
 00:01:32.800 --> 00:01:35.655
 With CloudFront origin groups,
+使用 CloudFront 源组 
 
 00:01:35.655 --> 00:01:42.085
 you can define multiple S3 buckets in multiple regions as failover buckets.
+您可以在多个区域中定义多个 S3 存储区作为故障转移存储区 
 
 00:01:42.085 --> 00:01:47.165
 If CloudFront is no longer able to get your content from the primary bucket,
+如果 CloudFront 不再能够从主存储区获取您的内容 
 
 00:01:47.165 --> 00:01:49.795
 it will then try a backup bucket.
+然后 它将尝试备份存储区 
 
 00:01:49.795 --> 00:01:55.745
 Using this option, your CloudFront distribution can now survive a region failure.
+使用此选项 您的 CloudFront 分布现在可以在区域故障中生存 
 
 00:01:55.745 --> 00:01:58.490
 DynamoDB can run in an active,
+" 发电机 " 可以在活动的情况下运行 
 
 00:01:58.490 --> 00:02:02.725
 active scenario with fairly low cost and effort.
+使用成本和工作量相当低的活动场景 
 
 00:02:02.725 --> 00:02:07.200
 RDS can create cross-region read replicas.
+RDS 可以创建跨区域读副本 
 
 00:02:07.200 --> 00:02:10.475
 These keep current data in another region,
+这些数据保存在另一个区域
 
 00:02:10.475 --> 00:02:15.740
 but there will still be work to do to make that data usable as an active database.
+但仍有工作要做 以将该数据用作活动数据库 
 
 00:02:15.740 --> 00:02:18.590
 You'll need to promote the read replica and then
+你需要推广读副本然后
 
 00:02:18.590 --> 00:02:21.940
 point your application at this new database instance.
+将应用程序指向此新数据库实例 
 
 00:02:21.940 --> 00:02:25.430
 CloudFront can use multiple S3 buckets as
+CloudFront 可以将多个 S3 存储区用作
 
 00:02:25.430 --> 00:02:30.125
 the origin for the same assets and automatically failover between them.
+相同资产的来源并自动在它们之间进行故障转移 
 
 00:02:30.125 --> 00:02:33.585
 Origin groups within CloudFront can use S3 buckets in
+CloudFront 中的源组可以使用 S3 存储区
 
 00:02:33.585 --> 00:02:38.615
 different regions and failover when necessary without manual intervention.
+不同区域和故障转移 无需人工干预 
 
 00:02:38.615 --> 00:02:43.070
 S3 buckets can be automatically replicated across regions.
+S3 存储区可以在跨区域自动复制 
 
 00:02:43.070 --> 00:02:47.635
 This provides a mechanism to keep current copies of S3 objects.
+这提供了一种保持 S3 对象的当前副本的机制 
 
 00:02:47.635 --> 00:02:50.955
 You do then pay double for storing these objects,
+你要付双倍的钱储存这些物品
 
 00:02:50.955 --> 00:02:55.320
 but that is the cost of being prepared for DR incident
-
+但这就是为 DR 事件做好准备的代价

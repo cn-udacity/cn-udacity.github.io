@@ -4,136 +4,180 @@ Language: en
 
 00:00:00.000 --> 00:00:03.164
 In this concept, you'll be introduced to services
+在这个概念中 您将被引入服务
 
 00:00:03.164 --> 00:00:07.245
 within AWS that are based on servers or instances.
+基于服务器或实例的 AWS 中 
 
 00:00:07.245 --> 00:00:09.885
 These services basically consist of
+这些服务基本上包括
 
 00:00:09.885 --> 00:00:14.400
 individual servers that have software installed by AWS for you,
+具有 AWS 为您安装的软件的各个服务器 
 
 00:00:14.400 --> 00:00:16.635
 and are managed by AWS.
+由 AWS管理 
 
 00:00:16.635 --> 00:00:20.160
 Having AWS run these servers as a service,
+使 AWS 作为服务运行这些服务器 
 
 00:00:20.160 --> 00:00:24.300
 removes a lot of the configuration and optimization work from your plate.
+从板中除去大量配置和优化工作 
 
 00:00:24.300 --> 00:00:27.480
 Further, AWS can use their knowledge of
+此外  AWS 还可以使用它们的知识 
 
 00:00:27.480 --> 00:00:29.850
 their internal infrastructure to create
+要创建的内部基础结构
 
 00:00:29.850 --> 00:00:32.640
 the optimal environment for the service to run it.
+服务的最佳运行环境 
 
 00:00:32.640 --> 00:00:37.455
 AWS has entire teams of experts operating these software applications,
+AWS 拥有所有运营这些软件应用程序的专家团队 
 
 00:00:37.455 --> 00:00:41.915
 which allows you to spend your effort consuming these applications,
+允许您花费精力消耗这些应用程序 
 
 00:00:41.915 --> 00:00:44.465
 not developing or maintaining them.
+而不是发展或维持它们
 
 00:00:44.465 --> 00:00:47.735
 How do we spot a server-based service?
+我们如何发现基于服务器的服务?
 
 00:00:47.735 --> 00:00:50.645
 Does a service run in your VPC?
+是否在 VPC中运行服务 ?
 
 00:00:50.645 --> 00:00:54.635
 Are you configuring a group of subnets for the service to use?
+是否要配置一组子网以供服务使用 ?
 
 00:00:54.635 --> 00:00:58.490
 These are good signs the service is server-based.
+这些是服务基于服务器的良好标志 
 
 00:00:58.490 --> 00:01:01.805
 Are you providing a security group for the service?
+您是否为服务提供安全组 ?
 
 00:01:01.805 --> 00:01:04.385
 Security groups belong to a VPC,
+安全组属于 VPC 
 
 00:01:04.385 --> 00:01:07.060
 and get placed on service instances.
+并将其放置在服务实例上 
 
 00:01:07.060 --> 00:01:10.785
 If you're choosing an instance type of instance family,
+如果您选择的实例类型为实例系列 
 
 00:01:10.785 --> 00:01:14.590
 very likely that this service is instance-based.
+很可能是基于实例的服务 
 
 00:01:14.590 --> 00:01:20.405
 Is the service an AWS managed service for a preexisting application?
+是否为预先存在的应用程序服务 AWS 受管服务 ?
 
 00:01:20.405 --> 00:01:24.380
 Think, MySQL, Redis, Elasticsearch,
+思考  MySQL  Redis  Elasticsearch 
 
 00:01:24.380 --> 00:01:27.250
 these are all applications that you could run anywhere.
+这些都是可以在任何地方运行的应用程序 
 
 00:01:27.250 --> 00:01:31.235
 AWS simply serves these applications for you.
+AWS 仅为您提供这些应用程序 
 
 00:01:31.235 --> 00:01:36.320
 These services run generally the same versions of software you can get elsewhere.
+这些服务通常运行相同版本的软件 您可以到其他地方 
 
 00:01:36.320 --> 00:01:41.695
 They're just being deployed to servers that AWS is managing for you.
+它们正被部署到 AWS 为您管理的服务器上 
 
 00:01:41.695 --> 00:01:46.559
 Some examples of server-based services in AWS,
+AWS 中基于服务器的服务的一些示例 
 
 00:01:46.559 --> 00:01:50.640
 ElastiCache, a managed caching service,
+ElastiCache  受管高速缓存服务 
 
 00:01:50.640 --> 00:01:56.775
 Elasticsearch, which is managed Elasticsearch, Document DB,
+Elasticsearch 它是受管 Elasticsearch 文档 DB 
 
 00:01:56.775 --> 00:02:01.785
 AWS's managed MongoDB, and Elastic MapReduce,
+AWS的受管 MongoDB 和 Elastic MapReduce 
 
 00:02:01.785 --> 00:02:04.875
 AWS's managed big data service.
+AWS 管理的大数据服务 
 
 00:02:04.875 --> 00:02:08.055
 You might think these are just MySQL servers,
+你可能认为这些只是 MySQL 服务器
 
 00:02:08.055 --> 00:02:10.665
 why do I need to pay AWS to run them?
+我为什么要付钱给 AWS
 
 00:02:10.665 --> 00:02:12.555
 Two important points here.
+这里有两个要点 
 
 00:02:12.555 --> 00:02:16.025
 One, AWS has teams of people who are
+一  AWS 有团队
 
 00:02:16.025 --> 00:02:19.925
 experts in each one of these services. You likely do not.
+每一项服务的专家  你不可能
 
 00:02:19.925 --> 00:02:24.020
 Two, RDS costs about the same as renting
+二  RDS 与租用差不多
 
 00:02:24.020 --> 00:02:28.310
 the equivalent size EC2 instance and running the database yourself.
+等效大小 EC2 实例并自行运行数据库 
 
 00:02:28.310 --> 00:02:30.800
 But running a database yourself
+但是自己运行数据库
 
 00:02:30.800 --> 00:02:34.790
 entails all the overhead of system planning and maintenance.
+包含系统规划和维护的所有开销 
 
 00:02:34.790 --> 00:02:38.065
 RDS takes care of all of that for you.
+RDS 把所有这些都照顾到你
 
 00:02:38.065 --> 00:02:41.585
 These services provide a lot of value for slight,
+这些服务提供了很多细微的价值 
 
 00:02:41.585 --> 00:02:44.340
 if any additional cost.
-
+如果有任何额外费用

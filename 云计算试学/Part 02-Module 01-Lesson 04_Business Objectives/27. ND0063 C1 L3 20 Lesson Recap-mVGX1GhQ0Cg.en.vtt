@@ -4,58 +4,76 @@ Language: en
 
 00:00:00.000 --> 00:00:04.380
 In this lesson, you've worked on and created a variety of ways to meet
+在本课程中 您已处理并创建了各种方法来满足
 
 00:00:04.380 --> 00:00:06.810
 business objectives and have seen how they
+业务目标 并已看到业务目标
 
 00:00:06.810 --> 00:00:09.585
 relate to the work you do in creating available,
+与您在创建时所做的工作相关 
 
 00:00:09.585 --> 00:00:11.805
 reliable and resilient systems.
+可靠的弹性系统 
 
 00:00:11.805 --> 00:00:14.550
 You've measured uptime and downtime and
+您已测量正常运行时间和停机时间 并且
 
 00:00:14.550 --> 00:00:17.730
 seen the intricacies of measuring and reporting on them.
+对他们的测量和报告的复杂性
 
 00:00:17.730 --> 00:00:21.300
 These concepts are not quite simple opposites but need to be
+这些概念不是很简单的对立面 而是需要
 
 00:00:21.300 --> 00:00:25.125
 considered with scheduled maintenance integrated service as well.
+也考虑使用定期维护集成服务 
 
 00:00:25.125 --> 00:00:29.414
 We've also calculated RTO and RPO matrix
+我们还计算了 RTO 和 RPO 矩阵
 
 00:00:29.414 --> 00:00:34.185
 to gain an understanding of what they are and how they apply to your business.
+以了解他们的情况以及他们对您的业务的应用情况 
 
 00:00:34.185 --> 00:00:37.920
 Disaster recovery is the last line of defense when
+灾难恢复是最后一道防线
 
 00:00:37.920 --> 00:00:41.755
 a major disruption takes place in your main datacenter or region.
+主要的中断发生在您的主要数据中心或区域中 
 
 00:00:41.755 --> 00:00:46.640
 You've practiced several options for disaster recovery configurations and
+您已为灾难恢复配置和
 
 00:00:46.640 --> 00:00:51.820
 also identified which AWS services are best suited for your DR needs.
+还可以确定哪些 AWS 服务最适合您的 DR 需求 
 
 00:00:51.820 --> 00:00:53.945
 So far we've looked at
+到目前为止
 
 00:00:53.945 --> 00:00:59.440
 the foundational pieces that AWS has in regions and availability zones.
+AWS 在区域和可用性区域中的基本部分 
 
 00:00:59.440 --> 00:01:04.565
 The resilience options within applications services and now
+应用程序中的弹性选项服务和现在
 
 00:01:04.565 --> 00:01:11.075
 business objectives and how they tie into availability, reliability, and resiliency.
+业务目标及其与可用性 可靠性和弹性的关系 
 
 00:01:11.075 --> 00:01:18.360
 Coming up, we'll discuss monitoring for and reacting to failures within our systems.
-
+接下来 我们将讨论监控系统中的故障并对故障作出反应 

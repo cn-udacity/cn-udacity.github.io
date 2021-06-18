@@ -4,40 +4,52 @@ Language: en
 
 00:00:00.000 --> 00:00:03.480
 While there are some limitations to using a public Cloud and
+虽然使用公共云存在一些限制 但
 
 00:00:03.480 --> 00:00:07.320
 that you can't do everything that you could do in your own data center,
+你无法在自己的数据中心做任何事情
 
 00:00:07.320 --> 00:00:09.120
 you can do most things.
+你可以做最重要的事
 
 00:00:09.120 --> 00:00:13.455
 However, AWS does not support multicast networking.
+但是  AWS 不支持多点广播网络 
 
 00:00:13.455 --> 00:00:19.320
 You should take care to review the AWS policies on penetration testing and running
+您应该注意查看有关渗透测试和运行的 AWS 策略
 
 00:00:19.320 --> 00:00:23.070
 your own email server on AWS is another area that
+AWS 上您自己的电子邮件服务器是另一个
 
 00:00:23.070 --> 00:00:27.195
 use edge research and look at AWS policies before attempting.
+使用边缘研究并在尝试前查看 AWS 策略 
 
 00:00:27.195 --> 00:00:31.220
 Further, when you're looking to solve problems in AWS,
+此外 当你想在 AWS中解决问题时 
 
 00:00:31.220 --> 00:00:34.925
 and what you're trying to solve feels like a common problem,
+你想解决的问题就像一个共同的问题
 
 00:00:34.925 --> 00:00:37.690
 there's probably a solution for you.
+可能有办法解决你的问题
 
 00:00:37.690 --> 00:00:42.530
 AWS has done a great job of listening to customers and identifying
+AWS 做了大量的倾听客户和识别的工作
 
 00:00:42.530 --> 00:00:47.540
 common requests and addressing them for the majority of limitations in their Cloud.
+共同请求 并针对其 Cloud中的大多数限制对其进行寻址 
 
 00:00:47.540 --> 00:00:52.170
 There are workarounds with only slight concessions that need to be made.
-
+有一些变通方法 只须作出轻微的让步 

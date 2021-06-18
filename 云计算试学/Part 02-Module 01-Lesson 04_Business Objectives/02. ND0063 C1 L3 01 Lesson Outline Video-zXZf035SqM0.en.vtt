@@ -4,64 +4,84 @@ Language: en
 
 00:00:00.000 --> 00:00:05.325
 So far, we've looked at both the foundational redundancy pieces that AWS
+到目前为止我们都看到了 AWS 的两个基本冗余
 
 00:00:05.325 --> 00:00:11.170
 has and regions and Availability Zones as well as resilience within application services.
+区域和可用性区域以及应用程序服务中的弹性 
 
 00:00:11.170 --> 00:00:13.470
 Now we'll take a look at
+现在我们看看
 
 00:00:13.470 --> 00:00:18.150
 understanding business objectives and how this relates to our work here.
+了解业务目标以及这与我们这里工作的关系 
 
 00:00:18.150 --> 00:00:21.705
 Later, we'll discuss reacting to failure.
+稍后 我们将讨论对失败的反应 
 
 00:00:21.705 --> 00:00:25.320
 In this lesson, we'll start by discussing uptime.
+在本课程中 我们将开始讨论正常运行时间 
 
 00:00:25.320 --> 00:00:27.570
 What it is and how to measure it.
+它是什么 如何衡量 
 
 00:00:27.570 --> 00:00:30.375
 The opposite of uptime is downtime.
+与正常运行时间相反的是停机时间 
 
 00:00:30.375 --> 00:00:34.035
 Downtime isn't quite as straightforward as it appears.
+停机时间不像看上去那么简单 
 
 00:00:34.035 --> 00:00:37.555
 We'll learn different types of downtime and how to account for them.
+我们将了解不同类型的停机时间以及如何对其进行计算 
 
 00:00:37.555 --> 00:00:41.610
 RTO is the Recovery Time Objective.
+RTO 是恢复时间目标 
 
 00:00:41.610 --> 00:00:43.205
 This is your commitment,
+这是你的承诺
 
 00:00:43.205 --> 00:00:47.140
 the maximum amount of time that your service would be down.
+您的服务将停机的最长时间 
 
 00:00:47.140 --> 00:00:49.455
 Recovery Point Objective or
+恢复点目标或
 
 00:00:49.455 --> 00:00:54.485
 RP0 is the maximum amount of time over which you would lose data.
+RP0 是丢失数据的最大时间量 
 
 00:00:54.485 --> 00:00:57.080
 These are commitments that you would make
+这些是你做出的承诺
 
 00:00:57.080 --> 00:01:01.044
 internally but also contractually to your customers.
+在内部 也在合同上给您的客户 
 
 00:01:01.044 --> 00:01:06.500
 Disaster recovery is the extreme of availability and resiliency.
+灾难恢复是可用性和弹性的极端 
 
 00:01:06.500 --> 00:01:10.414
 It refers to bringing up your systems in another place,
+它是指在另一个地方建立你的系统
 
 00:01:10.414 --> 00:01:13.365
 typically another AWS region.
+通常是另一个 AWS 区域 
 
 00:01:13.365 --> 00:01:19.590
 This would only be done in the case of a complete region outage or other disaster.
-
+只有在完全地区中断或其他灾难的情况下才会这样做 

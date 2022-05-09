@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   更多环境操作
+   管理包
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -96,7 +96,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          06. 更多环境操作
+          04. 管理包
          </h1>
         </div>
        </div>
@@ -110,23 +110,94 @@
         <h3>
         </h3>
         <div>
-         <h2 id="保存和加载环境">
-          保存和加载环境
-         </h2>
+         <h1 id="管理包">
+          管理包
+         </h1>
          <p>
-          共享环境这项功能确实很有用，它能让其他人安装你的代码中使用的所有包，并确保这些包的版本正确。你可以使用
+          安装了 Anaconda 之后，管理包是相当简单的。要安装包，请在终端中键入
           <code>
-           conda env export &gt; environment.yaml
+           conda install package_name
           </code>
-          将包保存为
-          <a href="http://www.yaml.org/" target="_blank">
-           YAML
+          。例如，要安装 numpy，请键入
+          <code>
+           conda install numpy
+          </code>
+          。
+         </p>
+         <video autoplay="" controls="" loop="">
+          <source src="media/conda_install.mp4" type="video/mp4"/>
+         </video>
+         <p>
+          你还可以同时安装多个包。类似
+          <code>
+           conda install numpy scipy pandas
+          </code>
+          的命令会同时安装所有这些包。还可以通过添加版本号（例如
+          <code>
+           conda install numpy=1.10
+          </code>
+          ）来指定所需的包版本。
+         </p>
+         <p>
+          Conda 还会自动为你安装依赖项。例如，
+          <code>
+           scipy
+          </code>
+          依赖于
+          <code>
+           numpy
+          </code>
+          ，因为它使用并需要
+          <code>
+           numpy
+          </code>
+          。如果你只安装
+          <code>
+           scipy
+          </code>
+          (
+          <code>
+           conda install scipy
+          </code>
+          )，则 conda 还会安装
+          <code>
+           numpy
+          </code>
+          （如果尚未安装的话）。
+         </p>
+         <p>
+          大多数命令都是很直观的。要卸载包，请使用
+          <code>
+           conda remove package_name
+          </code>
+          。要更新包，请使用
+          <code>
+           conda update package_name
+          </code>
+          。如果想更新环境中的所有包（这样做常常很有用），请使用
+          <code>
+           conda update --all
+          </code>
+          。最后，要列出已安装的包，请使用前面提过的
+          <code>
+           conda list
+          </code>
+          。
+         </p>
+         <p>
+          如果不知道要找的包的确切名称，可以尝试使用
+          <code>
+           conda search search_term
+          </code>
+          进行搜索。例如，我知道我想安装
+          <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">
+           Beautiful Soup
           </a>
-          。命令的第一部分
+          ，但我不清楚确切的包名称。因此，我尝试执行
           <code>
-           conda env export
+           conda search beautifulsoup
           </code>
-          用于输出环境中的所有包的名称（包括 Python 版本）。
+          。
          </p>
         </div>
        </div>
@@ -137,10 +208,10 @@
         </h3>
         <div>
          <figure class="figure">
-          <img alt="将导出的环境输出到终端中" class="img img-fluid" src="img/conda-env-export.png"/>
+          <img alt="搜索 beautifulsoup" class="img img-fluid" src="img/conda-search-beautifulsoup.png"/>
           <figcaption class="figure-caption">
            <p>
-            将导出的环境输出到终端中
+            搜索 beautifulsoup
            </p>
           </figcaption>
          </figure>
@@ -153,55 +224,82 @@
         </h3>
         <div>
          <p>
-          上图中，你可以看到环境的名称和所有依赖项及其版本。导出命令的第二部分
+          它返回可用的 Beautiful Soup 包的列表，并列出了相应的包名称
           <code>
-           &gt; environment.yaml
-          </code>
-          将导出的文本写入到 YAML 文件
-          <code>
-           environment.yaml
-          </code>
-          中。现在可以共享此文件，而且其他人能够用于创建和你项目相同的环境。
-         </p>
-         <p>
-          要通过环境文件创建环境，请使用
-          <code>
-           conda env create -f environment.yaml
-          </code>
-          。这会创建一个新环境，而且它具有同样的在
-          <code>
-           environment.yaml
-          </code>
-          中列出的库。
-         </p>
-         <h2 id="列出环境">
-          列出环境
-         </h2>
-         <p>
-          如果忘记了环境的名称（我有时会这样），可以使用
-          <code>
-           conda env list
-          </code>
-          列出你创建的所有环境。你会看到环境的列表，而且你当前所在环境的旁边会有一个星号。默认的环境（即当你不在选定环境中时使用的环境）名为
-          <code>
-           root
+           beautifulsoup4
           </code>
           。
          </p>
-         <h2 id="删除环境">
-          删除环境
-         </h2>
-         <p>
-          如果你不再使用某些环境，可以使用
-          <code>
-           conda env remove -n env_name
-          </code>
-          删除指定的环境（在这里名为
-          <code>
-           env_name
-          </code>
-          ）。
-         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             通过 conda ，你可使用以下哪个命令来安装包
+             <code>
+              numpy
+             </code>
+             和
+             <code>
+              pandas
+             </code>
+             ？（多选）
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1480541673069" name="220072" type="checkbox" value="a1480541673069"/>
+           <label for="a1480541673069">
+            <p>
+             <code>
+              conda install numpy
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1480541700965" name="220072" type="checkbox" value="a1480541700965"/>
+           <label for="a1480541700965">
+            <p>
+             <code>
+              conda install pandas
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1480541709026" name="220072" type="checkbox" value="a1480541709026"/>
+           <label for="a1480541709026">
+            <p>
+             <code>
+              conda install numpy pandas
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <ul>
+           <li>
+            `conda install pandas`
+           </li>
+           <li>
+            `conda install numpy pandas`
+           </li>
+          </ul>
+         </details>
         </div>
        </div>
        <div class="divider">
@@ -209,7 +307,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="07. 最佳做法.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="05. 管理环境.html" role="button">
          Next Concept
         </a>
        </p>
@@ -221,7 +319,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -293,7 +391,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 更多环境操作')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 管理包')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

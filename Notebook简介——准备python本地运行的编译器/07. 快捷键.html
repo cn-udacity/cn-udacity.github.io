@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   安装 Anaconda
+   快捷键
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -21,7 +21,7 @@
    <nav id="sidebar">
     <div class="sidebar-header">
      <h3>
-      (可选)Anaconda安装——准备python的本地环境
+      （可选）Notebook简介——准备python本地运行的编译器
      </h3>
     </div>
     <ul class="sidebar-list list-unstyled CTAs">
@@ -33,43 +33,58 @@
     </ul>
     <ul class="sidebar-list list-unstyled components">
      <li class="">
-      <a href="01. 欢迎！.html">
-       01. 欢迎！
+      <a href="01. Jupyter notebook 是什么？.html">
+       01. Jupyter notebook 是什么？
       </a>
      </li>
      <li class="">
-      <a href="02. Anaconda 是什么？.html">
-       02. Anaconda 是什么？
+      <a href="02. 安装 Jupyter notebook.html">
+       02. 安装 Jupyter notebook
       </a>
      </li>
      <li class="">
-      <a href="03. 安装 Anaconda.html">
-       03. 安装 Anaconda
+      <a href="03. 启动 notebook 服务器.html">
+       03. 启动 notebook 服务器
       </a>
      </li>
      <li class="">
-      <a href="04. 管理包.html">
-       04. 管理包
+      <a href="04. notebook 界面.html">
+       04. notebook 界面
       </a>
      </li>
      <li class="">
-      <a href="05. 管理环境.html">
-       05. 管理环境
+      <a href="05. 代码单元格.html">
+       05. 代码单元格
       </a>
      </li>
      <li class="">
-      <a href="06. 更多环境操作.html">
-       06. 更多环境操作
+      <a href="06. Markdown 单元格.html">
+       06. Markdown 单元格
       </a>
      </li>
      <li class="">
-      <a href="07. 最佳做法.html">
-       07. 最佳做法
+      <a href="07. 快捷键.html">
+       07. 快捷键
       </a>
      </li>
      <li class="">
-      <a href="08. Python 版本说明.html">
-       08. Python 版本说明
+      <a href="08. Magic 关键字.html">
+       08. Magic 关键字
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 转换 notebook.html">
+       09. 转换 notebook
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 创建幻灯片.html">
+       10. 创建幻灯片
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 结束.html">
+       11. 结束
       </a>
      </li>
     </ul>
@@ -96,7 +111,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          03. 安装 Anaconda
+          07. 快捷键
          </h1>
         </div>
        </div>
@@ -108,60 +123,17 @@
       <div class="col-12">
        <div class="ud-atom">
         <h3>
-         <p>
-          安装说明
-         </p>
         </h3>
         <div>
-         <h1 id="安装-anaconda">
-          安装 Anaconda
+         <h1 id="快捷键">
+          快捷键
          </h1>
          <p>
-          Anaconda 可用于 Windows、Mac OS X 和 Linux。可以在
-          <a href="https://www.anaconda.com/download/" target="_blank">
-           https://www.anaconda.com/download/
+          notebook 自带一组快捷键，能让你使用键盘与单元格交互，而无需使用鼠标和工具栏。熟悉这些快捷键需要花费一点时间，但如果能熟练掌握，将大大加快你在 notebook 中的工作速度。要详细了解这些快捷键和练习它们的用法，请在下面下载 notebook
+          <a href="https://raw.githubusercontent.com/udacity/cn-deep-learning/master/tutorials/jupyter-notebook-tutorial/keyboard-shortcuts.ipynb" target="_blank">
+           Keyboard Shortcuts
           </a>
-          上找到安装程序和安装说明。
-         </p>
-         <p>
-          如果计算机上已经安装了 Python，这不会有任何影响。实际上，脚本和程序使用的默认 Python 是 Anaconda 附带的 Python。
-         </p>
-         <p>
-          选择 Python 3.6 版本（你也可以根据具体的需要选择 Python 2 的版本）。此外，如果是 64 位操作系统，则选择 64 位安装程序，否则选择 32 位安装程序。选择下载合适的版本，并继续进行安装！
-         </p>
-         <p>
-          完成安装后，会自动进入默认的 conda 环境，而且所有包均已安装完毕，如下面所示。可以在终端或命令提示符中键入
-          <code>
-           conda list
-          </code>
-          ，以查看你安装的内容。
-         </p>
-         <video autoplay="" loop="">
-          <source src="media/conda_default_install.mp4" type="video/mp4"/>
-         </video>
-         <p>
-          在 Windows 上，会随 Anaconda 一起安装一批应用程序：
-         </p>
-         <ul>
-          <li>
-           Anaconda Navigator，它是用于管理环境和包的 GUI
-          </li>
-          <li>
-           Anaconda Prompt 终端，它可让你使用命令行界面来管理环境和包
-          </li>
-          <li>
-           Spyder，它是面向科学开发的 IDE
-          </li>
-         </ul>
-         <p>
-          为了避免报错，我推荐在默认环境下更新所有的包。打开 Anaconda Prompt （或者 Mac 下的终端），键入：
-         </p>
-         <pre><code>conda upgrade --all</code></pre>
-         <p>
-          并在提示是否更新的时候输入 y（Yes）以便让更新继续。初次安装下的软件包版本一般都比较老旧，因此提前更新可以避免未来不必要的问题。
-         </p>
-         <p>
-          在本课的余下部分，我会要求你在终端中使用命令。我强烈建议你以这种方式开始使用 Anaconda，之后再根据需要使用 GUI。
+          。再次提醒，浏览器可能会尝试打开它，但请将它保存到计算机中。请右击链接并选择“链接另存为…”。
          </p>
         </div>
        </div>
@@ -170,7 +142,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="04. 管理包.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="08. Magic 关键字.html" role="button">
          Next Concept
         </a>
        </p>
@@ -182,7 +154,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -254,7 +226,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 安装 Anaconda')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. 快捷键')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

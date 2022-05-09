@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   Python 版本说明
+   安装 Anaconda
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -96,7 +96,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          08. Python 版本说明
+          03. 安装 Anaconda
          </h1>
         </div>
        </div>
@@ -108,96 +108,60 @@
       <div class="col-12">
        <div class="ud-atom">
         <h3>
+         <p>
+          安装说明
+         </p>
         </h3>
         <div>
-         <h1 id="优达学城使用的-python-版本">
-          优达学城使用的 Python 版本
+         <h1 id="安装-anaconda">
+          安装 Anaconda
          </h1>
          <p>
-          优达学城的大部分纳米学位课程将专门使用（或者已经使用） Python 3。
+          Anaconda 可用于 Windows、Mac OS X 和 Linux。可以在
+          <a href="https://www.anaconda.com/download/" target="_blank">
+           https://www.anaconda.com/download/
+          </a>
+          上找到安装程序和安装说明。
          </p>
-         <h2 id="为何选择-python-3">
-          为何选择 Python 3
-         </h2>
+         <p>
+          如果计算机上已经安装了 Python，这不会有任何影响。实际上，脚本和程序使用的默认 Python 是 Anaconda 附带的 Python。
+         </p>
+         <p>
+          选择 Python 3.6 版本（你也可以根据具体的需要选择 Python 2 的版本）。此外，如果是 64 位操作系统，则选择 64 位安装程序，否则选择 32 位安装程序。选择下载合适的版本，并继续进行安装！
+         </p>
+         <p>
+          完成安装后，会自动进入默认的 conda 环境，而且所有包均已安装完毕，如下面所示。可以在终端或命令提示符中键入
+          <code>
+           conda list
+          </code>
+          ，以查看你安装的内容。
+         </p>
+         <video autoplay="" loop="">
+          <source src="media/conda_default_install.mp4" type="video/mp4"/>
+         </video>
+         <p>
+          在 Windows 上，会随 Anaconda 一起安装一批应用程序：
+         </p>
          <ul>
           <li>
-           Python 2.7 逐渐
-           <a href="https://pythonclock.org/" target="_blank">
-            过时了
-           </a>
+           Anaconda Navigator，它是用于管理环境和包的 GUI
           </li>
           <li>
-           Python 3.6 具有很多出色的功能，例如
-           <a href="https://docs.python.org/3.6/whatsnew/3.6.html#pep-498-formatted-string-literals" target="_blank">
-            格式化的字符串
-           </a>
+           Anaconda Prompt 终端，它可让你使用命令行界面来管理环境和包
+          </li>
+          <li>
+           Spyder，它是面向科学开发的 IDE
           </li>
          </ul>
          <p>
-          目前，Python 3 中已经具有很多新的功能，没必要再使用 Python 2，除非你使用的是旧版代码。所有新的 Python 代码应该用 Python 3 编写。
+          为了避免报错，我推荐在默认环境下更新所有的包。打开 Anaconda Prompt （或者 Mac 下的终端），键入：
          </p>
-         <h2 id="python-2-和-python-3-之间的主要差别">
-          Python 2 和 Python 3 之间的主要差别
-         </h2>
+         <pre><code>conda upgrade --all</code></pre>
          <p>
-          大部分情况下，Python 2 代码也可以用 Python 3 运行。当然，Python 3 中推出的大部分新功能无法向后兼容。而 Python 2 代码经常运行失败的是
-          <code>
-           print
-          </code>
-          语句。
+          并在提示是否更新的时候输入 y（Yes）以便让更新继续。初次安装下的软件包版本一般都比较老旧，因此提前更新可以避免未来不必要的问题。
          </p>
          <p>
-          对于大部分的旧版 Python，包括 Python 2，输出功能如下所示：
-         </p>
-         <pre><code>print "Hello", "world!"
-&gt; Hello world!</code></pre>
-         <p>
-          Python 3 中改成了一个函数。
-         </p>
-         <pre><code>print("Hello", "world!")
-&gt; Hello world!</code></pre>
-         <p>
-          在 2.6 版中，
-          <code>
-           print
-          </code>
-          函数通过
-          <code>
-           __future__
-          </code>
-          模块向后移植到 Python 2：
-         </p>
-         <pre><code># 在 Python 2.6 及以上版本中
-from __future__ import print_function
-print("Hello", "world!")
-&gt; Hello world!</code></pre>
-         <p>
-          <code>
-           print
-          </code>
-          语句在 Python 3 中无法运行。如果你要输出内容，并希望在两个版本的 Python 中都可以，则需要在 Python 2 代码中导入
-          <code>
-           print_function
-          </code>
-          。
-         </p>
-         <h2 id="数据分析师纳米学位课程的学员注意事项">
-          数据分析师纳米学位课程的学员注意事项
-         </h2>
-         <p>
-          深度学习课程学员请忽略此部分。
-         </p>
-         <p>
-          目前，此纳米学位课程的大部分资料依然只适用于 Python 2.7。你可以通过打开“资源”标签并下载相应的 YAML 文件，为当前的数据分析师纳米学位课程快速设置一个环境。
-         </p>
-         <h2 id="机器学习工程师纳米学位课程的学员注意事项">
-          机器学习工程师纳米学位课程的学员注意事项
-         </h2>
-         <p>
-          深度学习课程学员请忽略此部分。
-         </p>
-         <p>
-          目前，此纳米学位课程的大部分资料依然只适用于 Python 2.7。
+          在本课的余下部分，我会要求你在终端中使用命令。我强烈建议你以这种方式开始使用 Anaconda，之后再根据需要使用 GUI。
          </p>
         </div>
        </div>
@@ -206,6 +170,9 @@ print("Hello", "world!")
       </div>
       <div class="col-12">
        <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="04. 管理包.html" role="button">
+         Next Concept
+        </a>
        </p>
       </div>
      </div>
@@ -215,7 +182,7 @@ print("Hello", "world!")
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -287,7 +254,7 @@ print("Hello", "world!")
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Python 版本说明')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 安装 Anaconda')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

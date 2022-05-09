@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   欢迎！
+   管理环境
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -96,7 +96,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          01. 欢迎！
+          05. 管理环境
          </h1>
         </div>
        </div>
@@ -110,12 +110,47 @@
         <h3>
         </h3>
         <div>
+         <h1 id="管理环境">
+          管理环境
+         </h1>
+         <p>
+          如前所述，你可以使用 conda 创建环境以隔离项目。要创建环境，请在终端中使用
+          <code>
+           conda create -n env_name list of packages
+          </code>
+          。在这里，
+          <code>
+           -n env_name
+          </code>
+          设置环境的名称（
+          <code>
+           -n
+          </code>
+          是指名称），而
+          <code>
+           list of packages
+          </code>
+          是要安装在环境中的包的列表。例如，要创建名为
+          <code>
+           my_env
+          </code>
+          的环境并在其中安装 numpy，请键入
+          <code>
+           conda create -n my_env numpy
+          </code>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
          <figure class="figure">
-          <img alt="大家好！" class="img img-fluid" src="img/mat-headshot.png"/>
+          <img alt="" class="img img-fluid" src="img/conda-create-env.png"/>
           <figcaption class="figure-caption">
-           <p>
-            大家好！
-           </p>
           </figcaption>
          </figure>
         </div>
@@ -127,23 +162,124 @@
         </h3>
         <div>
          <p>
-          欢迎来到本课程！我叫 Mat Leonard，是人工智能学院的项目主管，也是这门课程的讲师。我会在课程中介绍两个对于数据分析师最为重要的工具，即 Anaconda 和 Jupyter notebook。
+          创建环境时，可以指定要安装在环境中的 Python 版本。这在你同时使用 Python 2.x 和 Python 3.x 中的代码时很有用。要创建具有特定 Python 版本的环境，请键入类似于
+          <code>
+           conda create -n py3 python=3
+          </code>
+          或
+          <code>
+           conda create -n py2 python=2
+          </code>
+          的命令。实际上，我在我的个人计算机上创建了这两个环境。我将它们用作与任何特定项目均无关的通用环境，以处理普通的工作（可轻松使用每个 Python 版本）。这些命令将分别安装 Python 3 和 Python 2 的最新版本。要安装特定版本（例如 Python 3.3），请使用
+          <code>
+           conda create -n py python=3.3
+          </code>
+          。
          </p>
+         <h2 id="进入环境">
+          进入环境
+         </h2>
          <p>
-          <a href="https://anaconda.org/" target="_blank">
-           Anaconda
-          </a>
-          是一个包含数据科学常用包的 Python 发行版本。它基于 conda ——一个包和环境管理器——衍生而来。你将使用 conda 创建环境，以便分隔使用不同 Python 版本和不同程序包的项目。你还将使用它在环境中安装、卸载和更新包。通过使用 Anaconda，处理数据的过程将更加愉快。
+          创建了环境后，在 OSX/Linux 上使用
+          <code>
+           source activate my_env
+          </code>
+          进入环境。在 Windows 上，请使用
+          <code>
+           activate my_env
+          </code>
+          。
          </p>
+         <video autoplay="" controls="" loop="">
+          <source src="media/conda_enter.mp4" type="video/mp4"/>
+         </video>
          <p>
-          <a href="http://jupyter.org/" target="_blank">
-           Jupyter notebook
-          </a>
-          是一种 Web 文档，能让你将文本、图像和代码全部组合到一个文档中。它事实上已经成为数据分析的标准环境。Jupyter notebook 源自 2011 年的 IPython 项目，之后迅速流行起来。在本课程的第二节课中，你将使用 Jupyter notebook 进行分析工作。
+          进入环境后，你会在终端提示符中看到环境名称，它类似于
+          <code>
+           (my_env) ~ $
+          </code>
+          。环境中只安装了几个默认的包，以及你在创建它时安装的包。你可以使用
+          <code>
+           conda list
+          </code>
+          检查这一点。在环境中安装包的命令与前面一样：
+          <code>
+           conda install package_name
+          </code>
+          。不过，这次你安装的特定包仅在你进入环境后才可用。要离开环境，请键入
+          <code>
+           source deactivate
+          </code>
+          （在 OSX/Linux 上）。在 Windows 上，请使用
+          <code>
+           deactivate
+          </code>
+          。
          </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
          <p>
-          让我们首先学习 Anaconda。
+          “创建环境”测试题
          </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             你将使用哪个命令来创建名为
+             <code>
+              data
+             </code>
+             且安装了 Python 3.5、numpy 和 pandas 的环境？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1477602911049" name="220085" type="radio" value="a1477602911049"/>
+           <label for="a1477602911049">
+            <p>
+             conda env create -n data python=3.5 numpy pandas
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1477603599067" name="220085" type="radio" value="a1477603599067"/>
+           <label for="a1477603599067">
+            <p>
+             conda create data python=3.5 numpy pandas
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1477603600155" name="220085" type="radio" value="a1477603600155"/>
+           <label for="a1477603600155">
+            <p>
+             conda create -n data python=3.5
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1477603618435" name="220085" type="radio" value="a1477603618435"/>
+           <label for="a1477603618435">
+            <p>
+             conda create -n data python=3.5 numpy pandas
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          conda create -n data python=3.5 numpy pandas
+         </details>
         </div>
        </div>
        <div class="divider">
@@ -151,7 +287,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="02. Anaconda 是什么？.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="06. 更多环境操作.html" role="button">
          Next Concept
         </a>
        </p>
@@ -163,7 +299,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -235,7 +371,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. 欢迎！')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 管理环境')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

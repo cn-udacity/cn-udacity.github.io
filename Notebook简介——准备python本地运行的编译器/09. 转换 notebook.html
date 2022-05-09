@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   创建幻灯片
+   转换 notebook
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -111,7 +111,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          10. 创建幻灯片
+          09. 转换 notebook
          </h1>
         </div>
        </div>
@@ -125,18 +125,19 @@
         <h3>
         </h3>
         <div>
-         <h1 id="创建幻灯片">
-          创建幻灯片
+         <h1 id="转换-notebook">
+          转换 notebook
          </h1>
          <p>
-          通过 notebook 创建幻灯片是我最爱的功能之一，
-          <a href="http://nbviewer.jupyter.org/format/slides/github/jorisvandenbossche/2015-PyDataParis/blob/master/pandas_introduction.ipynb#/" target="_blank">
-           你可以在浏览器中直接打开它
+          Notebook 只是扩展名为
+          <code>
+           .ipynb
+          </code>
+          的大型
+          <a href="http://www.json.org/" target="_blank">
+           JSON
           </a>
-          ，它介绍了用于处理数据的 Pandas。
-         </p>
-         <p>
-          在 notebook 中创建幻灯片的过程像平常一样，但需要指定作为幻灯片的单元格和单元格的幻灯片类型。在菜单栏中，点击“View”（视图）&gt;“Cell Toolbar”（单元格工具栏）&gt;“Slideshow”（幻灯片），以便在每个单元格上弹出幻灯片单元格菜单。
+          文件。
          </p>
         </div>
        </div>
@@ -147,10 +148,10 @@
         </h3>
         <div>
          <figure class="figure">
-          <img alt="打开单元格的幻灯片工具栏" class="img img-fluid" src="img/slides-cell-toolbar-menu.png"/>
+          <img alt="在文本编辑器中打开的 notebook 文件显示 JSON 数据" class="img img-fluid" src="img/notebook-json.png"/>
           <figcaption class="figure-caption">
            <p>
-            打开单元格的幻灯片工具栏
+            在文本编辑器中打开的 notebook 文件显示 JSON 数据
            </p>
           </figcaption>
          </figure>
@@ -163,70 +164,64 @@
         </h3>
         <div>
          <p>
-          这会在每个单元格上显示一个下拉菜单，让你选择单元格在幻灯片中的显示方式。
-         </p>
-        </div>
-       </div>
-       <div class="divider">
-       </div>
-       <div class="ud-atom">
-        <h3>
-        </h3>
-        <div>
-         <figure class="figure">
-          <img alt="选择幻灯片类型" class="img img-fluid" src="img/slides-choose-slide-type.png"/>
-          <figcaption class="figure-caption">
-           <p>
-            选择幻灯片类型
-           </p>
-          </figcaption>
-         </figure>
-        </div>
-       </div>
-       <div class="divider">
-       </div>
-       <div class="ud-atom">
-        <h3>
-        </h3>
-        <div>
-         <p>
-          <strong>
-           Slides
-          </strong>
-          （幻灯片）是你从左向右移动的完整幻灯片。按向上或向下的箭头时，
-          <strong>
-           Sub-slides
-          </strong>
-          （子幻灯片）会出现在幻灯片中。
-          <strong>
-           Fragments
-          </strong>
-          （片段）最初是隐藏的，在你按下按钮时会出现。选择Skip（忽略）会在幻灯片中忽略该单元格，而选择
-          <strong>
-           Notes
-          </strong>
-          （备注）会将为演讲者保留备注。
-         </p>
-         <h2 id="运行幻灯片">
-          运行幻灯片
-         </h2>
-         <p>
-          要通过 notebook 文件创建幻灯片，需要使用
+          由于 notebook 是 JSON 文件，因此，可以轻松将其转换为其他格式。Jupyter 附带了一个名为
           <code>
            nbconvert
           </code>
-          ：
-         </p>
-         <pre><code class="bash language-bash">    jupyter nbconvert notebook.ipynb --to slides</code></pre>
-         <p>
-          这只是将 notebook 转换为幻灯片必需的文件，你需要向其提供 HTTP 服务器才能真正看到演示文稿。
+          的实用程序，可将 notebook 转换为 HTML、Markdown、幻灯片等格式。
          </p>
          <p>
-          要转换它并立即看到它，请使用
+          例如，要将 notebook 转换为 HTML 文件，请在终端中使用
          </p>
-         <pre><code class="bash language-bash">jupyter nbconvert notebook.ipynb --to slides --post serve</code></pre>
+         <pre><code class="bash language-bash">jupyter nbconvert --to html notebook.ipynb</code></pre>
          <p>
-          这会在浏览器中打开幻灯片，让你可以演示它。
+          我们也可以在notebook界面中点击
+          <code>
+           File
+          </code>
+          ，在弹出的菜单中点击
+          <code>
+           Download as
+          </code>
+          ，之后选择我们需要转换的格式。
+         </p>
+         <p>
+          <img src="media/43558682-49ab30b8-963d-11e8-993b-2a14396f820f.png"/>
+         </p>
+         <p>
+          要将 notebook 与不使用 notebook 的其他人共享，转换为 HTML 很有用。而要在博客和其他接受 Markdown 格式化的文本编辑器中显示 notebook，Markdown 很合适。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/nbconvert-example.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          像平常一样，要详细了解
+          <code>
+           nbconvert
+          </code>
+          ，请阅读相关
+          <a href="https://nbconvert.readthedocs.io/en/latest/usage.html" target="_blank">
+           文档
+          </a>
+          。
          </p>
         </div>
        </div>
@@ -235,7 +230,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="11. 结束.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="10. 创建幻灯片.html" role="button">
          Next Concept
         </a>
        </p>
@@ -247,7 +242,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -319,7 +314,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 创建幻灯片')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 转换 notebook')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

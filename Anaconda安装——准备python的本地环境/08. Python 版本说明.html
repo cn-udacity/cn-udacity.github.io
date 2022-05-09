@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   管理包
+   Python 版本说明
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -96,7 +96,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          04. 管理包
+          08. Python 版本说明
          </h1>
         </div>
        </div>
@@ -110,196 +110,95 @@
         <h3>
         </h3>
         <div>
-         <h1 id="管理包">
-          管理包
+         <h1 id="优达学城使用的-python-版本">
+          优达学城使用的 Python 版本
          </h1>
          <p>
-          安装了 Anaconda 之后，管理包是相当简单的。要安装包，请在终端中键入
+          优达学城的大部分纳米学位课程将专门使用（或者已经使用） Python 3。
+         </p>
+         <h2 id="为何选择-python-3">
+          为何选择 Python 3
+         </h2>
+         <ul>
+          <li>
+           Python 2.7 逐渐
+           <a href="https://pythonclock.org/" target="_blank">
+            过时了
+           </a>
+          </li>
+          <li>
+           Python 3.6 具有很多出色的功能，例如
+           <a href="https://docs.python.org/3.6/whatsnew/3.6.html#pep-498-formatted-string-literals" target="_blank">
+            格式化的字符串
+           </a>
+          </li>
+         </ul>
+         <p>
+          目前，Python 3 中已经具有很多新的功能，没必要再使用 Python 2，除非你使用的是旧版代码。所有新的 Python 代码应该用 Python 3 编写。
+         </p>
+         <h2 id="python-2-和-python-3-之间的主要差别">
+          Python 2 和 Python 3 之间的主要差别
+         </h2>
+         <p>
+          大部分情况下，Python 2 代码也可以用 Python 3 运行。当然，Python 3 中推出的大部分新功能无法向后兼容。而 Python 2 代码经常运行失败的是
           <code>
-           conda install package_name
+           print
           </code>
-          。例如，要安装 numpy，请键入
+          语句。
+         </p>
+         <p>
+          对于大部分的旧版 Python，包括 Python 2，输出功能如下所示：
+         </p>
+         <pre><code>print "Hello", "world!"
+&gt; Hello world!</code></pre>
+         <p>
+          Python 3 中改成了一个函数。
+         </p>
+         <pre><code>print("Hello", "world!")
+&gt; Hello world!</code></pre>
+         <p>
+          在 2.6 版中，
           <code>
-           conda install numpy
+           print
+          </code>
+          函数通过
+          <code>
+           __future__
+          </code>
+          模块向后移植到 Python 2：
+         </p>
+         <pre><code># 在 Python 2.6 及以上版本中
+from __future__ import print_function
+print("Hello", "world!")
+&gt; Hello world!</code></pre>
+         <p>
+          <code>
+           print
+          </code>
+          语句在 Python 3 中无法运行。如果你要输出内容，并希望在两个版本的 Python 中都可以，则需要在 Python 2 代码中导入
+          <code>
+           print_function
           </code>
           。
          </p>
-         <video autoplay="" controls="" loop="">
-          <source src="media/conda_install.mp4" type="video/mp4"/>
-         </video>
+         <h2 id="数据分析师纳米学位课程的学员注意事项">
+          数据分析师纳米学位课程的学员注意事项
+         </h2>
          <p>
-          你还可以同时安装多个包。类似
-          <code>
-           conda install numpy scipy pandas
-          </code>
-          的命令会同时安装所有这些包。还可以通过添加版本号（例如
-          <code>
-           conda install numpy=1.10
-          </code>
-          ）来指定所需的包版本。
+          深度学习课程学员请忽略此部分。
          </p>
          <p>
-          Conda 还会自动为你安装依赖项。例如，
-          <code>
-           scipy
-          </code>
-          依赖于
-          <code>
-           numpy
-          </code>
-          ，因为它使用并需要
-          <code>
-           numpy
-          </code>
-          。如果你只安装
-          <code>
-           scipy
-          </code>
-          (
-          <code>
-           conda install scipy
-          </code>
-          )，则 conda 还会安装
-          <code>
-           numpy
-          </code>
-          （如果尚未安装的话）。
+          目前，此纳米学位课程的大部分资料依然只适用于 Python 2.7。你可以通过打开“资源”标签并下载相应的 YAML 文件，为当前的数据分析师纳米学位课程快速设置一个环境。
+         </p>
+         <h2 id="机器学习工程师纳米学位课程的学员注意事项">
+          机器学习工程师纳米学位课程的学员注意事项
+         </h2>
+         <p>
+          深度学习课程学员请忽略此部分。
          </p>
          <p>
-          大多数命令都是很直观的。要卸载包，请使用
-          <code>
-           conda remove package_name
-          </code>
-          。要更新包，请使用
-          <code>
-           conda update package_name
-          </code>
-          。如果想更新环境中的所有包（这样做常常很有用），请使用
-          <code>
-           conda update --all
-          </code>
-          。最后，要列出已安装的包，请使用前面提过的
-          <code>
-           conda list
-          </code>
-          。
+          目前，此纳米学位课程的大部分资料依然只适用于 Python 2.7。
          </p>
-         <p>
-          如果不知道要找的包的确切名称，可以尝试使用
-          <code>
-           conda search search_term
-          </code>
-          进行搜索。例如，我知道我想安装
-          <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">
-           Beautiful Soup
-          </a>
-          ，但我不清楚确切的包名称。因此，我尝试执行
-          <code>
-           conda search beautifulsoup
-          </code>
-          。
-         </p>
-        </div>
-       </div>
-       <div class="divider">
-       </div>
-       <div class="ud-atom">
-        <h3>
-        </h3>
-        <div>
-         <figure class="figure">
-          <img alt="搜索 beautifulsoup" class="img img-fluid" src="img/conda-search-beautifulsoup.png"/>
-          <figcaption class="figure-caption">
-           <p>
-            搜索 beautifulsoup
-           </p>
-          </figcaption>
-         </figure>
-        </div>
-       </div>
-       <div class="divider">
-       </div>
-       <div class="ud-atom">
-        <h3>
-        </h3>
-        <div>
-         <p>
-          它返回可用的 Beautiful Soup 包的列表，并列出了相应的包名称
-          <code>
-           beautifulsoup4
-          </code>
-          。
-         </p>
-        </div>
-       </div>
-       <div class="divider">
-       </div>
-       <div class="ud-atom">
-        <h3>
-        </h3>
-        <div>
-         <form>
-          <fieldset>
-           <legend>
-            <p>
-             通过 conda ，你可使用以下哪个命令来安装包
-             <code>
-              numpy
-             </code>
-             和
-             <code>
-              pandas
-             </code>
-             ？（多选）
-            </p>
-           </legend>
-          </fieldset>
-          <div>
-           <input id="a1480541673069" name="220072" type="checkbox" value="a1480541673069"/>
-           <label for="a1480541673069">
-            <p>
-             <code>
-              conda install numpy
-             </code>
-            </p>
-           </label>
-          </div>
-          <div>
-           <input id="a1480541700965" name="220072" type="checkbox" value="a1480541700965"/>
-           <label for="a1480541700965">
-            <p>
-             <code>
-              conda install pandas
-             </code>
-            </p>
-           </label>
-          </div>
-          <div>
-           <input id="a1480541709026" name="220072" type="checkbox" value="a1480541709026"/>
-           <label for="a1480541709026">
-            <p>
-             <code>
-              conda install numpy pandas
-             </code>
-            </p>
-           </label>
-          </div>
-         </form>
-         <details>
-          <summary>
-           <strong>
-            SOLUTION:
-           </strong>
-          </summary>
-          <ul>
-           <li>
-            `conda install pandas`
-           </li>
-           <li>
-            `conda install numpy pandas`
-           </li>
-          </ul>
-         </details>
         </div>
        </div>
        <div class="divider">
@@ -307,9 +206,6 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="05. 管理环境.html" role="button">
-         Next Concept
-        </a>
        </p>
       </div>
      </div>
@@ -319,7 +215,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -391,7 +287,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 管理包')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Python 版本说明')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

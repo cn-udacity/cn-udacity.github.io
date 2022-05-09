@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   代码单元格
+   安装 Jupyter notebook
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -111,7 +111,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          05. 代码单元格
+          02. 安装 Jupyter notebook
          </h1>
         </div>
        </div>
@@ -125,22 +125,25 @@
         <h3>
         </h3>
         <div>
-         <h1 id="代码单元格">
-          代码单元格
+         <h1 id="安装-jupyter-notebook">
+          安装 Jupyter notebook
          </h1>
          <p>
-          notebook 中的大部分工作均在代码单元格中完成。这是编写和执行代码的地方。在代码单元格中可以执行多种操作，例如编写代码、给变量赋值、定义函数和类、导入包等。在一个单元格中执行的任何代码在所有其他单元格中均可用。
+          目前，安装 Jupyter 的最简单方法是使用 Anaconda。该发行版附带了 Jupyter notebook。你能够在默认环境下使用 notebook。
          </p>
          <p>
-          我创建了一个 notebook，你可以将它当作练习来完成。请在下面下载此 notebook
-          <a href="https://raw.githubusercontent.com/udacity/cn-deep-learning/master/tutorials/jupyter-notebook-tutorial/working-with-code-cells.ipynb" target="_blank">
-           Working With Code Cells
-          </a>
-          ，然后从你自己的 notebook 服务器运行它（在你的终端中，转到包含此 notebook 文件的目录，然后输入
+          要在 conda 环境中安装 Jupyter notebook，请使用
           <code>
-           jupyter notebook
+           conda install jupyter notebook
           </code>
-          ）。浏览器可能会尝试不下载就打开此 notebook 文件。如果是这样，请右击链接并选择“链接另存为…”。
+          。
+         </p>
+         <p>
+          也可以通过 pip 使用
+          <code>
+           pip install jupyter notebook
+          </code>
+          来获得 Jupyter notebook。
          </p>
         </div>
        </div>
@@ -149,7 +152,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="06. Markdown 单元格.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="03. 启动 notebook 服务器.html" role="button">
          Next Concept
         </a>
        </p>
@@ -161,7 +164,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -233,7 +236,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 代码单元格')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 安装 Jupyter notebook')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });

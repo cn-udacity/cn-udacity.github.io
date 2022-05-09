@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
   <title>
-   安装 Jupyter notebook
+   更多环境操作
   </title>
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="../assets/css/plyr.css" rel="stylesheet"/>
@@ -21,7 +21,7 @@
    <nav id="sidebar">
     <div class="sidebar-header">
      <h3>
-      （可选）Notebook简介——准备python本地运行的编译器
+      (可选)Anaconda安装——准备python的本地环境
      </h3>
     </div>
     <ul class="sidebar-list list-unstyled CTAs">
@@ -33,58 +33,43 @@
     </ul>
     <ul class="sidebar-list list-unstyled components">
      <li class="">
-      <a href="01. Jupyter notebook 是什么？.html">
-       01. Jupyter notebook 是什么？
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
       </a>
      </li>
      <li class="">
-      <a href="02. 安装 Jupyter notebook.html">
-       02. 安装 Jupyter notebook
+      <a href="02. Anaconda 是什么？.html">
+       02. Anaconda 是什么？
       </a>
      </li>
      <li class="">
-      <a href="03. 启动 notebook 服务器.html">
-       03. 启动 notebook 服务器
+      <a href="03. 安装 Anaconda.html">
+       03. 安装 Anaconda
       </a>
      </li>
      <li class="">
-      <a href="04. notebook 界面.html">
-       04. notebook 界面
+      <a href="04. 管理包.html">
+       04. 管理包
       </a>
      </li>
      <li class="">
-      <a href="05. 代码单元格.html">
-       05. 代码单元格
+      <a href="05. 管理环境.html">
+       05. 管理环境
       </a>
      </li>
      <li class="">
-      <a href="06. Markdown 单元格.html">
-       06. Markdown 单元格
+      <a href="06. 更多环境操作.html">
+       06. 更多环境操作
       </a>
      </li>
      <li class="">
-      <a href="07. 快捷键.html">
-       07. 快捷键
+      <a href="07. 最佳做法.html">
+       07. 最佳做法
       </a>
      </li>
      <li class="">
-      <a href="08. Magic 关键字.html">
-       08. Magic 关键字
-      </a>
-     </li>
-     <li class="">
-      <a href="09. 转换 notebook.html">
-       09. 转换 notebook
-      </a>
-     </li>
-     <li class="">
-      <a href="10. 创建幻灯片.html">
-       10. 创建幻灯片
-      </a>
-     </li>
-     <li class="">
-      <a href="11. 结束.html">
-       11. 结束
+      <a href="08. Python 版本说明.html">
+       08. Python 版本说明
       </a>
      </li>
     </ul>
@@ -111,7 +96,7 @@
           </div>
          </button>
          <h1 style="display: inline-block">
-          02. 安装 Jupyter notebook
+          06. 更多环境操作
          </h1>
         </div>
        </div>
@@ -125,25 +110,97 @@
         <h3>
         </h3>
         <div>
-         <h1 id="安装-jupyter-notebook">
-          安装 Jupyter notebook
-         </h1>
+         <h2 id="保存和加载环境">
+          保存和加载环境
+         </h2>
          <p>
-          目前，安装 Jupyter 的最简单方法是使用 Anaconda。该发行版附带了 Jupyter notebook。你能够在默认环境下使用 notebook。
+          共享环境这项功能确实很有用，它能让其他人安装你的代码中使用的所有包，并确保这些包的版本正确。你可以使用
+          <code>
+           conda env export &gt; environment.yaml
+          </code>
+          将包保存为
+          <a href="http://www.yaml.org/" target="_blank">
+           YAML
+          </a>
+          。命令的第一部分
+          <code>
+           conda env export
+          </code>
+          用于输出环境中的所有包的名称（包括 Python 版本）。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="将导出的环境输出到终端中" class="img img-fluid" src="img/conda-env-export.png"/>
+          <figcaption class="figure-caption">
+           <p>
+            将导出的环境输出到终端中
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          上图中，你可以看到环境的名称和所有依赖项及其版本。导出命令的第二部分
+          <code>
+           &gt; environment.yaml
+          </code>
+          将导出的文本写入到 YAML 文件
+          <code>
+           environment.yaml
+          </code>
+          中。现在可以共享此文件，而且其他人能够用于创建和你项目相同的环境。
          </p>
          <p>
-          要在 conda 环境中安装 Jupyter notebook，请使用
+          要通过环境文件创建环境，请使用
           <code>
-           conda install jupyter notebook
+           conda env create -f environment.yaml
+          </code>
+          。这会创建一个新环境，而且它具有同样的在
+          <code>
+           environment.yaml
+          </code>
+          中列出的库。
+         </p>
+         <h2 id="列出环境">
+          列出环境
+         </h2>
+         <p>
+          如果忘记了环境的名称（我有时会这样），可以使用
+          <code>
+           conda env list
+          </code>
+          列出你创建的所有环境。你会看到环境的列表，而且你当前所在环境的旁边会有一个星号。默认的环境（即当你不在选定环境中时使用的环境）名为
+          <code>
+           root
           </code>
           。
          </p>
+         <h2 id="删除环境">
+          删除环境
+         </h2>
          <p>
-          也可以通过 pip 使用
+          如果你不再使用某些环境，可以使用
           <code>
-           pip install jupyter notebook
+           conda env remove -n env_name
           </code>
-          来获得 Jupyter notebook。
+          删除指定的环境（在这里名为
+          <code>
+           env_name
+          </code>
+          ）。
          </p>
         </div>
        </div>
@@ -152,7 +209,7 @@
       </div>
       <div class="col-12">
        <p class="text-right">
-        <a class="btn btn-outline-primary mt-4" href="03. 启动 notebook 服务器.html" role="button">
+        <a class="btn btn-outline-primary mt-4" href="07. 最佳做法.html" role="button">
          Next Concept
         </a>
        </p>
@@ -164,7 +221,7 @@
       <div class="row">
        <div class="col-12">
         <p class="text-center">
-         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+          <a href="https://cn-udacity.github.io/" target="_blank">点击返回主目录</a>
         </p>
        </div>
       </div>
@@ -236,7 +293,7 @@
       }
 
       // scroll sidebar to current concept
-      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 安装 Jupyter notebook')" )
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 更多环境操作')" )
       currentInSideBar.css( "text-decoration", "underline" );
       $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
     });
